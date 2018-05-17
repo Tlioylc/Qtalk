@@ -1,9 +1,5 @@
 [
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\raw\\beep.ogg",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\raw\\beep.ogg"
-    },
-    {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\raw\\beep.ogg",
         "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\raw\\beep.ogg"
     }

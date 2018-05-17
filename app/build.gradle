@@ -27,4 +27,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation files('libs/afinal_0.5.1_bin.jar')
     implementation project(':qumitalk')
+
+    implementation 'com.alibaba:fastjson:1.1.68.android'
 }

@@ -1,18 +1,10 @@
 [
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher_round.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
         "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher_round.png",
         "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     }
 ]

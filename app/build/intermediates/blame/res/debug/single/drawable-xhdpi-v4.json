@@ -1,7 +1,19 @@
 [
     {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_picture_press.png",
+        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_add_picture_press.png"
+    },
+    {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_text_select_handle_middle_mtrl_light.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
+    },
+    {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png",
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
+    },
+    {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_press.png",
@@ -12,32 +24,16 @@
         "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_emo_normal.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_text_select_handle_left_mtrl_light.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\fv_chat_content_r_normal.9.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\fv_chat_content_r_normal.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\fv_chat_content_l_normal.9.png",
+        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\fv_chat_content_l_normal.9.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\evf.png",
         "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\evf.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_text_select_handle_right_mtrl_light.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
@@ -48,12 +44,28 @@
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\skin_tips_newmessage.9.png",
+        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\skin_tips_newmessage.9.png"
+    },
+    {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\notification_bg_normal.9.png",
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cce174a5624158d4915e0d374b4e2d7e\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ibl.png",
+        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\ibl.png"
+    },
+    {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\fft.9.png",
+        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\fft.9.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
@@ -68,8 +80,8 @@
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cce174a5624158d4915e0d374b4e2d7e\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ffs.9.png",
+        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\ffs.9.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_black_48dp.png",
@@ -78,326 +90,6 @@
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\fv_chat_content_r_pressed.9.png",
         "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\fv_chat_content_r_pressed.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_text_select_handle_middle_mtrl_light.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\evm.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\evm.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\7587d732f0e5ed875150a1b3e3ba8ada\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\evk.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\evk.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_half_black_48dp.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_48dp.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_text_select_handle_right_mtrl_light.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_text_select_handle_left_mtrl_light.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_black_36dp.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_ic_star_black_36dp.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_camera_press.png",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_add_camera_press.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_emo_normal.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_emo_normal.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\skin_tips_newmessage.9.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\skin_tips_newmessage.9.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_normal.png",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_add_normal.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_keyboard_normal.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_keyboard_normal.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_voice_press.png",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_voice_press.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_location_press.png",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_add_location_press.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\evd.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\evd.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\fv_chat_content_r_normal.9.png",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\fv_chat_content_r_normal.9.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_picture_press.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_add_picture_press.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\7587d732f0e5ed875150a1b3e3ba8ada\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_half_black_16dp.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_16dp.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_black_48dp.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_ic_star_black_48dp.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_longpressed_holo.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_list_longpressed_holo.9.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_half_black_36dp.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_36dp.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\fv_chat_content_r_pressed.9.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\fv_chat_content_r_pressed.9.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_location_normal.png",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_add_location_normal.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_location_press.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_add_location_press.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\fv_chat_content_l_pressed.9.png",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\fv_chat_content_l_pressed.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_picture_press.png",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_add_picture_press.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_text_select_handle_middle_mtrl_light.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\7587d732f0e5ed875150a1b3e3ba8ada\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_camera_normal.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_add_camera_normal.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\fv_chat_content_l_normal.9.png",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\fv_chat_content_l_normal.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ffs.9.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\ffs.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\fft.9.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\fft.9.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_text_select_handle_right_mtrl_light.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\evf.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\evf.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_focused_holo.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_list_focused_holo.9.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\skin_tips_newmessage.9.png",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\skin_tips_newmessage.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\notification_bg_normal.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\7587d732f0e5ed875150a1b3e3ba8ada\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ibl.png",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\ibl.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_pressed_holo_light.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_light.9.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\fft.9.png",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\fft.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
-    },
-    {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ffs.9.png",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\ffs.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\fv_chat_content_l_pressed.9.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\fv_chat_content_l_pressed.9.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_picture_normal.png",
@@ -412,88 +104,72 @@
         "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\evk.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
-    },
-    {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_focused_holo.9.png",
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_emo_press.png",
         "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_emo_press.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_notice.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\ic_notice.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\evp.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\evp.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_normal.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_add_normal.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_half_black_48dp.png",
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_launcher_background.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
-    },
-    {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_notice.png",
         "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\ic_notice.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_text_select_handle_left_mtrl_light.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_camera_normal.png",
         "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_add_camera_normal.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_camera_press.png",
+        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_add_camera_press.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\7587d732f0e5ed875150a1b3e3ba8ada\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_normal.png",
+        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_add_normal.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
-    },
-    {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png",
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cce174a5624158d4915e0d374b4e2d7e\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",
@@ -512,40 +188,48 @@
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_press.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_add_press.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png",
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cce174a5624158d4915e0d374b4e2d7e\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_voice_press.png",
+        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_voice_press.png"
+    },
+    {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_black_36dp.png",
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_location_normal.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_add_location_normal.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_location_press.png",
+        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_add_location_press.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_voice_press.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_voice_press.png"
-    },
-    {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_longpressed_holo.9.png",
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\fv_chat_content_r_normal.9.png",
+        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\fv_chat_content_r_normal.9.png"
+    },
+    {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_pressed_holo_light.9.png",
@@ -568,12 +252,8 @@
         "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_keyboard_normal.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_camera_press.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_add_camera_press.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ibl.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\ibl.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
@@ -584,40 +264,40 @@
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_half_black_36dp.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_36dp.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_picture_normal.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_add_picture_normal.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
         "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_keyboard_press.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_keyboard_press.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_voice_normal.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_voice_normal.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_half_black_36dp.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\evp.png",
         "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\evp.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_add_location_normal.png",
+        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_add_location_normal.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\fv_chat_content_l_normal.9.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\fv_chat_content_l_normal.9.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
@@ -632,8 +312,8 @@
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
     {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chat_emo_press.png",
-        "source": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\chat_emo_press.png"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\fv_chat_content_l_pressed.9.png",
+        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-xhdpi\\fv_chat_content_l_pressed.9.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\evm.png",
@@ -642,14 +322,6 @@
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png",
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-xhdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
-    },
-    {
-        "merged": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
-        "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\drawable-xhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_launcher_background.png",

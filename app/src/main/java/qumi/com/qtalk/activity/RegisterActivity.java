@@ -34,8 +34,7 @@ public class RegisterActivity extends Activity {
 	private String account,password;
 	private LoadingDialog loadDialog;
 	
-	private XmppConnectionManager xmppConnectionManager;
-	
+
 	@SuppressLint("HandlerLeak")
 	private final Handler mHandler = new Handler() {
 		@Override
@@ -74,7 +73,6 @@ public class RegisterActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_register_userinfo);
 		mContext=this;
-		xmppConnectionManager=XmppConnectionManager.getInstance();
 		loadDialog=new LoadingDialog(this);
 		findView();
 		initTitleView();

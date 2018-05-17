@@ -16,36 +16,6 @@
             ]
         },
         {
-            "outputFile": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
-            "map": [
-                {
-                    "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\values-port\\values-port.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "55",
-                        "endOffsets": "106"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\values-port\\values-port.xml",
-            "map": [
-                {
-                    "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\values-port\\values-port.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "55",
-                        "endOffsets": "106"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\values-port\\values-port.xml",
             "map": [
                 {

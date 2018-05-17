@@ -1,22 +1,6 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\values-v25\\values-v25.xml",
-            "map": [
-                {
-                    "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\values-v25\\values-v25.xml",
-                    "from": {
-                        "startLines": "2,3,4,6",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,126,209,308",
-                        "endLines": "2,3,5,7",
-                        "endColumns": "70,82,12,12",
-                        "endOffsets": "121,204,303,414"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\values-v25\\values-v25.xml",
             "map": [
                 {
@@ -37,22 +21,6 @@
             "map": [
                 {
                     "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\values-v25\\values-v25.xml",
-                    "from": {
-                        "startLines": "2,3,4,6",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,126,209,308",
-                        "endLines": "2,3,5,7",
-                        "endColumns": "70,82,12,12",
-                        "endOffsets": "121,204,303,414"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v25\\values-v25.xml",
-            "map": [
-                {
-                    "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\values-v25\\values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",

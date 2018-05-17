@@ -117,6 +117,7 @@
     <orderEntry type="library" name="org.igniterealtime.smack:smack-android-extensions:4.1.2@jar" level="project" />
     <orderEntry type="library" name="org.igniterealtime.smack:smack-resolver-minidns:4.1.2@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support.test.espresso:espresso-core-3.0.2" level="project" />
+    <orderEntry type="library" name="com.alibaba:fastjson:1.1.68.android@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="javax.inject:javax.inject:1@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="com.squareup:javawriter:2.1.1@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support.test:monitor-1.0.2" level="project" />

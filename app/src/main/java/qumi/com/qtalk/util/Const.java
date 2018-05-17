@@ -30,13 +30,13 @@ public class Const {
 	public static  final String LOCATION_URL_S = "http://api.map.baidu.com/staticimage?width=320&height=240&zoom=17&center=";
 	public static  final String LOCATION_URL_L = "http://api.map.baidu.com/staticimage?width=480&height=800&zoom=17&center=";
 	
-	public static final String MSG_TYPE_TEXT="msg_type_text";//文本消息
-	public static final String MSG_TYPE_IMG="msg_type_img";//图片
-	public static final String MSG_TYPE_VOICE="msg_type_voice";//语音
-	public static final String MSG_TYPE_LOCATION="msg_type_location";//位置
+	public static final int MSG_TYPE_TEXT=1;//文本消息
+	public static final int MSG_TYPE_IMG=2;//图片
+	public static final int MSG_TYPE_VOICE=3;//语音
+	public static final int MSG_TYPE_LOCATION=4;//位置
 	
-	public static final String MSG_TYPE_ADD_FRIEND="msg_type_add_friend";//添加好友
-	public static final String MSG_TYPE_ADD_FRIEND_SUCCESS="msg_type_add_friend_success";//同意添加好友
+	public static final int MSG_TYPE_ADD_FRIEND=5;//添加好友
+	public static final int MSG_TYPE_ADD_FRIEND_SUCCESS=6;//同意添加好友
 	
 	public static final String SPLIT="卍";
 	

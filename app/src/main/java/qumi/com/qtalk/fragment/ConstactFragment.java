@@ -58,10 +58,12 @@ public class ConstactFragment extends Fragment {
 			super.handleMessage(msg);
 			switch (msg.what) {
 			case 1:
-				initData();
-				for(int i = 0; i < mExpAdapter.getGroupCount(); i++){  
-					mIphoneTreeView.expandGroup(i);  
-				}  
+ 				initData();
+				if(mExpAdapter != null){
+					for(int i = 0; i < mExpAdapter.getGroupCount(); i++){
+						mIphoneTreeView.expandGroup(i);
+					}
+				}
 				break;
 			}
 		}

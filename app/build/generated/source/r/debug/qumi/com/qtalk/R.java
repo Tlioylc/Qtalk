@@ -3826,12 +3826,12 @@ containing a value of this type.
         public static final int Animation_AppCompat_Tooltip=0x7f09008e;
         /** 
             Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
+            res/values-vXX/styles.xml, while customizations relatoUserd to
             backward-compatibility can go here.
         
          */
         public static final int AppBaseTheme=0x7f09008f;
-        /**  All customizations that are NOT specific to a particular API-level can go here. 
+        /**  All customizations that are NOT specitoUserc to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f090090;
         public static final int Base_AlertDialog_AppCompat=0x7f090091;

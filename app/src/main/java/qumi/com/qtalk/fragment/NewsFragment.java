@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.jivesoftware.smack.XMPPException;
 import org.jivesoftware.smack.roster.Roster;
 
 import qumi.com.qtalk.QQApplication;
@@ -13,8 +12,8 @@ import qumi.com.qtalk.R;
 import qumi.com.qtalk.activity.ChatActivity;
 import qumi.com.qtalk.adapter.SessionAdapter;
 import qumi.com.qumitalk.service.DataBean.Session;
-import qumi.com.qtalk.db.ChatMsgDao;
-import qumi.com.qtalk.db.SessionDao;
+import qumi.com.qumitalk.service.db.ChatMsgDao;
+import qumi.com.qumitalk.service.db.SessionDao;
 import qumi.com.qtalk.util.Const;
 import qumi.com.qtalk.util.PreferencesUtils;
 import qumi.com.qtalk.util.ToastUtil;
@@ -48,8 +47,6 @@ public class NewsFragment extends Fragment implements OnRefreshListener{
 	private SessionAdapter adapter;
 	private List<Session> sessionList = new ArrayList<Session>();
 	private TitleBarView mTitleBarView;
-	private SessionDao sessionDao;
-	private ChatMsgDao chatMsgDao;
 	private String userid;
 
 	private AddFriendReceiver addFriendReceiver;
@@ -59,8 +56,6 @@ public class NewsFragment extends Fragment implements OnRefreshListener{
 		mContext = getActivity();
 		mBaseView = inflater.inflate(R.layout.fragment_news_father, null);
 		userid=PreferencesUtils.getSharePreStr(mContext, "username");
-		sessionDao=new SessionDao(mContext);
-		chatMsgDao=new ChatMsgDao(mContext);
 		addFriendReceiver=new AddFriendReceiver();
 		IntentFilter intentFilter=new IntentFilter(Const.ACTION_ADDFRIEND);
 		mContext.registerReceiver(addFriendReceiver, intentFilter);
@@ -81,7 +76,7 @@ public class NewsFragment extends Fragment implements OnRefreshListener{
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,long arg3) {
 				final Session session=sessionList.get(arg2-1);
-				if(session.getType().equals(Const.MSG_TYPE_ADD_FRIEND)){
+				if(session.getType() == Const.MSG_TYPE_ADD_FRIEND ){
 					if(!TextUtils.isEmpty(session.getIsdispose())){
 						if(!session.getIsdispose().equals("1")){
 							Builder bd=new Builder(mContext);
@@ -90,21 +85,21 @@ public class NewsFragment extends Fragment implements OnRefreshListener{
 								public void onClick(DialogInterface arg0, int arg1) {
 									Roster roster= Roster.getInstanceFor(QtalkClient.getInstance());
 									XmppUtil.addGroup(roster, "我的好友");//先默认创建一个分组
-									if(XmppUtil.addUsers(roster, session.getFrom()+"@"+QQApplication.xmppConnection.getServiceName(), session.getFrom(),"我的好友")){
+									if(XmppUtil.addUsers(roster, session.getFromUser()+"@"+QtalkClient.getInstance().getServiceName(), session.getFromUser(),"我的好友")){
 										//告知对方，同意添加其为好友
 										new Thread(new Runnable() {
 											@Override
 											public void run() {
 												try {
 													//注意消息的协议格式 =》接收者卍发送者卍消息类型卍消息内容卍发送时间
-													String message= session.getFrom()+Const.SPLIT+userid+Const.SPLIT+Const.MSG_TYPE_ADD_FRIEND_SUCCESS+Const.SPLIT+""+Const.SPLIT+new SimpleDateFormat("MM-dd HH:mm").format(new Date());
-													XmppUtil.sendMessage(QQApplication.xmppConnection, message, session.getFrom());
-												} catch (XMPPException e) {
+													String message= session.getFromUser()+Const.SPLIT+userid+Const.SPLIT+Const.MSG_TYPE_ADD_FRIEND_SUCCESS+Const.SPLIT+""+Const.SPLIT+new SimpleDateFormat("MM-dd HH:mm").format(new Date());
+													XmppUtil.sendMessage(QQApplication.xmppConnection, message, session.getFromUser());
+												} catch (Exception e) {
 													e.printStackTrace();
 												}
 											}
 										}).start();
-										sessionDao.updateSessionToDisPose(session.getId());//将本条数据在数据库中改为已处理
+										QtalkClient.getInstance().getQMConversationManager().updateFriendRequestHandle(session.getId());//将本条数据在数据库中改为已处理
 //										ToastUtil.showShortToast(mContext, "你们已经是好友了，快去聊天吧！");
 										sessionList.remove(session);
 										session.setIsdispose("1");
@@ -125,7 +120,7 @@ public class NewsFragment extends Fragment implements OnRefreshListener{
 					}
 				}else{
 					Intent intent=new Intent(mContext, ChatActivity.class);
-					intent.putExtra("from", session.getFrom());
+					intent.putExtra("from", session.getFromUser());
 					startActivity(intent);
 				}
 			}
@@ -138,8 +133,8 @@ public class NewsFragment extends Fragment implements OnRefreshListener{
 				bd.setItems(new String[] {"删除会话"}, new OnClickListener() {
 					@Override
 					public void onClick(DialogInterface arg0, int arg1) {
-						sessionDao.deleteSession(session);
-						chatMsgDao.deleteAllMsg(session.getFrom(), session.getTo());
+						QtalkClient.getInstance().getQMConversationManager().deleteConversation(session);
+						QtalkClient.getInstance().getQmChatMessageManager().deleteConversationAllMessage(session.getFromUser(), session.getToUser());
 						mContext.sendBroadcast(new Intent(Const.ACTION_NEW_MSG));
 						initData();
 					}
@@ -151,7 +146,7 @@ public class NewsFragment extends Fragment implements OnRefreshListener{
 
 	private void initData() {
 		//注意，当数据量较多时，此处要开线程了，否则阻塞主线程
-		sessionList=sessionDao.queryAllSessions(userid);
+		sessionList=QtalkClient.getInstance().getQMConversationManager().getAllConversation(userid);
 		adapter = new SessionAdapter(mContext, sessionList);
 		mCustomListView.setAdapter(adapter);
 	}

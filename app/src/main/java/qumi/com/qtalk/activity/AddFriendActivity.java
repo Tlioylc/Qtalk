@@ -1,10 +1,8 @@
 package qumi.com.qtalk.activity;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
-import org.jivesoftware.smack.XMPPException;
+import org.jivesoftware.smack.SmackException;
 import org.jivesoftware.smack.roster.Roster;
 
 
@@ -35,8 +33,8 @@ import android.widget.PopupWindow;
 import qumi.com.qtalk.QQApplication;
 import qumi.com.qtalk.R;
 import qumi.com.qtalk.adapter.AddFriendAdapter;
+import qumi.com.qumitalk.service.DataBean.QMMessageBean;
 import qumi.com.qumitalk.service.DataBean.Session;
-import qumi.com.qtalk.util.Const;
 import qumi.com.qtalk.util.PreferencesUtils;
 import qumi.com.qtalk.util.ToastUtil;
 import qumi.com.qtalk.util.XmppUtil;
@@ -119,7 +117,7 @@ public class AddFriendActivity extends Activity implements OnClickListener{
 		search_list.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, final int arg2,long arg3) {
-				final String YOU=listUser.get(arg2).getFrom();
+				final String YOU=listUser.get(arg2).getFromUser();
 				if(YOU.equals(I)){
 					ToastUtil.showLongToast(getApplicationContext(), "不能添加自己为好友");
 					return;
@@ -203,13 +201,14 @@ public class AddFriendActivity extends Activity implements OnClickListener{
 						try {
 							Roster roster=Roster.getInstanceFor(QtalkClient.getInstance());
 							XmppUtil.addGroup(roster, "我的好友");//先默认创建一个分组
-							XmppUtil.addUsers(roster,toUser+"@"+QQApplication.xmppConnection.getServiceName(), toUser,"我的好友");
+							XmppUtil.addUsers(roster,toUser+"@"+QtalkClient.getInstance().getServiceName(), toUser,"我的好友");
 							//注意消息的协议格式 =》接收者卍发送者卍消息类型卍消息内容卍发送时间
-							String message=toUser+ Const.SPLIT+I+Const.SPLIT+Const.MSG_TYPE_ADD_FRIEND+Const.SPLIT+edit.getText().toString()+Const.SPLIT+new SimpleDateFormat("MM-dd HH:mm").format(new Date());
-							XmppUtil.sendMessage(QQApplication.xmppConnection, message,toUser);
+							QMMessageBean qmMessageBean = new QMMessageBean();
+							qmMessageBean.createFriendMessage(edit.getText().toString(),toUser,I);
+							QtalkClient.getInstance().getChatClient().sendMessage(qmMessageBean);
 							sendInviteUser=toUser;
 							mHandler.sendEmptyMessage(2);
-						} catch (XMPPException e) {
+						} catch (SmackException.NotConnectedException e) {
 							e.printStackTrace();
 						}
 					}

@@ -60,7 +60,7 @@ public class SessionAdapter extends BaseAdapter {
 		}
 		
 		Session session = lists.get(position);
-		if(session.getType().equals(Const.MSG_TYPE_ADD_FRIEND)){
+		if(session.getType()  == Const.MSG_TYPE_ADD_FRIEND){
 			holder.tv_tips .setVisibility(View.VISIBLE);
 			holder.iv.setImageResource(R.drawable.ibl);
 		}else{
@@ -68,9 +68,9 @@ public class SessionAdapter extends BaseAdapter {
 			holder.iv.setImageResource(R.drawable.ic_launcher);
 		}
 
-		holder.tv_name.setText(session.getFrom());
+		holder.tv_name.setText(session.getFromUser());
 		holder.tv_content.setText(ExpressionUtil.prase(mContext, holder.tv_content, session.getContent()==null?"":session.getContent()));
-		holder.tv_time.setText(session.getTime());
+		holder.tv_time.setText(session.getDate());
 		if(!TextUtils.isEmpty(session.getNotReadCount())&&Integer.parseInt(session.getNotReadCount())>0){
 			holder.tv_newmsg.setVisibility(View.VISIBLE);
 			holder.tv_newmsg.setText(session.getNotReadCount());

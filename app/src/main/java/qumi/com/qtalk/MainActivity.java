@@ -1,7 +1,8 @@
 package qumi.com.qtalk;
 
 import qumi.com.qtalk.activity.LoginActivity;
-import qumi.com.qtalk.db.ChatMsgDao;
+import qumi.com.qumitalk.service.QtalkClient;
+import qumi.com.qumitalk.service.db.ChatMsgDao;
 import qumi.com.qtalk.fragment.ConstactFragment;
 import qumi.com.qtalk.fragment.NewsFragment;
 import qumi.com.qtalk.fragment.SettingFragment;
@@ -44,7 +45,6 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 	SettingFragment settingFragment;
 	
 	boolean isStartService=false;
-	private ChatMsgDao chatMsgDao;
 	private int msgCount;
 	
 	private NewMsgReciver newMsgReciver;
@@ -54,7 +54,6 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		mContext=this;
-		chatMsgDao=new ChatMsgDao(mContext);
 		newMsgReciver=new NewMsgReciver();
 		IntentFilter intf=new IntentFilter();
 		intf.addAction(Const.ACTION_NEW_MSG);
@@ -76,7 +75,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 	}
 	
 	private void initMsgCount() {
-		msgCount=chatMsgDao.queryAllNotReadCount();
+		msgCount= QtalkClient.getInstance().getQmChatMessageManager().getUnreadCount();
 		if(msgCount>0){
 			tv_newmsg.setText(""+msgCount);
 			tv_newmsg.setVisibility(View.VISIBLE);

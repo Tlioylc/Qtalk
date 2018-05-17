@@ -1,6 +1,5 @@
 package qumi.com.qtalk.adapter;
 
-import java.io.File;
 import java.util.List;
 
 import net.tsz.afinal.FinalBitmap;
@@ -10,31 +9,25 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
-import android.net.Uri;
-import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.text.util.Linkify;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
 
 import qumi.com.qtalk.R;
 import qumi.com.qtalk.activity.ImgPageActivity;
-import qumi.com.qtalk.bean.Msg;
+import qumi.com.qumitalk.service.DataBean.QMMessageBean;
 import qumi.com.qtalk.util.Const;
 import qumi.com.qtalk.util.ExpressionUtil;
 import qumi.com.qtalk.util.PreferencesUtils;
@@ -49,7 +42,7 @@ import qumi.com.qtalk.view.CircleImageView;
 @SuppressLint("NewApi")
 public class ChatAdapter extends BaseAdapter {
 	private Context mContext;
-	private List<Msg> list;
+	private List<QMMessageBean> list;
 	private FinalBitmap finalImageLoader ;
 	private FinalHttp fh;  
 	AnimationDrawable anim;		
@@ -57,7 +50,7 @@ public class ChatAdapter extends BaseAdapter {
 	boolean ismHeadExsits=false;
 	boolean isxgzHeadExsits=false;
 
-	public ChatAdapter(Context mContext, List<Msg> list) {
+	public ChatAdapter(Context mContext, List<QMMessageBean> list) {
 		super();
 		this.mContext = mContext;
 		this.list = list;
@@ -67,7 +60,7 @@ public class ChatAdapter extends BaseAdapter {
 		
 	}
 
-	public void setList(List<Msg> list) {
+	public void setList(List<QMMessageBean> list) {
 		this.list = list;
 	}
 
@@ -114,32 +107,32 @@ public class ChatAdapter extends BaseAdapter {
 			hodler = (ViewHodler) convertView.getTag();
 		}
 		
-		final Msg msg=list.get(position);
+		final QMMessageBean QMMessageBean =list.get(position);
 
-		if (msg.getIsComing()== 0) {// 收到消息 from显示
+		if (QMMessageBean.getIsComing()== 0) {// 收到消息 from显示
 			hodler.toContainer.setVisibility(View.GONE);//隐藏右侧布局
 			hodler.fromContainer.setVisibility(View.VISIBLE);
-			hodler.time.setText(msg.getDate());
-			if(msg.getType().equals(Const.MSG_TYPE_TEXT)){//文本类型
+			hodler.time.setText(QMMessageBean.getDate());
+			if(QMMessageBean.getType() == Const.MSG_TYPE_TEXT){//文本类型
 				hodler.fromText.setVisibility(View.VISIBLE);//文本
 				hodler.fromImg.setVisibility(View.GONE);//图片
 				hodler.fromLocation.setVisibility(View.GONE);//位置
 				hodler.progress_load.setVisibility(View.GONE);
-				SpannableStringBuilder sb = ExpressionUtil.prase(mContext,hodler.fromText,msg.getContent());// 对内容做处理
+				SpannableStringBuilder sb = ExpressionUtil.prase(mContext,hodler.fromText, QMMessageBean.getContent());// 对内容做处理
 				hodler.fromText.setText(sb);
 				Linkify.addLinks(hodler.fromText,Linkify.ALL);//增加文本链接类型
-			}else if(msg.getType().equals(Const.MSG_TYPE_IMG)){//图片类型
+			}else if(QMMessageBean.getType() == Const.MSG_TYPE_IMG ){//图片类型
 				hodler.fromText.setVisibility(View.GONE);//文本
 				hodler.fromImg.setVisibility(View.VISIBLE);//图片
 				hodler.fromLocation.setVisibility(View.GONE);//位置
 				hodler.progress_load.setVisibility(View.GONE);
-				finalImageLoader.display(hodler.fromImg, msg.getContent());//加载图片
-			}else if(msg.getType().equals(Const.MSG_TYPE_LOCATION)){//位置类型
+				finalImageLoader.display(hodler.fromImg, QMMessageBean.getContent());//加载图片
+			}else if(QMMessageBean.getType()  == Const.MSG_TYPE_LOCATION ){//位置类型
 				hodler.fromText.setVisibility(View.GONE);//文本
 				hodler.fromImg.setVisibility(View.GONE);//图片
 				hodler.fromLocation.setVisibility(View.VISIBLE);//位置
 				hodler.progress_load.setVisibility(View.GONE);
-				String lat=msg.getContent();//经纬度
+				String lat= QMMessageBean.getContent();//经纬度
 				if(TextUtils.isEmpty(lat)){
 					lat="116.404,39.915";//北京
 				}
@@ -148,24 +141,24 @@ public class ChatAdapter extends BaseAdapter {
 		} else {// 发送消息 to显示（目前发送消息只能发送文本类型，后期将会增加其它类型）
 			hodler.toContainer.setVisibility(View.VISIBLE);
 			hodler.fromContainer.setVisibility(View.GONE);
-			hodler.time.setText(msg.getDate());
-			if(msg.getType().equals(Const.MSG_TYPE_TEXT)){//文本类型
+			hodler.time.setText(QMMessageBean.getDate());
+			if(QMMessageBean.getType() ==  Const.MSG_TYPE_TEXT){//文本类型
 				hodler.toText.setVisibility(View.VISIBLE);//文本
 				hodler.toImg.setVisibility(View.GONE);//图片
 				hodler.toLocation.setVisibility(View.GONE);//位置
-				SpannableStringBuilder sb = ExpressionUtil.prase(mContext,hodler.toText,msg.getContent());// 对内容做处理
+				SpannableStringBuilder sb = ExpressionUtil.prase(mContext,hodler.toText, QMMessageBean.getContent());// 对内容做处理
 				hodler.toText.setText(sb);
 				Linkify.addLinks(hodler.toText,Linkify.ALL);
-			}else if(msg.getType().equals(Const.MSG_TYPE_IMG)){//图片类型
+			}else if(QMMessageBean.getType() ==  Const.MSG_TYPE_IMG){//图片类型
 				hodler.toText.setVisibility(View.GONE);//文本
 				hodler.toImg.setVisibility(View.VISIBLE);//图片
 				hodler.toLocation.setVisibility(View.GONE);//位置
-				finalImageLoader.display(hodler.toImg, msg.getContent());//加载图片
-			}else if(msg.getType().equals(Const.MSG_TYPE_LOCATION)){//位置类型
+				finalImageLoader.display(hodler.toImg, QMMessageBean.getContent());//加载图片
+			}else if(QMMessageBean.getType()  == Const.MSG_TYPE_LOCATION ){//位置类型
 				hodler.toText.setVisibility(View.GONE);//文本
 				hodler.toImg.setVisibility(View.GONE);//图片
 				hodler.toLocation.setVisibility(View.VISIBLE);//位置
-				String lat=msg.getContent();//经纬度
+				String lat= QMMessageBean.getContent();//经纬度
 				if(TextUtils.isEmpty(lat)){
 					lat="116.404,39.915";//北京
 				}
@@ -174,20 +167,20 @@ public class ChatAdapter extends BaseAdapter {
 		}
 
 		// 文本点击
-		hodler.fromText.setOnClickListener(new onClick(position,msg));
+		hodler.fromText.setOnClickListener(new onClick(position, QMMessageBean));
 		hodler.fromText.setOnLongClickListener(new onLongCilck(position));
 		
-		hodler.toText.setOnClickListener(new onClick(position,msg));
+		hodler.toText.setOnClickListener(new onClick(position, QMMessageBean));
 		hodler.toText.setOnLongClickListener(new onLongCilck(position));
 		//图片点击
-		hodler.fromImg.setOnClickListener(new onClick(position,msg));
+		hodler.fromImg.setOnClickListener(new onClick(position, QMMessageBean));
 		hodler.fromImg.setOnLongClickListener(new onLongCilck(position));
-		hodler.toImg.setOnClickListener(new onClick(position,msg));
+		hodler.toImg.setOnClickListener(new onClick(position, QMMessageBean));
 		hodler.toImg.setOnLongClickListener(new onLongCilck(position));
 		//位置
-		hodler.fromLocation.setOnClickListener(new onClick(position,msg));
+		hodler.fromLocation.setOnClickListener(new onClick(position, QMMessageBean));
 		hodler.fromLocation.setOnLongClickListener(new onLongCilck(position));
-		hodler.toLocation.setOnClickListener(new onClick(position,msg));
+		hodler.toLocation.setOnClickListener(new onClick(position, QMMessageBean));
 		hodler.toLocation.setOnLongClickListener(new onLongCilck(position));
 		
 		return convertView;
@@ -232,19 +225,19 @@ public class ChatAdapter extends BaseAdapter {
 	 */
 	class onClick implements OnClickListener{
 		int position;
-		Msg msg;
-		public onClick(int position,Msg msg){
+		QMMessageBean QMMessageBean;
+		public onClick(int position,QMMessageBean QMMessageBean){
 			this.position=position;
-			this.msg=msg;
+			this.QMMessageBean = QMMessageBean;
 		}
 		@Override
 		public void onClick(View arg0) {
-			String content=msg.getContent();
-				if(msg.getType().equals(Const.MSG_TYPE_IMG)){//图片
+			String content= QMMessageBean.getContent();
+				if(QMMessageBean.getType() ==  Const.MSG_TYPE_IMG){//图片
 					Intent intentImg=new Intent(mContext, ImgPageActivity.class);
 					intentImg.putExtra("url", content);
 					mContext.startActivity(intentImg);
-				}else if(msg.getType().equals(Const.MSG_TYPE_LOCATION)){//位置
+				}else if(QMMessageBean.getType()  == Const.MSG_TYPE_LOCATION){//位置
 					String address= PreferencesUtils.getSharePreStr(mContext, "location_adr_detail");//详细地址
 					if(TextUtils.isEmpty(address)){
 						address="无法获取当前位置";

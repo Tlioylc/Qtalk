@@ -3,22 +3,17 @@ package qumi.com.qumitalk.service;
 import android.content.Context;
 
 import org.jivesoftware.smack.ConnectionConfiguration;
-import org.jivesoftware.smack.SASLAuthentication;
 import org.jivesoftware.smack.SmackException;
-import org.jivesoftware.smack.XMPPConnection;
 import org.jivesoftware.smack.XMPPException;
+import org.jivesoftware.smack.chat.Chat;
 import org.jivesoftware.smack.chat.ChatManager;
+import org.jivesoftware.smack.chat.ChatManagerListener;
 import org.jivesoftware.smack.filter.AndFilter;
-import org.jivesoftware.smack.filter.PacketFilter;
-import org.jivesoftware.smack.filter.PacketTypeFilter;
 import org.jivesoftware.smack.filter.StanzaTypeFilter;
-import org.jivesoftware.smack.packet.Packet;
 import org.jivesoftware.smack.packet.Presence;
 import org.jivesoftware.smack.roster.Roster;
-import org.jivesoftware.smack.roster.RosterEntry;
 import org.jivesoftware.smack.tcp.XMPPTCPConnection;
 import org.jivesoftware.smack.tcp.XMPPTCPConnectionConfiguration;
-import org.jivesoftware.smack.util.StringUtils;
 import org.jivesoftware.smackx.iqregister.AccountManager;
 import org.jivesoftware.smackx.search.ReportedData;
 import org.jivesoftware.smackx.search.UserSearchManager;
@@ -26,15 +21,19 @@ import org.jivesoftware.smackx.xdata.Form;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
 import io.realm.Realm;
+import qumi.com.qumitalk.service.Config.StaticConfig;
 import qumi.com.qumitalk.service.DataBean.Session;
 import qumi.com.qumitalk.service.callBack.LoginResultCallBack;
+import qumi.com.qumitalk.service.db.QMChatMessageManager;
+import qumi.com.qumitalk.service.db.QMConversationManager;
 import qumi.com.qumitalk.service.listener.QMFriendsPacketListener;
 import qumi.com.qumitalk.service.listener.QMCheckConnectionListener;
+import qumi.com.qumitalk.service.listener.QMMChatMessageListener;
+import qumi.com.qumitalk.service.listener.QMMessageListener;
 
 /**
  * Created by mwang on 2018/5/16.
@@ -46,6 +45,10 @@ public class QtalkClient  extends XMPPTCPConnection {
     private QMCheckConnectionListener checkConnectionListener;
     private QMFriendsPacketListener friendsPacketListener;
     private Context mcontext;
+    private QMChat qmChat;
+    private QMConversationManager qmConversationManager;
+    private QMChatMessageManager qmChatMessageManager;
+
 
     private QtalkClient(XMPPTCPConnectionConfiguration config) {
         super(config);
@@ -103,12 +106,12 @@ public class QtalkClient  extends XMPPTCPConnection {
         if(loginResultCallBack != null)
             loginResultCallBack.onProgress();
         try{
-            if(!getInstance().connected)
-                getInstance().connect();
-            getInstance().login(userId, pwd);
+            if(!connected)
+                connect();
+            login(userId, pwd);
 
             Presence presence = new Presence(Presence.Type.available);
-            getInstance().sendStanza(presence);
+            sendStanza(presence);
 
 //            ChatManager chatmanager = ChatManager.getInstanceFor(getInstance());
 //            chatmanager.addChatListener(new ChatManagerListener() {
@@ -119,7 +122,7 @@ public class QtalkClient  extends XMPPTCPConnection {
 //                        public void processMessage(Chat chat, Message message) {
 //                            String content=message.getBody();
 //                            if (content!=null){
-//                                LogUtil.e("from:" + message.getFrom() + " to:" + message.getTo() + " message:" + message.getBody());
+//                                LogUtil.e("from:" + message.getFromUser() + " to:" + message.getToUser() + " message:" + message.getBody());
 //                            }
 //
 //                        }
@@ -140,22 +143,29 @@ public class QtalkClient  extends XMPPTCPConnection {
     @Override
     protected void afterSuccessfulLogin(boolean resumed) throws SmackException.NotConnectedException {
         super.afterSuccessfulLogin(resumed);
-
-        if(!getInstance().isAuthenticated()){
+        if(!isAuthenticated()){
             return;
         }
             //链接状态监听
         if(checkConnectionListener != null)
-            getInstance().addConnectionListener(checkConnectionListener);
+            addConnectionListener(checkConnectionListener);
 
         // 注册好友状态更新监听
         if(friendsPacketListener != null){
             AndFilter filter = new AndFilter(new StanzaTypeFilter(Presence.class));
-            getInstance().addPacketSendingListener(friendsPacketListener, filter);
+            addPacketSendingListener(friendsPacketListener, filter);
         }
 
     }
 
+    public void  addMessageListener(final QMMessageListener qmMessageListener){
+        getChatManager().addChatListener(new ChatManagerListener() {
+            @Override
+            public void chatCreated(Chat arg0, boolean arg1) {
+                arg0.addMessageListener(new QMMChatMessageListener(qmMessageListener));
+            }
+        });
+    }
 
     public boolean logOut(){//退出登录
         return true;
@@ -163,9 +173,9 @@ public class QtalkClient  extends XMPPTCPConnection {
 
     public int creatAccount(String name , String pwd){
         try {
-            if(!getInstance().connected){
+            if(!connected){
                 try {
-                    getInstance().connect();
+                    connect();
                 } catch (SmackException e) {
                     e.printStackTrace();
                 } catch (IOException e) {
@@ -174,7 +184,7 @@ public class QtalkClient  extends XMPPTCPConnection {
                     e.printStackTrace();
                 }
             }
-            AccountManager accountManager = AccountManager.getInstance(getInstance());
+            AccountManager accountManager = AccountManager.getInstance(this);
             accountManager.createAccount(name,pwd);
             return 1;
         } catch (SmackException.NoResponseException e) {
@@ -189,26 +199,47 @@ public class QtalkClient  extends XMPPTCPConnection {
         }
     }
 
-    public ChatManager getChatManager(){
-        return ChatManager.getInstanceFor(getInstance());
+    public QMChat getChatClient(){
+        if(qmChat == null){
+            qmChat = new QMChat(this);
+        }
+        return qmChat;
     }
 
-    public static List<Session> searchUsers(String userName) {
+    protected ChatManager getChatManager(){
+        return ChatManager.getInstanceFor(this);
+    }
+
+    public QMConversationManager getQMConversationManager(){
+        if(qmConversationManager == null){
+            qmConversationManager = new QMConversationManager(mcontext);
+        }
+        return qmConversationManager;
+    }
+
+    public QMChatMessageManager getQmChatMessageManager(){
+        if(qmChatMessageManager == null){
+            qmChatMessageManager = new QMChatMessageManager(mcontext);
+        }
+        return qmChatMessageManager;
+    }
+
+    public  List<Session> searchUsers(String userName) {
         List<Session> listUser=new ArrayList<Session>();
         try{
-			UserSearchManager search = new UserSearchManager(getInstance());
+			UserSearchManager search = new UserSearchManager(this);
 			//此处一定要加上 search.
-			Form searchForm = search.getSearchForm("search."+getInstance().getServiceName());
+			Form searchForm = search.getSearchForm("search."+ getServiceName());
 			Form answerForm = searchForm.createAnswerForm();
 			answerForm.setAnswer("Username", true);
 			answerForm.setAnswer("search", userName);
-			ReportedData data = search.getSearchResults(answerForm,"search."+getInstance().getServiceName());
+			ReportedData data = search.getSearchResults(answerForm,"search."+ getServiceName());
 			Iterator<ReportedData.Row> it = data.getRows().iterator();
 			ReportedData.Row row=null;
 			while(it.hasNext()){
 				row=it.next();
 				Session session=new Session();
-				session.setFrom(row.getValues("Username").get(0).toString());
+				session.setFromUser(row.getValues("Username").get(0).toString());
 				listUser.add(session);
 			}
 		}catch(Exception e){
@@ -220,7 +251,7 @@ public class QtalkClient  extends XMPPTCPConnection {
     /**
      * 更改用户状态
      */
-    public static void setPresence(Context context,int code) {
+    public  void setPresence(Context context,int code) {
         Presence presence=null;
         switch (code) {
             case 0:
@@ -236,14 +267,14 @@ public class QtalkClient  extends XMPPTCPConnection {
 //            for (RosterEntry entry : entries) {
 //                presence = new Presence(Presence.Type.unavailable);
 //                presence.setStanzaId(ID_NOT_AVAILABLE);
-//                presence.setFrom(con.getUser());
-//                presence.setTo(entry.getUser());
+//                presence.setFromUser(con.getUser());
+//                presence.setToUser(entry.getUser());
 //            }
 //            // 向同一用户的其他客户端发送隐身状态
 //            presence = new Presence(Presence.Type.unavailable);
 //            presence.setStanzaId(Packet.ID_NOT_AVAILABLE);
-//            presence.setFrom(con.getUser());
-//            presence.setTo(StringUtils.parseBareAddress(con.getUser()));
+//            presence.setFromUser(con.getUser());
+//            presence.setToUser(StringUtils.parseBareAddress(con.getUser()));
                 break;
             case 3:
                 presence = new Presence(Presence.Type.available);  //设置忙碌
@@ -262,11 +293,47 @@ public class QtalkClient  extends XMPPTCPConnection {
         if(presence!=null){
 //            presence.setStatus(PreferencesUtils.getSharePreStr(context, "sign"));
             try {
-                getInstance().sendStanza(presence);
+                 sendStanza(presence);
             } catch (SmackException.NotConnectedException e) {
                 e.printStackTrace();
             }
         }
     }
 
+
+    public  void changeSign(int code , String content) throws SmackException.NotConnectedException {
+        Presence presence = getOnlineStatus(code);
+        presence.setStatus(content);
+        sendStanza(presence);
+    }
+
+    public  Presence getOnlineStatus(int code){
+        Presence presence=null;
+        switch (code) {
+            case 0:
+                presence = new Presence(Presence.Type.available);  //在线
+                break;
+            case 1:
+                presence = new Presence(Presence.Type.available);  //设置Q我吧
+                presence.setMode(Presence.Mode.chat);
+                break;
+            case 2:                                                                                      //隐身
+                presence = new Presence(Presence.Type.unavailable);
+                break;
+            case 3:
+                presence = new Presence(Presence.Type.available);  //设置忙碌
+                presence.setMode(Presence.Mode.dnd);
+                break;
+            case 4:
+                presence = new Presence(Presence.Type.available);  //设置离开
+                presence.setMode(Presence.Mode.away);
+                break;
+            case 5:
+                presence = new Presence(Presence.Type.unavailable);  //离线
+                break;
+            default:
+                break;
+        }
+        return presence;
+    }
 }

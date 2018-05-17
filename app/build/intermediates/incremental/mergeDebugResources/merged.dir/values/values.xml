@@ -797,12 +797,12 @@
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
+            res/values-vXX/styles.xml, while customizations relatoUserd to
             backward-compatibility can go here.
         -->
     </style>
     <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <!-- All customizations that are NOT specitoUserc to a particular API-level can go here. -->
     </style>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>

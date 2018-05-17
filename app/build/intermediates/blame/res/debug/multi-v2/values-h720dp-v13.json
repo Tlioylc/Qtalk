@@ -1,40 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
-            "map": [
-                {
-                    "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "66",
-                        "endOffsets": "117"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "66",
-                        "endOffsets": "117"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "E:\\Users\\wangmeng\\Desktop\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\values-h720dp-v13\\values-h720dp-v13.xml",
-            "map": [
-                {
-                    "source": "E:\\Users\\wangmeng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a489e0ccb941a82c6107ea5824c15bb7\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

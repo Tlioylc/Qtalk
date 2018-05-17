@@ -39,4 +39,6 @@ dependencies {
 // Optional for XMPP-IM (RFC 6121) support (Roster, Threaded Chats, …)
     api "org.igniterealtime.smack:smack-im:4.1.2"
 
+    implementation 'com.alibaba:fastjson:1.1.68.android'
+
 }

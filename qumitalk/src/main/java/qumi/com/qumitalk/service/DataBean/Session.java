@@ -2,15 +2,19 @@ package qumi.com.qumitalk.service.DataBean;
 
 import java.io.Serializable;
 
+/**
+ * Created by mwang on 2018/5/17.
+ * 会话数据bean
+ */
 @SuppressWarnings("serial")
 public class Session implements Serializable{
 	private String id;
-	private String from;		//发送人
-	private String type;		//消息类型
-	private String time;		//接收时间
+	private String fromUser;		//发送人
+	private int type;		//消息类型
+	private String date;		//接收时间
 	private String content;		//发送内容
 	private String notReadCount;//未读记录
-	private String to;		//接收人
+	private String toUser;		//接收人
 	private String isdispose;//是否已处理 0未处理，1已处理
 	
 	
@@ -21,23 +25,23 @@ public class Session implements Serializable{
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getFrom() {
-		return from;
+	public String getFromUser() {
+		return fromUser;
 	}
-	public void setFrom(String from) {
-		this.from = from;
+	public void setFromUser(String fromUser) {
+		this.fromUser = fromUser;
 	}
-	public String getType() {
+	public int getType() {
 		return type;
 	}
-	public void setType(String type) {
+	public void setType(int type) {
 		this.type = type;
 	}
-	public String getTime() {
-		return time;
+	public String getDate() {
+		return date;
 	}
-	public void setTime(String time) {
-		this.time = time;
+	public void setDate(String date) {
+		this.date = date;
 	}
 	public String getContent() {
 		return content;
@@ -51,11 +55,11 @@ public class Session implements Serializable{
 	public void setNotReadCount(String notReadCount) {
 		this.notReadCount = notReadCount;
 	}
-	public String getTo() {
-		return to;
+	public String getToUser() {
+		return toUser;
 	}
-	public void setTo(String to) {
-		this.to = to;
+	public void setToUser(String toUser) {
+		this.toUser = toUser;
 	}
 	public String getIsdispose() {
 		return isdispose;

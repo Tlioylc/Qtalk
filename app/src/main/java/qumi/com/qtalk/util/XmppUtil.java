@@ -18,9 +18,11 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import qumi.com.qtalk.R;
 import qumi.com.qumitalk.service.DataBean.Session;
+import qumi.com.qumitalk.service.QMChat;
 import qumi.com.qumitalk.service.QtalkClient;
 
 public class XmppUtil {
@@ -235,11 +237,9 @@ public class XmppUtil {
     /** 
      * 修改签名
      */  
-    public static void changeSign(XMPPConnection connection,int code , String content){  
-//        Presence presence = getOnlineStatus(code);
-//        presence.setStatus(content);
-//        connection.sendPacket(presence);
-    }  
+    public static void changeSign(XMPPConnection connection,int code , String content) throws SmackException.NotConnectedException {
+        QtalkClient.getInstance().changeSign(code,content);
+    }
     
     
     /**
@@ -249,16 +249,9 @@ public class XmppUtil {
 	 * @param touser
 	 * @throws XMPPException
 	 */
-	public static void sendMessage(XMPPConnection mXMPPConnection,String content,String touser) throws XMPPException {
-//		if(mXMPPConnection==null||!mXMPPConnection.isConnected()){
-//			throw new XMPPException();
-//		}
-//		ChatManager chatmanager = mXMPPConnection.getChatManager();
-//		Chat chat =chatmanager.createChat(touser + "@" + Const.XMPP_HOST, null);
-//		if (chat != null) {
-//			chat.sendMessage(content);
-//			Log.e("jj", "发送成功");
-//		}
+	public static void sendMessage(XMPPConnection mXMPPConnection,String content,String touser) throws SmackException.NotConnectedException {
+		QtalkClient.getInstance().getChatClient().sendMessage(content,touser);
+
 	}
 	
 	public static void setOnlineStatus(ImageView iv_stutas,int code,TextView tv_stutas,String[] items ){
@@ -289,34 +282,6 @@ public class XmppUtil {
 		
 	}
 	
-	public static Presence getOnlineStatus(int code){
-		Presence presence=null;
-		  switch (code) {  
-	        case 0:  
-	            presence = new Presence(Presence.Type.available);  //在线
-	            break;  
-	        case 1:  
-	            presence = new Presence(Presence.Type.available);  //设置Q我吧
-	            presence.setMode(Presence.Mode.chat);  
-	            break;  
-	        case 2:                                                                                      //隐身
-	            presence = new Presence(Presence.Type.unavailable);  
-	            break;  
-	        case 3:  
-	            presence = new Presence(Presence.Type.available);  //设置忙碌
-	            presence.setMode(Presence.Mode.dnd);  
-	            break;  
-	        case 4:  
-	            presence = new Presence(Presence.Type.available);  //设置离开
-	            presence.setMode(Presence.Mode.away);  
-	            break;  
-	        case 5:  
-	            presence = new Presence(Presence.Type.unavailable);  //离线
-	            break;  
-	        default:  
-	            break;  
-	        }  
-		return presence;
-	}
+
     
 }

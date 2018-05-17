@@ -56,7 +56,7 @@ public class AddFriendAdapter extends BaseAdapter {
 		}
 		
 		Session session = lists.get(position);
-		holder.tv_name.setText(session.getFrom());
+		holder.tv_name.setText(session.getFromUser());
 		holder.tv_content.setText("加我吧...");
 		return convertView;
 	}

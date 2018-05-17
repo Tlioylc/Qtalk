@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.jivesoftware.smack.XMPPException;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog.Builder;
@@ -39,20 +37,17 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import qumi.com.qtalk.QQApplication;
 import qumi.com.qtalk.R;
 import qumi.com.qtalk.adapter.ChatAdapter;
 import qumi.com.qtalk.adapter.FaceVPAdapter;
-import qumi.com.qtalk.bean.Msg;
+import qumi.com.qumitalk.service.DataBean.QMMessageBean;
 import qumi.com.qumitalk.service.DataBean.Session;
-import qumi.com.qtalk.db.ChatMsgDao;
-import qumi.com.qtalk.db.SessionDao;
 import qumi.com.qtalk.util.Const;
 import qumi.com.qtalk.util.ExpressionUtil;
 import qumi.com.qtalk.util.PreferencesUtils;
 import qumi.com.qtalk.util.ToastUtil;
-import qumi.com.qtalk.util.XmppUtil;
 import qumi.com.qtalk.view.DropdownListView;
+import qumi.com.qumitalk.service.QtalkClient;
 
 
 /**
@@ -70,9 +65,7 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 	private TextView send;
 	private DropdownListView mListView;
 	private ChatAdapter mLvAdapter;
-	private ChatMsgDao msgDao;
-	private SessionDao sessionDao;
-	
+
 	private LinearLayout chat_face_container,chat_add_container;
 	private ImageView image_face;//表情图标
 	private ImageView image_add;//更多图标
@@ -89,7 +82,7 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 	//表情列表
 	private List<String> staticFacesList;
 	//消息
-	private List<Msg> listMsg;
+	private List<QMMessageBean> listQMMessageBean;
 	private SimpleDateFormat sd;
 	private NewMsgReciver newMsgReciver;
 	private MsgOperReciver msgOperReciver;
@@ -120,8 +113,6 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 		tv_title=(TextView) findViewById(R.id.tv_title);
 		tv_title.setText(YOU);
 		sd=new SimpleDateFormat("MM-dd HH:mm");
-		msgDao=new ChatMsgDao(this);
-		sessionDao=new SessionDao(this);
 		msgOperReciver=new MsgOperReciver();
 		newMsgReciver=new NewMsgReciver();
 		IntentFilter intentFilter=new IntentFilter(Const.ACTION_MSG_OPER);
@@ -146,7 +137,7 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
-				msgDao.updateAllMsgToRead(YOU,I);
+				QtalkClient.getInstance().getQmChatMessageManager().markAllMessageAsRead(YOU,I);
 			}
 		}).start();
 	}
@@ -212,11 +203,11 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 	
 	public void initData(){
 		offset=0;
-		listMsg=msgDao.queryMsg(YOU,I,offset);
-		offset=listMsg.size();
-		mLvAdapter = new ChatAdapter(this, listMsg);
+		listQMMessageBean =QtalkClient.getInstance().getQmChatMessageManager().getMessageList(YOU,I,offset);
+		offset= listQMMessageBean.size();
+		mLvAdapter = new ChatAdapter(this, listQMMessageBean);
 		mListView.setAdapter(mLvAdapter);
-		mListView.setSelection(listMsg.size());
+		mListView.setSelection(listQMMessageBean.size());
 	}
 	
 	/**
@@ -310,29 +301,29 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 	
 	/**
 	 * 执行发送消息 图片类型
-	 * @param content
+	 * @param
 	 */
 	void sendMsgImg(String imgpath){
-		Msg msg=getChatInfoTo(imgpath,Const.MSG_TYPE_IMG);
-		msg.setMsgId(msgDao.insert(msg));
-		listMsg.add(msg);
-		offset=listMsg.size();
-		mLvAdapter.notifyDataSetChanged();
-		final String message=YOU+Const.SPLIT+I+Const.SPLIT+Const.MSG_TYPE_IMG+Const.SPLIT+imgpath+Const.SPLIT+sd.format(new Date());
-		new Thread(new Runnable() {
-			@Override
-			public void run() {
-				try {
-					XmppUtil.sendMessage(QQApplication.xmppConnection, message, YOU);
-				} catch (XMPPException e) {
-					e.printStackTrace();
-					Looper.prepare();
-					ToastUtil.showShortToast(ChatActivity.this, "发送失败");
-					Looper.loop();
-				}
-			}
-		}).start();
-		updateSession(Const.MSG_TYPE_TEXT,"[图片]");
+//		QMMessageBean QMMessageBean =getChatInfoTo(imgpath,Const.MSG_TYPE_IMG);
+//		QMMessageBean.setMsgId(msgDao.insert(QMMessageBean));
+//		listQMMessageBean.add(QMMessageBean);
+//		offset= listQMMessageBean.size();
+//		mLvAdapter.notifyDataSetChanged();
+//		final String message=YOU+Const.SPLIT+I+Const.SPLIT+Const.MSG_TYPE_IMG+Const.SPLIT+imgpath+Const.SPLIT+sd.format(new Date());
+//		new Thread(new Runnable() {
+//			@Override
+//			public void run() {
+//				try {
+//					XmppUtil.sendMessage(QQApplication.xmppConnection, message, YOU);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//					Looper.prepare();
+//					ToastUtil.showShortToast(ChatActivity.this, "发送失败");
+//					Looper.loop();
+//				}
+//			}
+//		}).start();
+//		updateSession(Const.MSG_TYPE_TEXT,"[图片]");
 	}
 	
 	/**
@@ -340,19 +331,20 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 	 * @param content
 	 */
 	void sendMsgText(String content){
-		Msg msg=getChatInfoTo(content,Const.MSG_TYPE_TEXT);
-		msg.setMsgId(msgDao.insert(msg));
-		listMsg.add(msg);
-		offset=listMsg.size();
+		QMMessageBean QMMessageBean =getChatInfoTo(content,Const.MSG_TYPE_TEXT);
+		QMMessageBean.setMsgId(QtalkClient.getInstance().getQmChatMessageManager().addMessage(QMMessageBean));
+		listQMMessageBean.add(QMMessageBean);
+		offset= listQMMessageBean.size();
 		mLvAdapter.notifyDataSetChanged();
 		input.setText("");
-		final String message=YOU+Const.SPLIT+I+Const.SPLIT+Const.MSG_TYPE_TEXT+Const.SPLIT+content+Const.SPLIT+sd.format(new Date());
+
+	    final QMMessageBean qmMessageBean = QMMessageBean.createTextMessage(content,YOU,I);
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
 				try {
-					XmppUtil.sendMessage(QQApplication.xmppConnection, message, YOU);
-				} catch (XMPPException e) {
+					QtalkClient.getInstance().getChatClient().sendMessage(qmMessageBean);
+				} catch (Exception e) {
 					e.printStackTrace();
 					Looper.prepare();
 					ToastUtil.showShortToast(ChatActivity.this, "发送失败");
@@ -360,26 +352,27 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 				}
 			}
 		}).start();
-		updateSession(Const.MSG_TYPE_TEXT,content);
+		updateSession(qmMessageBean);
 	}
 	
 	/**
-	 * 执行发送消息 文本类型
+	 * 执行发送消息 定位消息
 	 * @param content
 	 */
 	void sendMsgLocation(String content){
-		Msg msg=getChatInfoTo(content,Const.MSG_TYPE_LOCATION);
-		msg.setMsgId(msgDao.insert(msg));
-		listMsg.add(msg);
-		offset=listMsg.size();
+		QMMessageBean QMMessageBean =getChatInfoTo(content,Const.MSG_TYPE_LOCATION);
+		QMMessageBean.setMsgId(QtalkClient.getInstance().getQmChatMessageManager().addMessage(QMMessageBean));
+		listQMMessageBean.add(QMMessageBean);
+		offset= listQMMessageBean.size();
 		mLvAdapter.notifyDataSetChanged();
-		final String message=YOU+Const.SPLIT+I+Const.SPLIT+Const.MSG_TYPE_LOCATION+Const.SPLIT+content+Const.SPLIT+sd.format(new Date());
+
+		final QMMessageBean qmMessageBean = QMMessageBean.createTextMessage(content,YOU,I);
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
 				try {
-					XmppUtil.sendMessage(QQApplication.xmppConnection, message, YOU);
-				} catch (XMPPException e) {
+					QtalkClient.getInstance().getChatClient().sendMessage(qmMessageBean);
+				} catch (Exception e) {
 					e.printStackTrace();
 					Looper.prepare();
 					ToastUtil.showShortToast(ChatActivity.this, "发送失败");
@@ -387,7 +380,7 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 				}
 			}
 		}).start();
-		updateSession(Const.MSG_TYPE_TEXT,"[位置]");
+		updateSession(qmMessageBean);
 	}
 	
 	/**
@@ -396,30 +389,30 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 	 * @param message => 接收者卍发送者卍消息类型卍消息内容卍发送时间
 	 * @return
 	 */
-	private Msg getChatInfoTo(String message,String msgtype) {
+	private QMMessageBean getChatInfoTo(String message, int msgtype) {
 		String time=sd.format(new Date());
-		Msg msg = new Msg();
-		msg.setFromUser(YOU);
-		msg.setToUser(I);
-		msg.setType(msgtype);
-		msg.setIsComing(1);
-		msg.setContent(message);
-		msg.setDate(time);
-		return msg;
+		QMMessageBean QMMessageBean = new QMMessageBean();
+		QMMessageBean.setFromUser(YOU);
+		QMMessageBean.setToUser(I);
+		QMMessageBean.setType(msgtype);
+		QMMessageBean.setIsComing(1);
+		QMMessageBean.setContent(message);
+		QMMessageBean.setDate(time);
+		return QMMessageBean;
 	}
 	
-	void updateSession(String type,String content){
+	void updateSession(QMMessageBean qmMessageBean){
 		Session session=new Session();
-		session.setFrom(YOU);
-		session.setTo(I);
+		session.setFromUser(YOU);
+		session.setToUser(I);
 		session.setNotReadCount("");//未读消息数量
-		session.setContent(content);
-		session.setTime(sd.format(new Date()));
-		session.setType(type);
-		if(sessionDao.isContent(YOU, I)){
-			sessionDao.updateSession(session);
+		session.setContent(qmMessageBean.getContent());
+		session.setDate(sd.format(new Date()));
+		session.setType(qmMessageBean.getType());
+		if(QtalkClient.getInstance().getQMConversationManager().isHaveConversation(YOU, I)){
+			QtalkClient.getInstance().getQMConversationManager().updateConversation(session);
 		}else{
-			sessionDao.insertSession(session);
+			QtalkClient.getInstance().getQMConversationManager().addConversation(session);
 		}
 		Intent intent=new Intent(Const.ACTION_ADDFRIEND);//发送广播，通知消息界面更新
 		sendBroadcast(intent);
@@ -450,14 +443,14 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 	 */
 	@Override
 	public void onRefresh() {
-		List<Msg> list=msgDao.queryMsg(YOU,I,offset);
+		List<QMMessageBean> list=QtalkClient.getInstance().getQmChatMessageManager().getMessageList(YOU,I,offset);
 		if(list.size()<=0){
 			mListView.setSelection(0);
 			mListView.onRefreshCompleteHeader();
 			return;
 		}
-		listMsg.addAll(0,list);
-		offset=listMsg.size();
+		listQMMessageBean.addAll(0,list);
+		offset= listQMMessageBean.size();
 		mListView.onRefreshCompleteHeader();
 		mLvAdapter.notifyDataSetChanged();
 		mListView.setSelection(list.size());
@@ -495,15 +488,15 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 		public void onReceive(Context context, Intent intent) {
 			int type=intent.getIntExtra("type", 0);
 			final int position=intent.getIntExtra("position", 0);
-			if(listMsg.size()<=0){
+			if(listQMMessageBean.size()<=0){
 				return;
 			}
-			final Msg msg=listMsg.get(position);
+			final QMMessageBean QMMessageBean = listQMMessageBean.get(position);
 			switch (type) {
 			case 1://聊天记录操作
 				Builder bd = new Builder(ChatActivity.this);
 				String[] items=null;
-				if(msg.getType().equals(Const.MSG_TYPE_TEXT)){
+				if(QMMessageBean.getType() == Const.MSG_TYPE_TEXT){
 					items =  new String[]{"删除记录","删除全部记录","复制文字"};
 				}else{
 					items =  new String[]{"删除记录","删除全部记录"};
@@ -513,20 +506,20 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 					public void onClick(DialogInterface arg0, int arg1) {
 						switch (arg1) {
 						case 0://删除
-							listMsg.remove(position);
-							offset=listMsg.size();
+							listQMMessageBean.remove(position);
+							offset= listQMMessageBean.size();
 							mLvAdapter.notifyDataSetChanged();
-							msgDao.deleteMsgById(msg.getMsgId());
+							QtalkClient.getInstance().getQmChatMessageManager().deleteMessage(QMMessageBean.getMsgId());
 							break;
 						case 1://删除全部
-							listMsg.removeAll(listMsg);
-							offset=listMsg.size();
+							listQMMessageBean.removeAll(listQMMessageBean);
+							offset= listQMMessageBean.size();
 							mLvAdapter.notifyDataSetChanged();
-							msgDao.deleteAllMsg(YOU, I);
+							QtalkClient.getInstance().getQmChatMessageManager().deleteConversationAllMessage(YOU, I);
 							break;
 						case 2://复制
 							ClipboardManager cmb = (ClipboardManager) ChatActivity.this.getSystemService(ChatActivity.CLIPBOARD_SERVICE);
-							cmb.setText(msg.getContent());
+							cmb.setText(QMMessageBean.getContent());
 							Toast.makeText(getApplicationContext(), "已复制到剪切板", Toast.LENGTH_SHORT).show();
 							break;
 						}
@@ -546,10 +539,10 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 	private class NewMsgReciver extends BroadcastReceiver {
 		@Override
 		public void onReceive(Context context, Intent intent) {
-			Bundle b=intent.getBundleExtra("msg");
-			Msg msg=(Msg) b.getSerializable("msg");
-			listMsg.add(msg);
-			offset=listMsg.size();
+			Bundle b=intent.getBundleExtra("QMMessageBean");
+			QMMessageBean QMMessageBean =(QMMessageBean) b.getSerializable("QMMessageBean");
+			listQMMessageBean.add(QMMessageBean);
+			offset= listQMMessageBean.size();
 			mLvAdapter.notifyDataSetChanged();
 		}
 	}

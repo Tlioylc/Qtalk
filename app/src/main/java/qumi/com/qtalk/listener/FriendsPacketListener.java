@@ -4,6 +4,7 @@ import org.jivesoftware.smack.SmackException;
 import org.jivesoftware.smack.packet.Presence;
 import org.jivesoftware.smack.packet.Stanza;
 
+import de.measite.minidns.util.NameUtil;
 import qumi.com.qtalk.service.MsfService;
 import qumi.com.qtalk.util.Const;
 import qumi.com.qumitalk.service.listener.QMFriendsPacketListener;
@@ -19,7 +20,8 @@ public class FriendsPacketListener extends QMFriendsPacketListener {
 
 
 	public void processPacket(Stanza packet)  throws SmackException.NotConnectedException {
-		if(packet.getFrom().equals(packet.getTo())){
+		Log.e("test",packet.toXML().toString());
+		if(packet != null && (packet.getFrom() == null || packet.getTo() == null || packet.getFrom().equals(packet.getTo()))){
 			return;
 		}
 		 if (packet instanceof Presence) {  
