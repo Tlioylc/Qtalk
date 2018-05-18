@@ -2,8 +2,8 @@ package qumi.com.qtalk.activity;
 
 import qumi.com.qtalk.R;
 import qumi.com.qumitalk.service.QtalkClient;
-import qumi.com.qumitalk.service.db.ChatMsgDao;
-import qumi.com.qumitalk.service.db.SessionDao;
+import qumi.com.qumitalk.service.Db.ChatMsgDao;
+import qumi.com.qumitalk.service.Db.SessionDao;
 import qumi.com.qtalk.util.Const;
 import qumi.com.qtalk.util.ToastUtil;
 

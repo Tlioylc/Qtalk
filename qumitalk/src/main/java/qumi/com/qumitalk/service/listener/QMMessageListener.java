@@ -1,6 +1,4 @@
-package qumi.com.qumitalk.service.listener;
-
-import java.util.List;
+package qumi.com.qumitalk.service.Listener;
 
 import qumi.com.qumitalk.service.DataBean.QMMessageBean;
 

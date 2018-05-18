@@ -1,9 +1,7 @@
-package qumi.com.qumitalk.service.listener;
+package qumi.com.qumitalk.service.Listener;
 
-import android.content.Intent;
 import android.util.Log;
 
-import org.jivesoftware.smack.PacketListener;
 import org.jivesoftware.smack.SmackException;
 import org.jivesoftware.smack.StanzaListener;
 import org.jivesoftware.smack.packet.Presence;

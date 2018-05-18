@@ -2,7 +2,6 @@ package qumi.com.qtalk;
 
 import qumi.com.qtalk.activity.LoginActivity;
 import qumi.com.qumitalk.service.QtalkClient;
-import qumi.com.qumitalk.service.db.ChatMsgDao;
 import qumi.com.qtalk.fragment.ConstactFragment;
 import qumi.com.qtalk.fragment.NewsFragment;
 import qumi.com.qtalk.fragment.SettingFragment;

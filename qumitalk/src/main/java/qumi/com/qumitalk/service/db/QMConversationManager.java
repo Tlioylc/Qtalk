@@ -1,4 +1,4 @@
-package qumi.com.qumitalk.service.db;
+package qumi.com.qumitalk.service.Db;
 
 import android.content.Context;
 
@@ -14,7 +14,7 @@ public class QMConversationManager {
     private Context mContext;
     private SessionDao sessionDao;
 
-    QMConversationManager(Context context){
+    public QMConversationManager(Context context){
         mContext = context;
         sessionDao = new SessionDao(context);
     }

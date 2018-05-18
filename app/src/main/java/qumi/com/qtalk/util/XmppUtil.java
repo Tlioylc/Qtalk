@@ -48,7 +48,7 @@ public class XmppUtil {
      * @throws XMPPException 
      */  
     public static List<Session> searchUsers(XMPPConnection mXMPPConnection, String userName) {
-        return QtalkClient.getInstance().searchUsers(userName);
+        return QtalkClient.getInstance().getQMMContactsManager().searchUsers(userName);
     }  
     
 	 /** 

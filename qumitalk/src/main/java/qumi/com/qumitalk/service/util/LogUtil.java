@@ -1,4 +1,4 @@
-package qumi.com.qumitalk.service.util;
+package qumi.com.qumitalk.service.Util;
 
 import android.util.Log;
 

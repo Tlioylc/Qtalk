@@ -4,10 +4,9 @@ import org.jivesoftware.smack.SmackException;
 import org.jivesoftware.smack.packet.Presence;
 import org.jivesoftware.smack.packet.Stanza;
 
-import de.measite.minidns.util.NameUtil;
 import qumi.com.qtalk.service.MsfService;
 import qumi.com.qtalk.util.Const;
-import qumi.com.qumitalk.service.listener.QMFriendsPacketListener;
+import qumi.com.qumitalk.service.Listener.QMFriendsPacketListener;
 
 import android.content.Intent;
 import android.util.Log;

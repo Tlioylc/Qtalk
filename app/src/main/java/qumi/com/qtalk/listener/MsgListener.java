@@ -4,12 +4,10 @@ import qumi.com.qtalk.R;
 import qumi.com.qumitalk.service.DataBean.QMMessageBean;
 import qumi.com.qumitalk.service.DataBean.Session;
 import qumi.com.qumitalk.service.QtalkClient;
-import qumi.com.qumitalk.service.db.ChatMsgDao;
-import qumi.com.qumitalk.service.db.SessionDao;
 import qumi.com.qtalk.service.MsfService;
 import qumi.com.qtalk.util.Const;
 import qumi.com.qtalk.util.PreferencesUtils;
-import qumi.com.qumitalk.service.listener.QMMessageListener;
+import qumi.com.qumitalk.service.Listener.QMMessageListener;
 
 import android.app.KeyguardManager;
 import android.app.Notification;

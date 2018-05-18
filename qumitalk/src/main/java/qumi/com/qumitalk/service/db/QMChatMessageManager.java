@@ -1,12 +1,10 @@
-package qumi.com.qumitalk.service.db;
+package qumi.com.qumitalk.service.Db;
 
 import android.content.Context;
 
 import java.util.ArrayList;
 
 import qumi.com.qumitalk.service.DataBean.QMMessageBean;
-import qumi.com.qumitalk.service.db.ChatMsgDao;
-import qumi.com.qumitalk.service.db.SessionDao;
 
 /**
  * Created by mwang on 2018/5/17.
@@ -16,7 +14,7 @@ public class QMChatMessageManager {
     private Context mContext;
     private ChatMsgDao chatMsgDao;
 
-    QMChatMessageManager(Context context){
+    public QMChatMessageManager(Context context){
         mContext = context;
         chatMsgDao = new ChatMsgDao(context);
     }

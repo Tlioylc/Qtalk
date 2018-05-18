@@ -27,13 +27,13 @@ import java.util.List;
 import io.realm.Realm;
 import qumi.com.qumitalk.service.Config.StaticConfig;
 import qumi.com.qumitalk.service.DataBean.Session;
-import qumi.com.qumitalk.service.callBack.LoginResultCallBack;
-import qumi.com.qumitalk.service.db.QMChatMessageManager;
-import qumi.com.qumitalk.service.db.QMConversationManager;
-import qumi.com.qumitalk.service.listener.QMFriendsPacketListener;
-import qumi.com.qumitalk.service.listener.QMCheckConnectionListener;
-import qumi.com.qumitalk.service.listener.QMMChatMessageListener;
-import qumi.com.qumitalk.service.listener.QMMessageListener;
+import qumi.com.qumitalk.service.CallBack.LoginResultCallBack;
+import qumi.com.qumitalk.service.Db.QMChatMessageManager;
+import qumi.com.qumitalk.service.Db.QMConversationManager;
+import qumi.com.qumitalk.service.Listener.QMFriendsPacketListener;
+import qumi.com.qumitalk.service.Listener.QMCheckConnectionListener;
+import qumi.com.qumitalk.service.Listener.QMMChatMessageListener;
+import qumi.com.qumitalk.service.Listener.QMMessageListener;
 
 /**
  * Created by mwang on 2018/5/16.
@@ -48,7 +48,7 @@ public class QtalkClient  extends XMPPTCPConnection {
     private QMChat qmChat;
     private QMConversationManager qmConversationManager;
     private QMChatMessageManager qmChatMessageManager;
-
+    private QMMContactsManager qmmContactsManager;
 
     private QtalkClient(XMPPTCPConnectionConfiguration config) {
         super(config);
@@ -224,29 +224,12 @@ public class QtalkClient  extends XMPPTCPConnection {
         return qmChatMessageManager;
     }
 
-    public  List<Session> searchUsers(String userName) {
-        List<Session> listUser=new ArrayList<Session>();
-        try{
-			UserSearchManager search = new UserSearchManager(this);
-			//此处一定要加上 search.
-			Form searchForm = search.getSearchForm("search."+ getServiceName());
-			Form answerForm = searchForm.createAnswerForm();
-			answerForm.setAnswer("Username", true);
-			answerForm.setAnswer("search", userName);
-			ReportedData data = search.getSearchResults(answerForm,"search."+ getServiceName());
-			Iterator<ReportedData.Row> it = data.getRows().iterator();
-			ReportedData.Row row=null;
-			while(it.hasNext()){
-				row=it.next();
-				Session session=new Session();
-				session.setFromUser(row.getValues("Username").get(0).toString());
-				listUser.add(session);
-			}
-		}catch(Exception e){
-		}
-        return listUser;
+    public QMMContactsManager getQMMContactsManager(){
+        if(qmmContactsManager == null){
+            qmmContactsManager = new QMMContactsManager(this);
+        }
+        return qmmContactsManager;
     }
-
 
     /**
      * 更改用户状态

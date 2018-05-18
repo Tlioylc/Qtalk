@@ -1,4 +1,4 @@
-package qumi.com.qumitalk.service.listener;
+package qumi.com.qumitalk.service.Listener;
 
 import org.jivesoftware.smack.ConnectionListener;
 import org.jivesoftware.smack.XMPPConnection;

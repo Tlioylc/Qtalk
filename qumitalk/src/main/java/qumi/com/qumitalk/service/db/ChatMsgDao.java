@@ -1,4 +1,4 @@
-package qumi.com.qumitalk.service.db;
+package qumi.com.qumitalk.service.Db;
 
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package qumi.com.qumitalk.service.callBack;
+package qumi.com.qumitalk.service.CallBack;
 
 /**
  * Created by mwang on 2018/5/16.

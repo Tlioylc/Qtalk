@@ -1,8 +1,8 @@
-package qumi.com.qumitalk.service.db;
+package qumi.com.qumitalk.service.Db;
 
 /**
  * 
- * @author 白玉梁
+ *
  */
 public class DBcolumns {
 	

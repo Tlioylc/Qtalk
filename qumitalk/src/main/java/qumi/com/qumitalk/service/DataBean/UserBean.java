@@ -7,7 +7,26 @@ public class UserBean extends RealmObject{
     private String uid;
     private String nickName;
     private String avator;
-    private String publicKey;
+    private boolean isAvailable;//在线状态
+    private String mood;//签名
+    private String publicKey;//公钥
+
+
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+
+    public void setAvailable(boolean available) {
+        isAvailable = available;
+    }
+
+    public String getMood() {
+        return mood;
+    }
+
+    public void setMood(String mood) {
+        this.mood = mood;
+    }
 
     public String getUid() {
         return uid;

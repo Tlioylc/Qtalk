@@ -1,10 +1,8 @@
 package qumi.com.qtalk.listener;
 
-import org.jivesoftware.smack.ConnectionListener;
-
 import qumi.com.qtalk.service.MsfService;
 import qumi.com.qtalk.util.ToastUtil;
-import qumi.com.qumitalk.service.listener.QMCheckConnectionListener;
+import qumi.com.qumitalk.service.Listener.QMCheckConnectionListener;
 
 
 /**

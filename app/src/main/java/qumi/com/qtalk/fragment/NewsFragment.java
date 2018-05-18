@@ -12,8 +12,6 @@ import qumi.com.qtalk.R;
 import qumi.com.qtalk.activity.ChatActivity;
 import qumi.com.qtalk.adapter.SessionAdapter;
 import qumi.com.qumitalk.service.DataBean.Session;
-import qumi.com.qumitalk.service.db.ChatMsgDao;
-import qumi.com.qumitalk.service.db.SessionDao;
 import qumi.com.qtalk.util.Const;
 import qumi.com.qtalk.util.PreferencesUtils;
 import qumi.com.qtalk.util.ToastUtil;
