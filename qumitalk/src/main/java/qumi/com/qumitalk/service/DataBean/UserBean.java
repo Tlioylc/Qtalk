@@ -10,7 +10,15 @@ public class UserBean extends RealmObject{
     private boolean isAvailable;//在线状态
     private String mood;//签名
     private String publicKey;//公钥
+    private int friendRelationship;//好友关系
 
+    public int getFriendRelationship() {
+        return friendRelationship;
+    }
+
+    public void setFriendRelationship(int friendRelationship) {
+        this.friendRelationship = friendRelationship;
+    }
 
     public boolean isAvailable() {
         return isAvailable;

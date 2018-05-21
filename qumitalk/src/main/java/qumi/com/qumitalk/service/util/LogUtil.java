@@ -8,6 +8,8 @@ import android.util.Log;
 
 public class LogUtil {
     public static void e(String s){
-        Log.e("test",s);
+//        Log.e("test",s);
+
+        System.out.println("-------------1----------------------"+s);
     }
 }

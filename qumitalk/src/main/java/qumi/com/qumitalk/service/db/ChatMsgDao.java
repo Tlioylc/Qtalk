@@ -74,19 +74,19 @@ public class ChatMsgDao {
 		String sql = "select * from " + DBcolumns.TABLE_MSG + " where "+DBcolumns.MSG_FROM+"=? and "+DBcolumns.MSG_TO+"=? order by " + DBcolumns.MSG_ID + " desc limit ?,?";
 		String[] args = new String[] {from,to,String.valueOf(offset),"15" };
 		Cursor cursor = db.rawQuery(sql, args);
-		QMMessageBean QMMessageBean = null;
+		QMMessageBean qMMessageBean = null;
 		while (cursor.moveToNext()) {
-			QMMessageBean = new QMMessageBean();
-			QMMessageBean.setMsgId(cursor.getInt(cursor.getColumnIndex(DBcolumns.MSG_ID)));
-			QMMessageBean.setFromUser(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_FROM)));
-			QMMessageBean.setToUser(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_TO)));
-			QMMessageBean.setType(cursor.getInt(cursor.getColumnIndex(DBcolumns.MSG_TYPE)));
-			QMMessageBean.setContent(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_CONTENT)));
-			QMMessageBean.setIsComing(cursor.getInt(cursor.getColumnIndex(DBcolumns.MSG_ISCOMING)));
-			QMMessageBean.setDate(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_DATE)));
-			QMMessageBean.setIsReaded(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_ISREADED)));
-			QMMessageBean.setAttributeJson(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_OTHER)));
-			list.add(0, QMMessageBean);
+			qMMessageBean = QMMessageBean.createEmptyMessage();
+			qMMessageBean.setMsgId(cursor.getInt(cursor.getColumnIndex(DBcolumns.MSG_ID)));
+			qMMessageBean.setFromUser(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_FROM)));
+			qMMessageBean.setToUser(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_TO)));
+			qMMessageBean.setType(cursor.getInt(cursor.getColumnIndex(DBcolumns.MSG_TYPE)));
+			qMMessageBean.setContent(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_CONTENT)));
+			qMMessageBean.setIsComing(cursor.getInt(cursor.getColumnIndex(DBcolumns.MSG_ISCOMING)));
+			qMMessageBean.setDate(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_DATE)));
+			qMMessageBean.setIsReaded(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_ISREADED)));
+			qMMessageBean.setAttributeJson(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_OTHER)));
+			list.add(0, qMMessageBean);
 		}
 		cursor.close();
 		db.close();
@@ -103,22 +103,22 @@ public class ChatMsgDao {
 		String[] args = new String[] {};
 		Cursor cursor = db.rawQuery(sql, args);
 		
-		QMMessageBean QMMessageBean = null;
+		QMMessageBean qMMessageBean = null;
 		while (cursor.moveToNext()) {
-			QMMessageBean = new QMMessageBean();
-			QMMessageBean.setMsgId(cursor.getInt(cursor.getColumnIndex(DBcolumns.MSG_ID)));
-			QMMessageBean.setFromUser(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_FROM)));
-			QMMessageBean.setToUser(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_TO)));
-			QMMessageBean.setType(cursor.getInt(cursor.getColumnIndex(DBcolumns.MSG_TYPE)));
-			QMMessageBean.setContent(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_CONTENT)));
-			QMMessageBean.setIsComing(cursor.getInt(cursor.getColumnIndex(DBcolumns.MSG_ISCOMING)));
-			QMMessageBean.setDate(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_DATE)));
-			QMMessageBean.setIsReaded(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_ISREADED)));
-			QMMessageBean.setAttributeJson(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_OTHER)));
+			qMMessageBean = QMMessageBean.createEmptyMessage();
+			qMMessageBean.setMsgId(cursor.getInt(cursor.getColumnIndex(DBcolumns.MSG_ID)));
+			qMMessageBean.setFromUser(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_FROM)));
+			qMMessageBean.setToUser(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_TO)));
+			qMMessageBean.setType(cursor.getInt(cursor.getColumnIndex(DBcolumns.MSG_TYPE)));
+			qMMessageBean.setContent(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_CONTENT)));
+			qMMessageBean.setIsComing(cursor.getInt(cursor.getColumnIndex(DBcolumns.MSG_ISCOMING)));
+			qMMessageBean.setDate(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_DATE)));
+			qMMessageBean.setIsReaded(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_ISREADED)));
+			qMMessageBean.setAttributeJson(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_OTHER)));
 		}
 		cursor.close();
 		db.close();
-		return QMMessageBean;
+		return qMMessageBean;
 	}
 	
 	/**

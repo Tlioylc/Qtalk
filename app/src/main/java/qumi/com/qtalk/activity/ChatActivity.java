@@ -22,6 +22,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.text.ClipboardManager;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -391,14 +392,14 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 	 */
 	private QMMessageBean getChatInfoTo(String message, int msgtype) {
 		String time=sd.format(new Date());
-		QMMessageBean QMMessageBean = new QMMessageBean();
-		QMMessageBean.setFromUser(YOU);
-		QMMessageBean.setToUser(I);
-		QMMessageBean.setType(msgtype);
-		QMMessageBean.setIsComing(1);
-		QMMessageBean.setContent(message);
-		QMMessageBean.setDate(time);
-		return QMMessageBean;
+		QMMessageBean qMMessageBean = QMMessageBean.createEmptyMessage();
+		qMMessageBean.setFromUser(YOU);
+		qMMessageBean.setToUser(I);
+		qMMessageBean.setType(msgtype);
+		qMMessageBean.setIsComing(1);
+		qMMessageBean.setContent(message);
+		qMMessageBean.setDate(time);
+		return qMMessageBean;
 	}
 	
 	void updateSession(QMMessageBean qmMessageBean){

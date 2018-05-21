@@ -30,6 +30,7 @@ public class QMMessageBean implements Serializable {
 
 	private JSONObject attributeJson;
 
+	private QMMessageBean(){}
 
 	public String toBase64Json(){
 		String json = JSON.toJSONString(this);
@@ -41,6 +42,10 @@ public class QMMessageBean implements Serializable {
 		return JSONObject.parseObject(json,QMMessageBean.class);
 	}
 
+	public static QMMessageBean createEmptyMessage(){
+		QMMessageBean qmMessageBean = new QMMessageBean();
+		return qmMessageBean;
+	}
 	public static QMMessageBean createTextMessage(String content,String toUser,String fromUser){
 		SimpleDateFormat sd = new SimpleDateFormat("MM-dd HH:mm");
 		String time=sd.format(new Date());
@@ -65,6 +70,16 @@ public class QMMessageBean implements Serializable {
 		return qmMessageBean;
 	}
 
+	public static QMMessageBean createReceivedFriendMessage(String toUser,String fromUser){
+		SimpleDateFormat sd = new SimpleDateFormat("MM-dd HH:mm");
+		String time=sd.format(new Date());
+		QMMessageBean qmMessageBean = new QMMessageBean();
+		qmMessageBean.setFromUser(fromUser);
+		qmMessageBean.setToUser(toUser);
+		qmMessageBean.setDate(time);
+		qmMessageBean.setType(StaticConfig.MSG_TYPE_ADD_FRIEND_SUCCESS);
+		return qmMessageBean;
+	}
 	public void setAttributeJson(String attributeJson) {
 		if(TextUtils.isEmpty(attributeJson)){
 			return;

@@ -14,6 +14,7 @@ import android.app.Notification;
 import android.app.NotificationManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 /**
  * @author baiyuliang
@@ -66,7 +67,7 @@ public class MsgListener implements QMMessageListener {
 		mNotification.ledOffMS = 1000;
 		mNotification.flags |= Notification.FLAG_SHOW_LIGHTS;
 //		mNotification.setLatestEventInfo(context, "新消息", tickerText, null);
-		mNotificationManager.notify(Const.NOTIFY_ID, mNotification);// 通知
+//		mNotificationManager.notify(Const.NOTIFY_ID, mNotification);// 通知
 	}
 	@Override
 	public void onMessageReceived(QMMessageBean messageBean) {
@@ -76,13 +77,11 @@ public class MsgListener implements QMMessageListener {
 		String msgcontent= messageBean.getContent();//消息内容
 		String msgtime= messageBean.getDate();//消息时间
 
-
 		Session session=new Session();
 		session.setFromUser(from);
 		session.setToUser(to);
 		session.setNotReadCount("");//未读消息数量
 		session.setDate(msgtime);
-
 		if(msgtype == Const.MSG_TYPE_ADD_FRIEND){//添加好友的请求
 			session.setType(msgtype);
 			session.setContent(msgcontent);
@@ -96,37 +95,36 @@ public class MsgListener implements QMMessageListener {
 			Intent intent=new Intent(Const.ACTION_FRIENDS_ONLINE_STATUS_CHANGE);
 			context.sendBroadcast(intent);
 		}else if(msgtype ==  Const.MSG_TYPE_TEXT){//文本类型
-			QMMessageBean QMMessageBean =new QMMessageBean();
-			QMMessageBean.setToUser(to);
-			QMMessageBean.setFromUser(from);
-			QMMessageBean.setIsComing(0);
-			QMMessageBean.setContent(msgcontent);
-			QMMessageBean.setDate(msgtime);
-			QMMessageBean.setIsReaded("0");
-			QMMessageBean.setType(msgtype);
-			QtalkClient.getInstance().getQmChatMessageManager().addMessage(QMMessageBean);
-			sendNewMsg(QMMessageBean);
+			QMMessageBean qMMessageBean = QMMessageBean.createEmptyMessage();
+			qMMessageBean.setToUser(to);
+			qMMessageBean.setFromUser(from);
+			qMMessageBean.setIsComing(0);
+			qMMessageBean.setContent(msgcontent);
+			qMMessageBean.setDate(msgtime);
+			qMMessageBean.setIsReaded("0");
+			qMMessageBean.setType(msgtype);
+			QtalkClient.getInstance().getQmChatMessageManager().addMessage(qMMessageBean);
+			sendNewMsg(qMMessageBean);
 
 			session.setType(Const.MSG_TYPE_TEXT);
 			session.setContent(msgcontent);
 
-			QtalkClient.getInstance().getQMConversationManager().addConversation(session);
 			if(QtalkClient.getInstance().getQMConversationManager().isHaveConversation(from, to)){//判断最近联系人列表是否已存在记录
 				QtalkClient.getInstance().getQMConversationManager().updateConversation(session);
 			}else{
 				QtalkClient.getInstance().getQMConversationManager().addConversation(session);
 			}
 		}else if(msgtype == Const.MSG_TYPE_IMG){
-			QMMessageBean QMMessageBean =new QMMessageBean();
-			QMMessageBean.setToUser(to);
-			QMMessageBean.setFromUser(from);
-			QMMessageBean.setIsComing(0);
-			QMMessageBean.setContent(msgcontent);
-			QMMessageBean.setDate(msgtime);
-			QMMessageBean.setIsReaded("0");
-			QMMessageBean.setType(msgtype);
-			QtalkClient.getInstance().getQmChatMessageManager().addMessage(QMMessageBean);
-			sendNewMsg(QMMessageBean);
+			QMMessageBean qMMessageBean = QMMessageBean.createEmptyMessage();
+			qMMessageBean.setToUser(to);
+			qMMessageBean.setFromUser(from);
+			qMMessageBean.setIsComing(0);
+			qMMessageBean.setContent(msgcontent);
+			qMMessageBean.setDate(msgtime);
+			qMMessageBean.setIsReaded("0");
+			qMMessageBean.setType(msgtype);
+			QtalkClient.getInstance().getQmChatMessageManager().addMessage(qMMessageBean);
+			sendNewMsg(qMMessageBean);
 
 			session.setType(Const.MSG_TYPE_TEXT);
 			session.setContent("[图片]");
@@ -136,16 +134,16 @@ public class MsgListener implements QMMessageListener {
 				QtalkClient.getInstance().getQMConversationManager().addConversation(session);
 			}
 		}else if(msgtype == Const.MSG_TYPE_LOCATION){//位置
-			QMMessageBean QMMessageBean =new QMMessageBean();
-			QMMessageBean.setToUser(to);
-			QMMessageBean.setFromUser(from);
-			QMMessageBean.setIsComing(0);
-			QMMessageBean.setContent(msgcontent);
-			QMMessageBean.setDate(msgtime);
-			QMMessageBean.setIsReaded("0");
-			QMMessageBean.setType(msgtype);
-			QtalkClient.getInstance().getQmChatMessageManager().addMessage(QMMessageBean);
-			sendNewMsg(QMMessageBean);
+			QMMessageBean qMMessageBean = QMMessageBean.createEmptyMessage();
+			qMMessageBean.setToUser(to);
+			qMMessageBean.setFromUser(from);
+			qMMessageBean.setIsComing(0);
+			qMMessageBean.setContent(msgcontent);
+			qMMessageBean.setDate(msgtime);
+			qMMessageBean.setIsReaded("0");
+			qMMessageBean.setType(msgtype);
+			QtalkClient.getInstance().getQmChatMessageManager().addMessage(qMMessageBean);
+			sendNewMsg(qMMessageBean);
 
 			session.setType(Const.MSG_TYPE_TEXT);
 			session.setContent("[位置]");

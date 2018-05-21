@@ -21,6 +21,7 @@ import qumi.com.qtalk.util.Const;
 import qumi.com.qtalk.util.ToastUtil;
 import qumi.com.qtalk.view.IphoneTreeView;
 import qumi.com.qtalk.view.TitleBarView;
+import qumi.com.qumitalk.service.DataBean.UserBean;
 import qumi.com.qumitalk.service.QtalkClient;
 
 import android.annotation.SuppressLint;
@@ -40,6 +41,8 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
+
+import static qumi.com.qumitalk.service.QMMContactsManager.FRIEND;
 
 public class ConstactFragment extends Fragment {
 	private Context mContext;
@@ -145,39 +148,30 @@ public class ConstactFragment extends Fragment {
 	public void findFriends() {
 		try {
 			listGroup=new ArrayList<Group>();
-			XMPPConnection conn = QQApplication.xmppConnection;
-			Roster roster = Roster.getInstanceFor(QtalkClient.getInstance());
-			Collection<RosterGroup> groups = roster.getGroups();
-			for (RosterGroup group : groups) {
-				Group mygroup=new Group();
-				mygroup.setGroupName(group.getName());
-				Collection<RosterEntry> entries = group.getEntries();
-				List<Child> childListNotOnline=new ArrayList<Child>();//不在线
-				List<Child> childListOnline=new ArrayList<Child>();//在线
-				for (RosterEntry entry : entries) {
-					if(entry.getType().name().equals("both")){
-						Presence presence = roster.getPresence(entry.getUser());
-						Child child=new Child();
-						child.setUsername(entry.getUser().split("@")[0]);
-						if(!TextUtils.isEmpty(presence.getStatus())){
-							child.setMood(presence.getStatus());
-						}else{
-							child.setMood("QQXMPP版...");
-						}
-						if(presence.isAvailable()){//在线
+			List<UserBean> userBeans = QtalkClient.getInstance().getQMMContactsManager().getAllContactsFromServer();
+			Group mygroup=new Group();
+			mygroup.setGroupName("我的好友");
+			List<Child> childListNotOnline=new ArrayList<Child>();//不在线
+			List<Child> childListOnline=new ArrayList<Child>();//在线
+			for (UserBean userBean : userBeans) {
+					if(userBean.getFriendRelationship() == FRIEND) {
+//						Presence presence = roster.getPresence(entry.getUser());
+						Child child = new Child();
+						child.setUsername(userBean.getNickName());
+						child.setMood(userBean.getMood());
+						if (userBean.isAvailable()) {//在线
 							child.setOnline_status("1");
 							childListOnline.add(child);
-						}else{//下线
+						} else {//下线
 							child.setOnline_status("0");
 							childListNotOnline.add(child);
 						}
 					}
-				}
-				childListOnline.addAll(childListNotOnline);//在线的靠前排列
-				mygroup.setChildList(childListOnline);
-				
-				listGroup.add(mygroup);
+//				}
 			}
+			childListOnline.addAll(childListNotOnline);//在线的靠前排列
+			mygroup.setChildList(childListOnline);
+			listGroup.add(mygroup);
 			Log.e("jj", "好友数量="+listGroup.get(0).getChildList().size());
 		} catch (Exception e) {
 			e.printStackTrace();

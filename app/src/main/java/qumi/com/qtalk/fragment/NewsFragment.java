@@ -11,6 +11,7 @@ import qumi.com.qtalk.QQApplication;
 import qumi.com.qtalk.R;
 import qumi.com.qtalk.activity.ChatActivity;
 import qumi.com.qtalk.adapter.SessionAdapter;
+import qumi.com.qumitalk.service.DataBean.QMMessageBean;
 import qumi.com.qumitalk.service.DataBean.Session;
 import qumi.com.qtalk.util.Const;
 import qumi.com.qtalk.util.PreferencesUtils;
@@ -82,16 +83,18 @@ public class NewsFragment extends Fragment implements OnRefreshListener{
 								@Override
 								public void onClick(DialogInterface arg0, int arg1) {
 									Roster roster= Roster.getInstanceFor(QtalkClient.getInstance());
-									XmppUtil.addGroup(roster, "我的好友");//先默认创建一个分组
-									if(XmppUtil.addUsers(roster, session.getFromUser()+"@"+QtalkClient.getInstance().getServiceName(), session.getFromUser(),"我的好友")){
+//									XmppUtil.addGroup(roster, "我的好友");//先默认创建一个分组
+
+									if(QtalkClient.getInstance().getQMMContactsManager().agreeApply( session.getFromUser())){
 										//告知对方，同意添加其为好友
 										new Thread(new Runnable() {
 											@Override
 											public void run() {
 												try {
 													//注意消息的协议格式 =》接收者卍发送者卍消息类型卍消息内容卍发送时间
-													String message= session.getFromUser()+Const.SPLIT+userid+Const.SPLIT+Const.MSG_TYPE_ADD_FRIEND_SUCCESS+Const.SPLIT+""+Const.SPLIT+new SimpleDateFormat("MM-dd HH:mm").format(new Date());
-													XmppUtil.sendMessage(QQApplication.xmppConnection, message, session.getFromUser());
+
+													QMMessageBean qmMessageBean = QMMessageBean.createReceivedFriendMessage(session.getFromUser(),userid);
+													QtalkClient.getInstance().getChatClient().sendMessage(qmMessageBean);
 												} catch (Exception e) {
 													e.printStackTrace();
 												}

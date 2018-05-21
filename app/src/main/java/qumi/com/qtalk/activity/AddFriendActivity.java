@@ -40,6 +40,7 @@ import qumi.com.qtalk.util.ToastUtil;
 import qumi.com.qtalk.util.XmppUtil;
 import qumi.com.qtalk.view.LoadingDialog;
 import qumi.com.qumitalk.service.QtalkClient;
+import qumi.com.qumitalk.service.Util.LogUtil;
 
 
 /**
@@ -128,6 +129,7 @@ public class AddFriendActivity extends Activity implements OnClickListener{
 					ToastUtil.showShortToast(getApplicationContext(), "你已经邀请过"+YOU+"了");
 					return;
 				}
+				LogUtil.e("---------"+YOU);
 				showPopupWindow(search_list,YOU);
 				popupInputMethodWindow();
 			}
@@ -200,11 +202,9 @@ public class AddFriendActivity extends Activity implements OnClickListener{
 					public void run() {
 						try {
 							Roster roster=Roster.getInstanceFor(QtalkClient.getInstance());
-							XmppUtil.addGroup(roster, "我的好友");//先默认创建一个分组
-							XmppUtil.addUsers(roster,toUser+"@"+QtalkClient.getInstance().getServiceName(), toUser,"我的好友");
-							//注意消息的协议格式 =》接收者卍发送者卍消息类型卍消息内容卍发送时间
-							QMMessageBean qmMessageBean = new QMMessageBean();
-							qmMessageBean.createFriendMessage(edit.getText().toString(),toUser,I);
+//							XmppUtil.addGroup(roster, "我的好友");//先默认创建一个分组
+							XmppUtil.addUsers(roster,toUser, toUser,"我的好友");
+							QMMessageBean qmMessageBean = QMMessageBean.createFriendMessage(edit.getText().toString(),toUser,I);
 							QtalkClient.getInstance().getChatClient().sendMessage(qmMessageBean);
 							sendInviteUser=toUser;
 							mHandler.sendEmptyMessage(2);

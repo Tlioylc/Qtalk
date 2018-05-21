@@ -23,6 +23,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import io.realm.Realm;
 import qumi.com.qumitalk.service.Config.StaticConfig;
@@ -30,6 +32,7 @@ import qumi.com.qumitalk.service.DataBean.Session;
 import qumi.com.qumitalk.service.CallBack.LoginResultCallBack;
 import qumi.com.qumitalk.service.Db.QMChatMessageManager;
 import qumi.com.qumitalk.service.Db.QMConversationManager;
+import qumi.com.qumitalk.service.Listener.QMContactListener;
 import qumi.com.qumitalk.service.Listener.QMFriendsPacketListener;
 import qumi.com.qumitalk.service.Listener.QMCheckConnectionListener;
 import qumi.com.qumitalk.service.Listener.QMMChatMessageListener;
@@ -42,6 +45,7 @@ import qumi.com.qumitalk.service.Listener.QMMessageListener;
 public class QtalkClient  extends XMPPTCPConnection {
     private static XMPPTCPConnectionConfiguration.Builder builder;
 
+    private ExecutorService executor = null;
     private QMCheckConnectionListener checkConnectionListener;
     private QMFriendsPacketListener friendsPacketListener;
     private Context mcontext;
@@ -69,6 +73,7 @@ public class QtalkClient  extends XMPPTCPConnection {
     public void init(Context context){
         mcontext = context;
         Realm.init(mcontext);
+        this.executor = Executors.newCachedThreadPool();
     }
     public static final QtalkClient getInstance() {
 
@@ -91,18 +96,19 @@ public class QtalkClient  extends XMPPTCPConnection {
     public boolean Login(String userId,String pwd){
         return Login(userId, pwd , null, null );
     }
-    public boolean Login(String userId,String pwd, QMCheckConnectionListener checkConnectionListener,QMFriendsPacketListener friendsPacketListener ){
+    public boolean Login(String userId,String pwd, QMCheckConnectionListener checkConnectionListener,QMContactListener friendsPacketListener ){
        return Login(userId, pwd , checkConnectionListener, friendsPacketListener ,null);
     }
 
-    public boolean Login(String userId, String pwd , QMCheckConnectionListener checkConnectionListener, QMFriendsPacketListener friendsPacketListener , LoginResultCallBack loginResultCallBack){
+    public boolean Login(String userId, String pwd , QMCheckConnectionListener checkConnectionListener, QMContactListener qmContactListener , LoginResultCallBack loginResultCallBack){
         if(checkConnectionListener != null){
             this.checkConnectionListener = checkConnectionListener;
         }
 
-        if(friendsPacketListener != null){
-            this.friendsPacketListener = friendsPacketListener;
-        }
+//        if(friendsPacketListener != null){
+//            this.friendsPacketListener = friendsPacketListener;
+//        }
+        this.friendsPacketListener = new QMFriendsPacketListener(qmContactListener);
         if(loginResultCallBack != null)
             loginResultCallBack.onProgress();
         try{
@@ -153,7 +159,7 @@ public class QtalkClient  extends XMPPTCPConnection {
         // 注册好友状态更新监听
         if(friendsPacketListener != null){
             AndFilter filter = new AndFilter(new StanzaTypeFilter(Presence.class));
-            addPacketSendingListener(friendsPacketListener, filter);
+            addAsyncStanzaListener(friendsPacketListener, filter);
         }
 
     }
@@ -318,5 +324,10 @@ public class QtalkClient  extends XMPPTCPConnection {
                 break;
         }
         return presence;
+    }
+
+
+    void execute(Runnable var1) {
+        this.executor.execute(var1);
     }
 }

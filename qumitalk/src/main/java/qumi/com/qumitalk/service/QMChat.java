@@ -6,6 +6,7 @@ import org.jivesoftware.smack.chat.ChatManager;
 
 import qumi.com.qumitalk.service.Config.StaticConfig;
 import qumi.com.qumitalk.service.DataBean.QMMessageBean;
+import qumi.com.qumitalk.service.Util.LogUtil;
 
 /**
  * Created by mwang on 2018/5/17.

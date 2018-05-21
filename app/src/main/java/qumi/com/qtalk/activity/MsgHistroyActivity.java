@@ -22,15 +22,11 @@ import android.widget.RelativeLayout;
 public class MsgHistroyActivity extends Activity implements OnClickListener{
 	private ImageView go_back;
 	private RelativeLayout rl_msg_voice,rl_msg_vibrate;
-	private ChatMsgDao chatMsgDao;
-	private SessionDao sessionDao;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_setting_msg_histroy);
-		chatMsgDao=new ChatMsgDao(this);
-		sessionDao=new SessionDao(this);
 		initView();
 	}
 
