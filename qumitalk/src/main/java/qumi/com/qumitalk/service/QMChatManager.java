@@ -12,10 +12,10 @@ import qumi.com.qumitalk.service.Util.LogUtil;
  * Created by mwang on 2018/5/17.
  */
 
-public class QMChat {
+public class QMChatManager {
     private QtalkClient qtalkClient;
 
-    public QMChat(QtalkClient qtalkClient){
+    protected QMChatManager(QtalkClient qtalkClient){
         this.qtalkClient = qtalkClient;
     }
 

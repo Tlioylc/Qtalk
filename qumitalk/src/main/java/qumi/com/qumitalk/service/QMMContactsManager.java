@@ -11,6 +11,8 @@ import org.jivesoftware.smack.roster.Roster;
 import org.jivesoftware.smack.roster.RosterEntry;
 import org.jivesoftware.smackx.search.ReportedData;
 import org.jivesoftware.smackx.search.UserSearchManager;
+import org.jivesoftware.smackx.vcardtemp.VCardManager;
+import org.jivesoftware.smackx.vcardtemp.packet.VCard;
 import org.jivesoftware.smackx.xdata.Form;
 
 import java.util.ArrayList;
@@ -36,7 +38,7 @@ public class QMMContactsManager {
     public static final int FRIEND = 3;//已建立好友关系
     public static final int removed = 4;//已删除
 
-    QMMContactsManager(QtalkClient qtalkClient){
+    protected QMMContactsManager(QtalkClient qtalkClient){
         this.qtalkClient = qtalkClient;
         if(roster == null){
             roster = Roster.getInstanceFor(qtalkClient);
@@ -223,10 +225,15 @@ public class QMMContactsManager {
                 row=it.next();
                 Session session=new Session();
                 session.setFromUser(row.getValues("Username").iterator().next().toString());
+
+                VCardManager vCardManager = VCardManager.getInstanceFor(qtalkClient);
+                VCard vCard = vCardManager.loadVCard(userName+"@"+qtalkClient.getServiceName());
+                LogUtil.e(vCard.getNickName()+"--------nickName-----------"+vCard.toXML().toString());
+
                 listUser.add(session);
             }
         }catch(Exception e){
-
+            e.printStackTrace();
         }
         return listUser;
     }

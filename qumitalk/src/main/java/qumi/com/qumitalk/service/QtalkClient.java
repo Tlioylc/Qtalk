@@ -15,20 +15,13 @@ import org.jivesoftware.smack.roster.Roster;
 import org.jivesoftware.smack.tcp.XMPPTCPConnection;
 import org.jivesoftware.smack.tcp.XMPPTCPConnectionConfiguration;
 import org.jivesoftware.smackx.iqregister.AccountManager;
-import org.jivesoftware.smackx.search.ReportedData;
-import org.jivesoftware.smackx.search.UserSearchManager;
-import org.jivesoftware.smackx.xdata.Form;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import io.realm.Realm;
 import qumi.com.qumitalk.service.Config.StaticConfig;
-import qumi.com.qumitalk.service.DataBean.Session;
 import qumi.com.qumitalk.service.CallBack.LoginResultCallBack;
 import qumi.com.qumitalk.service.Db.QMChatMessageManager;
 import qumi.com.qumitalk.service.Db.QMConversationManager;
@@ -49,10 +42,11 @@ public class QtalkClient  extends XMPPTCPConnection {
     private QMCheckConnectionListener checkConnectionListener;
     private QMFriendsPacketListener friendsPacketListener;
     private Context mcontext;
-    private QMChat qmChat;
+    private QMChatManager qmChat;
     private QMConversationManager qmConversationManager;
     private QMChatMessageManager qmChatMessageManager;
     private QMMContactsManager qmmContactsManager;
+    private QMGoupChatManager qmGoupChatManager;
 
     private QtalkClient(XMPPTCPConnectionConfiguration config) {
         super(config);
@@ -205,9 +199,9 @@ public class QtalkClient  extends XMPPTCPConnection {
         }
     }
 
-    public QMChat getChatClient(){
+    public QMChatManager getChatClient(){
         if(qmChat == null){
-            qmChat = new QMChat(this);
+            qmChat = new QMChatManager(this);
         }
         return qmChat;
     }
@@ -235,6 +229,13 @@ public class QtalkClient  extends XMPPTCPConnection {
             qmmContactsManager = new QMMContactsManager(this);
         }
         return qmmContactsManager;
+    }
+
+    public QMGoupChatManager getQMGoupChatManager(){
+        if(qmGoupChatManager == null){
+            qmGoupChatManager = new QMGoupChatManager(this);
+        }
+        return qmGoupChatManager;
     }
 
     /**

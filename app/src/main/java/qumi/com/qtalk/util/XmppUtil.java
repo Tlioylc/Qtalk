@@ -1,28 +1,20 @@
 package qumi.com.qtalk.util;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
 
 import org.jivesoftware.smack.SmackException;
 import org.jivesoftware.smack.XMPPConnection;
 import org.jivesoftware.smack.XMPPException;
-import org.jivesoftware.smack.packet.Presence;
 import org.jivesoftware.smack.roster.Roster;
-import org.jivesoftware.smack.roster.RosterEntry;
-import org.jivesoftware.smack.roster.RosterGroup;
 
 
 import android.content.Context;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import qumi.com.qtalk.R;
 import qumi.com.qumitalk.service.DataBean.Session;
-import qumi.com.qumitalk.service.QMChat;
 import qumi.com.qumitalk.service.QtalkClient;
 
 public class XmppUtil {

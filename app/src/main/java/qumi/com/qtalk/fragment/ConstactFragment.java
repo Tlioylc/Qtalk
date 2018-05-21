@@ -23,6 +23,7 @@ import qumi.com.qtalk.view.IphoneTreeView;
 import qumi.com.qtalk.view.TitleBarView;
 import qumi.com.qumitalk.service.DataBean.UserBean;
 import qumi.com.qumitalk.service.QtalkClient;
+import qumi.com.qumitalk.service.Util.LogUtil;
 
 import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
@@ -41,6 +42,8 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
+
+import com.nostra13.universalimageloader.utils.L;
 
 import static qumi.com.qumitalk.service.QMMContactsManager.FRIEND;
 
@@ -98,8 +101,10 @@ public class ConstactFragment extends Fragment {
 		mTitleBarView.setBtnRightOnclickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent=new Intent(mContext, AddFriendActivity.class);
-				startActivity(intent);
+				QtalkClient.getInstance().getQMGoupChatManager().joinMultiUserChat(QtalkClient.getInstance().getUser(),null,"2222_ghv");
+				LogUtil.e(QtalkClient.getInstance().getQMGoupChatManager().findMulitGroup().size() +"--");
+//				Intent intent=new Intent(mContext, AddFriendActivity.class);
+//				startActivity(intent);
 			}
 		});
 		mIphoneTreeView = (IphoneTreeView) mBaseView.findViewById(R.id.iphone_tree_view);
@@ -156,6 +161,7 @@ public class ConstactFragment extends Fragment {
 			for (UserBean userBean : userBeans) {
 					if(userBean.getFriendRelationship() == FRIEND) {
 //						Presence presence = roster.getPresence(entry.getUser());
+						LogUtil.e(userBean.getNickName()+"-----------------");
 						Child child = new Child();
 						child.setUsername(userBean.getNickName());
 						child.setMood(userBean.getMood());
