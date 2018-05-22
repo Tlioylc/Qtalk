@@ -1,6 +1,5 @@
 package qumi.com.qtalk.fragment;
 
-import org.jivesoftware.smack.XMPPConnection;
 
 import qumi.com.qtalk.QQApplication;
 import qumi.com.qtalk.R;
@@ -35,6 +34,7 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SettingFragment extends Fragment implements OnClickListener{
 
@@ -104,12 +104,7 @@ public class SettingFragment extends Fragment implements OnClickListener{
 			bd.setItems(items, new DialogInterface.OnClickListener() {
 				@Override
 				public void onClick(DialogInterface arg0, int arg1) {
-					XMPPConnection mXMPPConnection=QQApplication.xmppConnection;
-					if(mXMPPConnection==null){
-						ToastUtil.showShortToast(mContext, "设置失败，请检查您的网络连接");
-						return;
-					}
-					XmppUtil.setPresence(mContext,mXMPPConnection, arg1);
+					XmppUtil.setPresence(mContext, arg1);
 					XmppUtil.setOnlineStatus(iv_stutas,arg1,tv_stutas,items);
 					PreferencesUtils.putSharePre(mContext, "online_status", arg1);//将状态保存
 				}
@@ -158,7 +153,7 @@ public class SettingFragment extends Fragment implements OnClickListener{
 				try{
 					MsfService.getInstance().stopSelf();
 				}catch (Exception e) {
-					
+					Toast.makeText(getContext(),"退出登陆失败",Toast.LENGTH_SHORT).show();
 				}
 				Intent intent=new Intent(mContext, LoginActivity.class);
 				mContext.startActivity(intent);

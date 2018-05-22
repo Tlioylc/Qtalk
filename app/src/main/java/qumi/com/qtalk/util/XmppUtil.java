@@ -2,10 +2,6 @@ package qumi.com.qtalk.util;
 
 import java.util.List;
 
-import org.jivesoftware.smack.SmackException;
-import org.jivesoftware.smack.XMPPConnection;
-import org.jivesoftware.smack.XMPPException;
-import org.jivesoftware.smack.roster.Roster;
 
 
 import android.content.Context;
@@ -14,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import qumi.com.qtalk.R;
-import qumi.com.qumitalk.service.DataBean.Session;
+import qumi.com.qumitalk.service.Db.Session;
 import qumi.com.qumitalk.service.QtalkClient;
 
 public class XmppUtil {
@@ -28,7 +24,7 @@ public class XmppUtil {
      *            注册密码 
      * @return 1、注册成功 0、服务器没有返回结果2、注册失败3、服务器未连接
      */  
-    public static int register(XMPPConnection mXMPPConnection,String account, String password) {
+    public static int register(String account, String password) {
 		return  QtalkClient.getInstance().creatAccount(account,password);
     }  
     
@@ -36,17 +32,16 @@ public class XmppUtil {
      * 查询用户 
      *  
      * @param userName 
-     * @return 
-     * @throws XMPPException 
+     * @return
      */  
-    public static List<Session> searchUsers(XMPPConnection mXMPPConnection, String userName) {
+    public static List<Session> searchUsers(String userName) {
         return QtalkClient.getInstance().getQMMContactsManager().searchUsers(userName);
     }  
     
 	 /** 
      * 更改用户状态 
      */  
-    public static void setPresence(Context context,XMPPConnection con,int code) {
+    public static void setPresence(Context context,int code) {
       	QtalkClient.getInstance().setPresence(context,code);
     }  
 //	/**
@@ -149,12 +144,11 @@ public class XmppUtil {
 //	}
 	/**
 	 * 添加一个好友到分组
-	 * @param roster
 	 * @param userName
 	 * @param name
 	 * @return
 	 */
-	public static boolean addUsers(Roster roster,String userName,String name,String groupName)
+	public static boolean addUsers(String userName,String name,String groupName)
 	{
 		try {
 			QtalkClient.getInstance().getQMMContactsManager().addContanct(userName);
@@ -169,11 +163,10 @@ public class XmppUtil {
 	
 	/**
 	 * 删除一个好友
-	 * @param roster
 	 * @param userJid
 	 * @return
 	 */
-	public static boolean removeUser(Roster roster,String userJid)
+	public static boolean removeUser(String userJid)
 	{
 		try {
 		    QtalkClient.getInstance().getQMMContactsManager().removeUser(userJid);
@@ -229,22 +222,10 @@ public class XmppUtil {
     /** 
      * 修改签名
      */  
-    public static void changeSign(XMPPConnection connection,int code , String content) throws SmackException.NotConnectedException {
+    public static void changeSign(int code , String content) throws Exception {
         QtalkClient.getInstance().changeSign(code,content);
     }
-    
-    
-    /**
-	 * 发送消息
-	 * @param
-	 * @param content
-	 * @param touser
-	 * @throws XMPPException
-	 */
-	public static void sendMessage(XMPPConnection mXMPPConnection,String content,String touser) throws SmackException.NotConnectedException {
-		QtalkClient.getInstance().getChatClient().sendMessage(content,touser);
 
-	}
 	
 	public static void setOnlineStatus(ImageView iv_stutas,int code,TextView tv_stutas,String[] items ){
 		switch (code) {

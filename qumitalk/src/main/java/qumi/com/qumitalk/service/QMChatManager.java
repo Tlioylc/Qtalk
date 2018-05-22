@@ -3,6 +3,10 @@ package qumi.com.qumitalk.service;
 import org.jivesoftware.smack.SmackException;
 import org.jivesoftware.smack.chat.Chat;
 import org.jivesoftware.smack.chat.ChatManager;
+import org.jivesoftware.smackx.muc.MultiUserChat;
+import org.jivesoftware.smackx.muc.MultiUserChatManager;
+
+import java.util.HashMap;
 
 import qumi.com.qumitalk.service.Config.StaticConfig;
 import qumi.com.qumitalk.service.DataBean.QMMessageBean;
@@ -13,16 +17,48 @@ import qumi.com.qumitalk.service.Util.LogUtil;
  */
 
 public class QMChatManager {
+    private QMXMPPConnectClient qmxmppConnectClient;
     private QtalkClient qtalkClient;
+    private HashMap<String,Chat> chatMap;
+    private HashMap<String,MultiUserChat> multiUserChatHashMap;
 
     protected QMChatManager(QtalkClient qtalkClient){
+        this.qmxmppConnectClient = qtalkClient.getClient();
         this.qtalkClient = qtalkClient;
     }
 
+
+    private Chat getChat(String touser) {
+        Chat chat;
+        if(chatMap == null){
+            chatMap = new HashMap<>();
+        }
+        if(chatMap.containsKey(touser)){
+            chat = chatMap.get(touser);
+        }else {
+            ChatManager chatmanager =qtalkClient.getChatManager();
+            chat =chatmanager.createChat(touser + "@" + StaticConfig.host, null);
+            chatMap.put(touser,chat);
+        }
+        return chat;
+    }
+
+    private MultiUserChat getMultiuserChat(String touser) {
+        MultiUserChat chat;
+        if(multiUserChatHashMap == null){
+            multiUserChatHashMap = new HashMap<>();
+        }
+        if(multiUserChatHashMap.containsKey(touser)){
+            chat = multiUserChatHashMap.get(touser);
+        }else {
+            chat  = MultiUserChatManager.getInstanceFor(qmxmppConnectClient).getMultiUserChat(touser + "@conference."  +qmxmppConnectClient.getServiceName());
+            multiUserChatHashMap.put(touser,chat);
+        }
+        return chat;
+    }
     public void sendMessage(String content,String touser) {
-		ChatManager chatmanager =qtalkClient.getChatManager();
-		Chat chat =chatmanager.createChat(touser + "@" + StaticConfig.host, null);
-		if (chat != null) {
+        Chat chat = getChat(touser);
+        if (chat != null) {
             try {
                 chat.sendMessage(content);
             } catch (SmackException.NotConnectedException e) {
@@ -31,11 +67,30 @@ public class QMChatManager {
         }
     }
 
-    public void sendMessage(QMMessageBean qmMessageBean)  throws SmackException.NotConnectedException {
-        ChatManager chatmanager = qtalkClient.getChatManager();
-        Chat chat =chatmanager.createChat(qmMessageBean.getToUser() + "@" + StaticConfig.host, null);
+
+
+    public boolean sendMessage(QMMessageBean qmMessageBean) {
+        Chat chat = getChat(qmMessageBean.getToUser());
         if (chat != null) {
-            chat.sendMessage(qmMessageBean.toBase64Json());
+            try {
+                chat.sendMessage(qmMessageBean.toBase64Json());
+            } catch (SmackException.NotConnectedException e) {
+                e.printStackTrace();
+                return false;
+            }
         }
+        return true;
+    }
+
+
+    public boolean sendGroupMessage(QMMessageBean qmMessageBean) {
+        MultiUserChat muc = getMultiuserChat(qmMessageBean.getToUser());
+        try {
+            muc.sendMessage(qmMessageBean.toBase64Json());
+        } catch (SmackException.NotConnectedException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
     }
 }

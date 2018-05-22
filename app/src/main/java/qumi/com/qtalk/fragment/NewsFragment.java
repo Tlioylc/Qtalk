@@ -1,22 +1,16 @@
 package qumi.com.qtalk.fragment;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-import org.jivesoftware.smack.roster.Roster;
-
-import qumi.com.qtalk.QQApplication;
 import qumi.com.qtalk.R;
 import qumi.com.qtalk.activity.ChatActivity;
 import qumi.com.qtalk.adapter.SessionAdapter;
 import qumi.com.qumitalk.service.DataBean.QMMessageBean;
-import qumi.com.qumitalk.service.DataBean.Session;
+import qumi.com.qumitalk.service.Db.Session;
 import qumi.com.qtalk.util.Const;
 import qumi.com.qtalk.util.PreferencesUtils;
 import qumi.com.qtalk.util.ToastUtil;
-import qumi.com.qtalk.util.XmppUtil;
 import qumi.com.qtalk.view.CustomListView;
 import qumi.com.qtalk.view.TitleBarView;
 import qumi.com.qtalk.view.CustomListView.OnRefreshListener;
@@ -82,17 +76,12 @@ public class NewsFragment extends Fragment implements OnRefreshListener{
 							bd.setItems(new String[]{"同意"}, new OnClickListener() {
 								@Override
 								public void onClick(DialogInterface arg0, int arg1) {
-									Roster roster= Roster.getInstanceFor(QtalkClient.getInstance());
-//									XmppUtil.addGroup(roster, "我的好友");//先默认创建一个分组
-
 									if(QtalkClient.getInstance().getQMMContactsManager().agreeApply( session.getFromUser())){
 										//告知对方，同意添加其为好友
 										new Thread(new Runnable() {
 											@Override
 											public void run() {
 												try {
-													//注意消息的协议格式 =》接收者卍发送者卍消息类型卍消息内容卍发送时间
-
 													QMMessageBean qmMessageBean = QMMessageBean.createReceivedFriendMessage(session.getFromUser(),userid);
 													QtalkClient.getInstance().getChatClient().sendMessage(qmMessageBean);
 												} catch (Exception e) {
@@ -122,6 +111,7 @@ public class NewsFragment extends Fragment implements OnRefreshListener{
 				}else{
 					Intent intent=new Intent(mContext, ChatActivity.class);
 					intent.putExtra("from", session.getFromUser());
+					intent.putExtra("type", session.getChatType());
 					startActivity(intent);
 				}
 			}

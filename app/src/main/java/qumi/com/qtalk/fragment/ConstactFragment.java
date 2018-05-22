@@ -1,14 +1,7 @@
 package qumi.com.qtalk.fragment;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
-
-import org.jivesoftware.smack.XMPPConnection;
-import org.jivesoftware.smack.packet.Presence;
-import org.jivesoftware.smack.roster.Roster;
-import org.jivesoftware.smack.roster.RosterEntry;
-import org.jivesoftware.smack.roster.RosterGroup;
 
 import qumi.com.qtalk.QQApplication;
 import qumi.com.qtalk.R;
@@ -43,17 +36,19 @@ import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
 
-import com.nostra13.universalimageloader.utils.L;
-
-import static qumi.com.qumitalk.service.QMMContactsManager.FRIEND;
+import static qumi.com.qumitalk.service.QMContactsManager.FRIEND;
 
 public class ConstactFragment extends Fragment {
 	private Context mContext;
 	private View mBaseView;
+	private View addView;
+	private View shadowView;
 	private TitleBarView mTitleBarView;
 	private IphoneTreeView mIphoneTreeView;
 	private ConstactAdapter mExpAdapter;
 	private List<Group> listGroup;
+	private View creatGroupChat;
+	private View addChat;
 	
 	private FriendsOnlineStatusReceiver friendsOnlineStatusReceiver;
 
@@ -88,6 +83,11 @@ public class ConstactFragment extends Fragment {
 
 	private void findView() {
 		mTitleBarView=(TitleBarView) mBaseView.findViewById(R.id.title_bar);
+		addView = mBaseView.findViewById(R.id.add_view);
+		shadowView = mBaseView.findViewById(R.id.shadow_view);
+		addChat = mBaseView.findViewById(R.id.add_chat);
+		creatGroupChat = mBaseView.findViewById(R.id.create_group_chat);
+
 		mTitleBarView.setCommonTitle(View.VISIBLE, View.VISIBLE, View.GONE, View.VISIBLE);
 		mTitleBarView.setTitleText(R.string.constacts);//标题
 		mTitleBarView.setTitleLeft("刷新");//左按钮-刷新好友
@@ -101,10 +101,39 @@ public class ConstactFragment extends Fragment {
 		mTitleBarView.setBtnRightOnclickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				QtalkClient.getInstance().getQMGoupChatManager().joinMultiUserChat(QtalkClient.getInstance().getUser(),null,"2222_ghv");
-				LogUtil.e(QtalkClient.getInstance().getQMGoupChatManager().findMulitGroup().size() +"--");
-//				Intent intent=new Intent(mContext, AddFriendActivity.class);
-//				startActivity(intent);
+				QtalkClient.getInstance().getQMGoupChatManager().joinMultiUserChat(null,"2222_ghv");
+			}
+		});
+
+		addChat.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent intent=new Intent(mContext, AddFriendActivity.class);
+				startActivity(intent);
+			}
+		});
+
+		creatGroupChat.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				QtalkClient.getInstance().getQMGoupChatManager().createChatGroup("heheda","");
+			}
+		});
+
+		shadowView.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				shadowView.setVisibility(View.GONE);
+				addView.setVisibility(View.GONE);
+			}
+		});
+		mTitleBarView.setBtn_titleRightIcon(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				shadowView.setVisibility(View.VISIBLE);
+				addView.setVisibility(View.VISIBLE);
+				shadowView.bringToFront();
+				addView.bringToFront();
 			}
 		});
 		mIphoneTreeView = (IphoneTreeView) mBaseView.findViewById(R.id.iphone_tree_view);
@@ -115,20 +144,13 @@ public class ConstactFragment extends Fragment {
 			public boolean onChildClick(ExpandableListView arg0, View arg1, int arg2,int arg3, long arg4) {
 				Intent intent =new Intent(mContext, ChatActivity.class);
 				intent.putExtra("from", listGroup.get(arg2).getChildList().get(arg3).getUsername());
+				intent.putExtra("type", listGroup.get(arg2).getChildList().get(arg3).getChatType());
 				startActivity(intent);
 				return true;
 			}
 		});
-		if(QQApplication.xmppConnection==null){
-			new Handler().postDelayed(new Runnable() {
-				@Override
-				public void run() {
-					mHandler.sendEmptyMessage(1);
-				}
-			}, 1000);
-		}else{
-			initData();
-		}
+
+		initData();
 	}
 	
 	/**
@@ -172,12 +194,29 @@ public class ConstactFragment extends Fragment {
 							child.setOnline_status("0");
 							childListNotOnline.add(child);
 						}
+						child.setChatType(0);
 					}
 //				}
 			}
 			childListOnline.addAll(childListNotOnline);//在线的靠前排列
 			mygroup.setChildList(childListOnline);
+
+			Group mygroup2=new Group();
+			mygroup2.setGroupName("群聊");
+			List<Child> childListGroup=new ArrayList<Child>();//在线
+			List<String> mulitGroup = QtalkClient.getInstance().getQMGoupChatManager().findMulitGroup();
+			for(String name : mulitGroup){
+				Child child = new Child();
+				child.setUsername(name);
+				child.setMood("群聊");
+				child.setOnline_status("1");
+				childListGroup.add(child);
+				child.setChatType(1);
+			}
+
+			mygroup2.setChildList(childListGroup);
 			listGroup.add(mygroup);
+			listGroup.add(mygroup2);
 			Log.e("jj", "好友数量="+listGroup.get(0).getChildList().size());
 		} catch (Exception e) {
 			e.printStackTrace();

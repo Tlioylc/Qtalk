@@ -42,6 +42,8 @@ public class DBHelper extends SQLiteOpenHelper {
 				+ DBcolumns.MSG_FROM + " text," 
 				+ DBcolumns.MSG_TO + " text," 
 				+ DBcolumns.MSG_TYPE + " text,"
+				+ DBcolumns.MSG_CHATTYPE + " text,"
+				+ DBcolumns.MSG_SENDUSER + " text,"
 				+ DBcolumns.MSG_CONTENT + " text,"
 				+ DBcolumns.MSG_ISCOMING + " integer,"
 				+ DBcolumns.MSG_DATE + " text,"
@@ -58,6 +60,8 @@ public class DBHelper extends SQLiteOpenHelper {
 				+ DBcolumns.SESSION_TIME + " text,"
 				+ DBcolumns.SESSION_TO + " text,"
 				+ DBcolumns.SESSION_CONTENT + " text,"
+				+ DBcolumns.SESSION_CHATTYPE + " text,"
+				+ DBcolumns.SESSION_SENDUSER + " text,"
 				+ DBcolumns.SESSION_ISDISPOSE + " text);";
 		
 		String sql_notice = "Create table IF NOT EXISTS "

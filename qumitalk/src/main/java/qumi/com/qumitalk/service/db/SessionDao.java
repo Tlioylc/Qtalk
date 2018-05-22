@@ -9,8 +9,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import qumi.com.qumitalk.service.DataBean.Session;
-
 
 /**
  * 聊天回话列表的管理
@@ -52,6 +50,8 @@ public class SessionDao {
 		values.put(DBcolumns.SESSION_CONTENT, session.getContent());
 		values.put(DBcolumns.SESSION_TO, session.getToUser());
 		values.put(DBcolumns.SESSION_TYPE, session.getType());
+		values.put(DBcolumns.SESSION_CHATTYPE, session.getChatType());
+		values.put(DBcolumns.SESSION_SENDUSER, session.getSendUser());
 		values.put(DBcolumns.SESSION_ISDISPOSE, session.getIsdispose());
 		long row = db.insert(DBcolumns.TABLE_SESSION, null, values);
 		return row;
@@ -71,6 +71,8 @@ public class SessionDao {
 			String type = cursor.getString(cursor.getColumnIndex(DBcolumns.SESSION_TYPE));
 			String to = cursor.getString(cursor.getColumnIndex(DBcolumns.SESSION_TO));
 			String isdispose = cursor.getString(cursor.getColumnIndex(DBcolumns.SESSION_ISDISPOSE));
+			String chatType = cursor.getString(cursor.getColumnIndex(DBcolumns.SESSION_CHATTYPE));
+			String sendUser = cursor.getString(cursor.getColumnIndex(DBcolumns.SESSION_SENDUSER));
 			int unreadCount = 0;
 			Cursor countcursor = db.rawQuery("select count(*) from " + DBcolumns.TABLE_MSG + " where " + DBcolumns.MSG_FROM + " = ? and " + DBcolumns.MSG_ISREADED + " = 0" + " AND " + DBcolumns.MSG_TO + " = ?", new String[] { from,  user_id });
 			if (countcursor.moveToFirst()) {
@@ -84,7 +86,9 @@ public class SessionDao {
 			session.setContent(content);
 			session.setToUser(to);
 			session.setType(Integer.parseInt(type));
+			session.setSendUser(sendUser);
 			session.setIsdispose(isdispose);
+			session.setChatType(Integer.parseInt(chatType));
 			list.add(session);
 		}
 		return list;

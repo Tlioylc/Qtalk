@@ -8,6 +8,40 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <View
+        android:id="@+id/shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1A000000"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:id="@+id/add_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:background="#fff"
+        android:layout_below="@+id/title_bar"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/create_group_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="创建群聊"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/add_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加好友/群"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+    </LinearLayout>
+
     <TextView
         android:id="@+id/tv"
         android:layout_width="wrap_content"

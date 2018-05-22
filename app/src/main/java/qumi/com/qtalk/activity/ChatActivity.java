@@ -22,7 +22,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.text.ClipboardManager;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -42,7 +41,7 @@ import qumi.com.qtalk.R;
 import qumi.com.qtalk.adapter.ChatAdapter;
 import qumi.com.qtalk.adapter.FaceVPAdapter;
 import qumi.com.qumitalk.service.DataBean.QMMessageBean;
-import qumi.com.qumitalk.service.DataBean.Session;
+import qumi.com.qumitalk.service.Db.Session;
 import qumi.com.qtalk.util.Const;
 import qumi.com.qtalk.util.ExpressionUtil;
 import qumi.com.qtalk.util.PreferencesUtils;
@@ -90,6 +89,7 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 	private LayoutInflater inflater;
 	private int offset;
 	private String I,YOU;//为了好区分，I就是自己，YOU就是对方
+	private int chatType;
 	
 	@SuppressLint("HandlerLeak")
 	private Handler mHandler = new Handler() {
@@ -110,6 +110,7 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 		setContentView(R.layout.main_chat);
 		I= PreferencesUtils.getSharePreStr(this, "username");
 		YOU=getIntent().getStringExtra("from");
+		chatType = getIntent().getIntExtra("type",0);
 		inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
 		tv_title=(TextView) findViewById(R.id.tv_title);
 		tv_title.setText(YOU);
@@ -344,7 +345,10 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 			@Override
 			public void run() {
 				try {
-					QtalkClient.getInstance().getChatClient().sendMessage(qmMessageBean);
+					if(chatType == 0)
+						QtalkClient.getInstance().getChatClient().sendMessage(qmMessageBean);
+					else
+						QtalkClient.getInstance().getChatClient().sendGroupMessage(qmMessageBean);
 				} catch (Exception e) {
 					e.printStackTrace();
 					Looper.prepare();
@@ -372,7 +376,10 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 			@Override
 			public void run() {
 				try {
-					QtalkClient.getInstance().getChatClient().sendMessage(qmMessageBean);
+					if(chatType == 0)
+						QtalkClient.getInstance().getChatClient().sendMessage(qmMessageBean);
+					else
+						QtalkClient.getInstance().getChatClient().sendGroupMessage(qmMessageBean);
 				} catch (Exception e) {
 					e.printStackTrace();
 					Looper.prepare();
@@ -397,6 +404,7 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 		qMMessageBean.setToUser(I);
 		qMMessageBean.setType(msgtype);
 		qMMessageBean.setIsComing(1);
+		qMMessageBean.setChatType(chatType);
 		qMMessageBean.setContent(message);
 		qMMessageBean.setDate(time);
 		return qMMessageBean;
@@ -406,6 +414,7 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 		Session session=new Session();
 		session.setFromUser(YOU);
 		session.setToUser(I);
+		session.setChatType(chatType);
 		session.setNotReadCount("");//未读消息数量
 		session.setContent(qmMessageBean.getContent());
 		session.setDate(sd.format(new Date()));
@@ -542,6 +551,9 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 		public void onReceive(Context context, Intent intent) {
 			Bundle b=intent.getBundleExtra("QMMessageBean");
 			QMMessageBean QMMessageBean =(QMMessageBean) b.getSerializable("QMMessageBean");
+			if(!QMMessageBean.getFromUser().equals(YOU)){
+				return;
+			}
 			listQMMessageBean.add(QMMessageBean);
 			offset= listQMMessageBean.size();
 			mLvAdapter.notifyDataSetChanged();

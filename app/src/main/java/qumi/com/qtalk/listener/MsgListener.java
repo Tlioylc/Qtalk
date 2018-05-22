@@ -2,19 +2,19 @@ package qumi.com.qtalk.listener;
 
 import qumi.com.qtalk.R;
 import qumi.com.qumitalk.service.DataBean.QMMessageBean;
-import qumi.com.qumitalk.service.DataBean.Session;
+import qumi.com.qumitalk.service.Db.Session;
 import qumi.com.qumitalk.service.QtalkClient;
 import qumi.com.qtalk.service.MsfService;
 import qumi.com.qtalk.util.Const;
 import qumi.com.qtalk.util.PreferencesUtils;
 import qumi.com.qumitalk.service.Listener.QMMessageListener;
+import qumi.com.qumitalk.service.Util.LogUtil;
 
 import android.app.KeyguardManager;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
 /**
  * @author baiyuliang
@@ -78,8 +78,16 @@ public class MsgListener implements QMMessageListener {
 		String msgtime= messageBean.getDate();//消息时间
 
 		Session session=new Session();
-		session.setFromUser(from);
-		session.setToUser(to);
+
+		if(messageBean.getChatType() == 1){
+			session.setChatType(1);
+			session.setToUser(QtalkClient.getInstance().getUser());
+			session.setFromUser(to);
+		}else {
+			session.setChatType(0);
+			session.setFromUser(from);
+			session.setToUser(to);
+		}
 		session.setNotReadCount("");//未读消息数量
 		session.setDate(msgtime);
 		if(msgtype == Const.MSG_TYPE_ADD_FRIEND){//添加好友的请求
@@ -96,16 +104,33 @@ public class MsgListener implements QMMessageListener {
 			context.sendBroadcast(intent);
 		}else if(msgtype ==  Const.MSG_TYPE_TEXT){//文本类型
 			QMMessageBean qMMessageBean = QMMessageBean.createEmptyMessage();
-			qMMessageBean.setToUser(to);
-			qMMessageBean.setFromUser(from);
 			qMMessageBean.setIsComing(0);
 			qMMessageBean.setContent(msgcontent);
+			qMMessageBean.setChatType(messageBean.getChatType());
 			qMMessageBean.setDate(msgtime);
 			qMMessageBean.setIsReaded("0");
 			qMMessageBean.setType(msgtype);
-			QtalkClient.getInstance().getQmChatMessageManager().addMessage(qMMessageBean);
-			sendNewMsg(qMMessageBean);
 
+			if(messageBean.getChatType() == 1){
+				if(!from.equals(QtalkClient.getInstance().getUser())) {
+					qMMessageBean.setSendUser(from);
+					qMMessageBean.setToUser(QtalkClient.getInstance().getUser());
+					qMMessageBean.setFromUser(to);
+				}
+			}else {
+				qMMessageBean.setToUser(to);
+				qMMessageBean.setFromUser(from);
+			}
+
+
+			if(!from.equals(QtalkClient.getInstance().getUser())){
+				QtalkClient.getInstance().getQmChatMessageManager().addMessage(qMMessageBean);
+				sendNewMsg(qMMessageBean);
+			}
+			if(messageBean.getChatType() == 1){
+				from = to;
+				to = QtalkClient.getInstance().getUser();
+			}
 			session.setType(Const.MSG_TYPE_TEXT);
 			session.setContent(msgcontent);
 

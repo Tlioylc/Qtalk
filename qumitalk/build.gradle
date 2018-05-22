@@ -32,12 +32,12 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    api "org.igniterealtime.smack:smack-android-extensions:4.1.2"
-    api "org.igniterealtime.smack:smack-android:4.1.2"
+    implementation "org.igniterealtime.smack:smack-android-extensions:4.1.2"
+    implementation "org.igniterealtime.smack:smack-android:4.1.2"
 // Optional for XMPPTCPConnection
-    api "org.igniterealtime.smack:smack-tcp:4.1.2"
+    implementation "org.igniterealtime.smack:smack-tcp:4.1.2"
 // Optional for XMPP-IM (RFC 6121) support (Roster, Threaded Chats, …)
-    api "org.igniterealtime.smack:smack-im:4.1.2"
+    implementation "org.igniterealtime.smack:smack-im:4.1.2"
 
     implementation 'com.alibaba:fastjson:1.1.68.android'
 

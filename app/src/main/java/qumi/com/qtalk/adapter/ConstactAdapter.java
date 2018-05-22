@@ -3,7 +3,6 @@ package qumi.com.qtalk.adapter;
 import java.util.HashMap;
 import java.util.List;
 
-import org.jivesoftware.smack.util.StringUtils;
 
 import qumi.com.qtalk.R;
 import qumi.com.qtalk.bean.Child;

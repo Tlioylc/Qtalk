@@ -1,7 +1,5 @@
 package qumi.com.qtalk.activity;
 
-import org.jivesoftware.smack.XMPPConnection;
-import org.jivesoftware.smack.XMPPException;
 
 import qumi.com.qtalk.R;
 import qumi.com.qtalk.util.PreferencesUtils;

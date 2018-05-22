@@ -21,6 +21,8 @@ public class DBcolumns {
 	public static final String MSG_DATE= "msg_date";
 	public static final String MSG_ISREADED = "msg_isreaded";
 	public static final String MSG_OTHER= "msg_other";
+	public static final String MSG_CHATTYPE= "msg_chattype";
+	public static final String MSG_SENDUSER= "msg_senduser";
 	
 	
 	/**
@@ -34,6 +36,8 @@ public class DBcolumns {
 	public static final String SESSION_CONTENT = "session_content";
 	public static final String SESSION_TO = "session_to";// 登录人id
 	public static final String SESSION_ISDISPOSE = "session_isdispose";
+	public static final String SESSION_CHATTYPE = "session_chattype";
+	public static final String SESSION_SENDUSER = "session_senduser";
 	
 	/**
 	 *  好友消息通知表

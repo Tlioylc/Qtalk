@@ -11,6 +11,16 @@ public class Child implements Serializable{
 	private String username;
 	private String mood;
 	private String online_status;//在线状态
+	private int chatType;//聊天类型 0单聊 1群聊
+
+	public int getChatType() {
+		return chatType;
+	}
+
+	public void setChatType(int chatType) {
+		this.chatType = chatType;
+	}
+
 	
 	
 	public String getMood() {

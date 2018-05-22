@@ -80,10 +80,10 @@ public class SignActivity extends Activity implements OnClickListener{
 			this.finish();
 			break;
 		case R.id.btn_ok:
-			if(QQApplication.xmppConnection==null){
-				ToastUtil.showLongToast(SignActivity.this, "请检查您的网络");
-				return;
-			}
+//			if(){
+//				ToastUtil.showLongToast(SignActivity.this, "请检查您的网络");
+//				return;
+//			}
 			if(TextUtils.isEmpty(sign_content.getText().toString().trim())){
 				return;
 			}
@@ -93,7 +93,7 @@ public class SignActivity extends Activity implements OnClickListener{
 				public void run() {
 					int code=PreferencesUtils.getSharePreInt(SignActivity.this, "online_status");
 					try{
-						XmppUtil.changeSign(QQApplication.xmppConnection, code, sign_content.getText().toString());
+						XmppUtil.changeSign( code, sign_content.getText().toString());
 						PreferencesUtils.putSharePre(SignActivity.this, "sign", sign_content.getText().toString());//保存个性签名
 					}catch(Exception e){
 						ToastUtil.showLongToast(SignActivity.this, "设置签名失败："+e.getMessage());

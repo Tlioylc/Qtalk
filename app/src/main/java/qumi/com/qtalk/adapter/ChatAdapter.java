@@ -32,6 +32,7 @@ import qumi.com.qtalk.util.Const;
 import qumi.com.qtalk.util.ExpressionUtil;
 import qumi.com.qtalk.util.PreferencesUtils;
 import qumi.com.qtalk.view.CircleImageView;
+import qumi.com.qumitalk.service.Util.LogUtil;
 
 
 /**
@@ -101,6 +102,7 @@ public class ChatAdapter extends BaseAdapter {
 			hodler.toLocation= (ImageView) convertView.findViewById(R.id.chatto_location);//位置
 			//时间
 			hodler.time = (TextView) convertView.findViewById(R.id.chat_time);
+			hodler.userName = convertView.findViewById(R.id.user_name);
 			
 			convertView.setTag(hodler);
 		} else {
@@ -108,11 +110,16 @@ public class ChatAdapter extends BaseAdapter {
 		}
 		
 		final QMMessageBean QMMessageBean =list.get(position);
-
+		hodler.userName.setVisibility(View.GONE);
 		if (QMMessageBean.getIsComing()== 0) {// 收到消息 from显示
 			hodler.toContainer.setVisibility(View.GONE);//隐藏右侧布局
 			hodler.fromContainer.setVisibility(View.VISIBLE);
 			hodler.time.setText(QMMessageBean.getDate());
+			LogUtil.e("test----------"+QMMessageBean.getSendUser()+"----"+QMMessageBean.getChatType());
+			if(QMMessageBean.getChatType() == 1){
+				hodler.userName.setVisibility(View.VISIBLE);
+				hodler.userName.setText(QMMessageBean.getSendUser());
+			}
 			if(QMMessageBean.getType() == Const.MSG_TYPE_TEXT){//文本类型
 				hodler.fromText.setVisibility(View.VISIBLE);//文本
 				hodler.fromImg.setVisibility(View.GONE);//图片
@@ -203,6 +210,7 @@ public class ChatAdapter extends BaseAdapter {
 		LinearLayout fromContainer;
 		RelativeLayout toContainer;
 		ProgressBar progress_load;
+		TextView userName;
 	}
 
 	/**

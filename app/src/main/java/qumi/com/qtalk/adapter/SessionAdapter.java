@@ -3,7 +3,7 @@ package qumi.com.qtalk.adapter;
 import java.util.List;
 
 import qumi.com.qtalk.R;
-import qumi.com.qumitalk.service.DataBean.Session;
+import qumi.com.qumitalk.service.Db.Session;
 import qumi.com.qtalk.util.Const;
 import qumi.com.qtalk.util.ExpressionUtil;
 import qumi.com.qtalk.view.CircleImageView;

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\qumitalk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\qumitalk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cce174a5624158d4915e0d374b4e2d7e\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\qumitalk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\qumitalk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    }
+]

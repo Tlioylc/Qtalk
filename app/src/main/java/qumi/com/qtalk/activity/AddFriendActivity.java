@@ -2,8 +2,6 @@ package qumi.com.qtalk.activity;
 
 import java.util.List;
 
-import org.jivesoftware.smack.SmackException;
-import org.jivesoftware.smack.roster.Roster;
 
 
 import android.annotation.SuppressLint;
@@ -30,11 +28,10 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 
-import qumi.com.qtalk.QQApplication;
 import qumi.com.qtalk.R;
 import qumi.com.qtalk.adapter.AddFriendAdapter;
 import qumi.com.qumitalk.service.DataBean.QMMessageBean;
-import qumi.com.qumitalk.service.DataBean.Session;
+import qumi.com.qumitalk.service.Db.Session;
 import qumi.com.qtalk.util.PreferencesUtils;
 import qumi.com.qtalk.util.ToastUtil;
 import qumi.com.qtalk.util.XmppUtil;
@@ -58,7 +55,8 @@ public class AddFriendActivity extends Activity implements OnClickListener{
 	List<Session> listUser;
 	AddFriendAdapter addFriendAdapter;
 	private LoadingDialog loadingDialog;
-	
+
+	private int currentSearchType = 0;//0 好友 1群；
 	private String I;
 	
 	private String sendInviteUser="";//被邀请人
@@ -66,6 +64,7 @@ public class AddFriendActivity extends Activity implements OnClickListener{
 	PopupWindow popWindow;
 	EditText edit;
 	Button btn_ok,btn_cancel;
+	Button joinGroup,addFriend;
 	private LayoutInflater layoutInflater;
 	
 	
@@ -86,7 +85,10 @@ public class AddFriendActivity extends Activity implements OnClickListener{
 				ToastUtil.showLongToast( AddFriendActivity.this, "未查询到信息");
 				break;
 			case 2:
-				ToastUtil.showLongToast( AddFriendActivity.this, "邀请已发送");
+				if(currentSearchType == 0)
+					ToastUtil.showLongToast( AddFriendActivity.this, "邀请已发送");
+				else
+					ToastUtil.showLongToast( AddFriendActivity.this, "已加入群组");
 				break;
 			}
 		}
@@ -112,6 +114,9 @@ public class AddFriendActivity extends Activity implements OnClickListener{
 		go_back = (ImageView) findViewById(R.id.img_back);//返回
 		search_key=(EditText) findViewById(R.id.search_key);
 		btn_search=(Button) findViewById(R.id.btn_search);
+
+		joinGroup = findViewById(R.id.constact_join_group);
+		addFriend = findViewById(R.id.constact_add_friend);
 		//listview
 		search_list=(ListView) findViewById(R.id.search_list);
 		search_list.setOverScrollMode(View.OVER_SCROLL_NEVER);
@@ -119,6 +124,7 @@ public class AddFriendActivity extends Activity implements OnClickListener{
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, final int arg2,long arg3) {
 				final String YOU=listUser.get(arg2).getFromUser();
+
 				if(YOU.equals(I)){
 					ToastUtil.showLongToast(getApplicationContext(), "不能添加自己为好友");
 					return;
@@ -129,7 +135,6 @@ public class AddFriendActivity extends Activity implements OnClickListener{
 					ToastUtil.showShortToast(getApplicationContext(), "你已经邀请过"+YOU+"了");
 					return;
 				}
-				LogUtil.e("---------"+YOU);
 				showPopupWindow(search_list,YOU);
 				popupInputMethodWindow();
 			}
@@ -137,6 +142,9 @@ public class AddFriendActivity extends Activity implements OnClickListener{
 		
 		go_back.setOnClickListener(this);
 		btn_search.setOnClickListener(this);
+
+		joinGroup.setOnClickListener(this);
+		addFriend.setOnClickListener(this);
 	}
 	
 	@Override
@@ -152,6 +160,16 @@ public class AddFriendActivity extends Activity implements OnClickListener{
 			}
 			searchUser();
 			break;
+		case R.id.constact_join_group:
+			search_key.setText("");
+			search_key.setHint("群名");
+			currentSearchType = 1;
+			break;
+		case R.id.constact_add_friend:
+			search_key.setText("");
+			search_key.setHint("昵称");
+			currentSearchType = 0;
+			break;
 		}
 	}
 
@@ -162,7 +180,11 @@ public class AddFriendActivity extends Activity implements OnClickListener{
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
-				listUser= XmppUtil.searchUsers(QQApplication.xmppConnection, search_content);
+				if(currentSearchType == 0){
+					listUser= XmppUtil.searchUsers(search_content);
+				}else {
+					listUser = QtalkClient.getInstance().getQMGoupChatManager().findMulitGroup(search_content);
+				}
 				if(listUser.size()>0){
 					mHandler.sendEmptyMessage(1);
 				}else{
@@ -201,14 +223,18 @@ public class AddFriendActivity extends Activity implements OnClickListener{
 					@Override
 					public void run() {
 						try {
-							Roster roster=Roster.getInstanceFor(QtalkClient.getInstance());
 //							XmppUtil.addGroup(roster, "我的好友");//先默认创建一个分组
-							XmppUtil.addUsers(roster,toUser, toUser,"我的好友");
-							QMMessageBean qmMessageBean = QMMessageBean.createFriendMessage(edit.getText().toString(),toUser,I);
-							QtalkClient.getInstance().getChatClient().sendMessage(qmMessageBean);
-							sendInviteUser=toUser;
+							if(currentSearchType == 0){
+								XmppUtil.addUsers(toUser, toUser,"我的好友");
+								QMMessageBean qmMessageBean = QMMessageBean.createFriendMessage(edit.getText().toString(),toUser,I);
+								QtalkClient.getInstance().getChatClient().sendMessage(qmMessageBean);
+								sendInviteUser=toUser;
+							}else {
+								QtalkClient.getInstance().getQMGoupChatManager().joinMultiUserChat(null,toUser);
+							}
+
 							mHandler.sendEmptyMessage(2);
-						} catch (SmackException.NotConnectedException e) {
+						} catch (Exception e) {
 							e.printStackTrace();
 						}
 					}

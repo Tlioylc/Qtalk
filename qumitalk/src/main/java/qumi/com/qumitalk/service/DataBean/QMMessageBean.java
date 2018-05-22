@@ -26,7 +26,24 @@ public class QMMessageBean implements Serializable {
 	private int isComing;//0表接收的消息，1表发送的消息
 	private String date;//时间
 	private String isReaded;//是否已读
+	private int chatType;//聊天类型
+	private String sendUser; //当为群聊时，sendUser为发送者，fromUser为群ID
 
+	public String getSendUser() {
+		return sendUser;
+	}
+
+	public void setSendUser(String sendUser) {
+		this.sendUser = sendUser;
+	}
+
+	public int getChatType() {
+		return chatType;
+	}
+
+	public void setChatType(int chatType) {
+		this.chatType = chatType;
+	}
 
 	private JSONObject attributeJson;
 

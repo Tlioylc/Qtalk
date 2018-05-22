@@ -4,10 +4,6 @@ package qumi.com.qtalk.service;
 import java.net.DatagramSocket;
 import java.net.SocketException;
 
-import org.jivesoftware.smack.XMPPConnection;
-import org.jivesoftware.smack.chat.Chat;
-import org.jivesoftware.smack.chat.ChatManager;
-import org.jivesoftware.smack.chat.ChatManagerListener;
 
 import qumi.com.qtalk.listener.CheckConnectionListener;
 import qumi.com.qtalk.listener.FriendsPacketListener;

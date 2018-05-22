@@ -424,6 +424,10 @@
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\drawable-hdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_add_white.png",
+        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-hdpi\\icon_add_white.png"
+    },
+    {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\wifi_state4.png",
         "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\drawable-hdpi\\wifi_state4.png"
     },

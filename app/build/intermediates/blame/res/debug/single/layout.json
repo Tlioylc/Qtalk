@@ -40,16 +40,16 @@
         "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_constact_group.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cce174a5624158d4915e0d374b4e2d7e\\res\\layout\\notification_action_tombstone.xml"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pop_loginout.xml",
+        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\pop_loginout.xml"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_setting_msg_histroy.xml",
         "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\activity_setting_msg_histroy.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pop_loginout.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\pop_loginout.xml"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cce174a5624158d4915e0d374b4e2d7e\\res\\layout\\notification_action_tombstone.xml"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register_result.xml",
@@ -80,16 +80,16 @@
         "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_news_code_scan.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_news_qq_item.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_news_qq_item.xml"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_news_call.xml",
+        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_news_call.xml"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_welcome.xml",
         "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\activity_welcome.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_news_call.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_news_call.xml"
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_news_qq_item.xml",
+        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_news_qq_item.xml"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
@@ -136,12 +136,12 @@
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_alert_dialog_title_material.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dropdown_lv_head.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\dropdown_lv_head.xml"
-    },
-    {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dropdown_lv_head.xml",
+        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\dropdown_lv_head.xml"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\water_camera_page5.xml",
@@ -172,12 +172,12 @@
         "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\select_dialog_multichoice_material.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
-    },
-    {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
         "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",

@@ -11,6 +11,7 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
@@ -23,6 +24,7 @@ public class TitleBarView extends RelativeLayout {
 	private Button btnRight;
 	private Button btn_titleLeft;
 	private Button btn_titleRight;
+	private ImageView btn_titleRightIcon;
 	private TextView tv_center;
 	private LinearLayout common_constact;
 	public TitleBarView(Context context){
@@ -45,6 +47,7 @@ public class TitleBarView extends RelativeLayout {
 		btn_titleRight=(Button) findViewById(R.id.constact_all);
 		tv_center=(TextView) findViewById(R.id.title_txt);
 		common_constact=(LinearLayout) findViewById(R.id.common_constact);
+		btn_titleRightIcon = findViewById(R.id.title_icon_right);
 		
 	}
 	
@@ -77,7 +80,13 @@ public class TitleBarView extends RelativeLayout {
 		img.setBounds(0, 0, width, height);
 		btnRight.setCompoundDrawables(img, null, null, null);
 	}
-	
+
+	public void setBtn_titleRightIcon(OnClickListener onClickListener) {
+		btn_titleRightIcon.setVisibility(VISIBLE);
+		btnRight.setVisibility(GONE);
+		btn_titleRightIcon.setOnClickListener(onClickListener);
+	}
+
 	public void setTitleLeft(int resId){
 		btn_titleLeft.setText(resId);
 	}

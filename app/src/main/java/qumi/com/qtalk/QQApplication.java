@@ -1,6 +1,5 @@
 package qumi.com.qtalk;
 
-import org.jivesoftware.smack.XMPPConnection;
 
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -13,9 +12,7 @@ import android.content.Context;
 import qumi.com.qumitalk.service.QtalkClient;
 
 public class QQApplication extends Application{
-	
-	public static XMPPConnection xmppConnection;
-	
+
 	@Override
 	public void onCreate() {
 		super.onCreate();

@@ -31,6 +31,8 @@ public class ChatMsgDao {
 		values.put(DBcolumns.MSG_FROM, QMMessageBean.getFromUser());
 		values.put(DBcolumns.MSG_TO, QMMessageBean.getToUser());
 		values.put(DBcolumns.MSG_TYPE, QMMessageBean.getType());
+		values.put(DBcolumns.MSG_CHATTYPE, QMMessageBean.getChatType());
+		values.put(DBcolumns.MSG_SENDUSER, QMMessageBean.getSendUser());
 		values.put(DBcolumns.MSG_CONTENT, QMMessageBean.getContent());
 		values.put(DBcolumns.MSG_ISCOMING, QMMessageBean.getIsComing());
 		values.put(DBcolumns.MSG_DATE, QMMessageBean.getDate());
@@ -81,6 +83,8 @@ public class ChatMsgDao {
 			qMMessageBean.setFromUser(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_FROM)));
 			qMMessageBean.setToUser(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_TO)));
 			qMMessageBean.setType(cursor.getInt(cursor.getColumnIndex(DBcolumns.MSG_TYPE)));
+			qMMessageBean.setChatType(cursor.getInt(cursor.getColumnIndex(DBcolumns.MSG_CHATTYPE)));
+			qMMessageBean.setSendUser(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_SENDUSER)));
 			qMMessageBean.setContent(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_CONTENT)));
 			qMMessageBean.setIsComing(cursor.getInt(cursor.getColumnIndex(DBcolumns.MSG_ISCOMING)));
 			qMMessageBean.setDate(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_DATE)));
@@ -110,6 +114,8 @@ public class ChatMsgDao {
 			qMMessageBean.setFromUser(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_FROM)));
 			qMMessageBean.setToUser(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_TO)));
 			qMMessageBean.setType(cursor.getInt(cursor.getColumnIndex(DBcolumns.MSG_TYPE)));
+			qMMessageBean.setChatType(cursor.getInt(cursor.getColumnIndex(DBcolumns.MSG_CHATTYPE)));
+			qMMessageBean.setSendUser(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_SENDUSER)));
 			qMMessageBean.setContent(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_CONTENT)));
 			qMMessageBean.setIsComing(cursor.getInt(cursor.getColumnIndex(DBcolumns.MSG_ISCOMING)));
 			qMMessageBean.setDate(cursor.getString(cursor.getColumnIndex(DBcolumns.MSG_DATE)));

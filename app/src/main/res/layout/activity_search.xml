@@ -19,15 +19,26 @@
             android:layout_centerVertical="true"
             android:src="@drawable/img_back_selector" />
 
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/common_constact"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="添加"
-            android:textColor="@color/whites"
-            android:textSize="18sp" />
+            android:layout_centerInParent="true"
+            android:background="@drawable/ll_top_bg"
+            android:orientation="horizontal"
+
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/constact_add_friend"
+                style="@style/top_group"
+                android:text="添加好友" />
+
+            <Button
+                android:id="@+id/constact_join_group"
+                style="@style/top_all"
+                android:text="加入群" />
+        </LinearLayout>
     </RelativeLayout>
 
     <LinearLayout
@@ -36,16 +47,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/title_bar"
         android:orientation="vertical" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="10dp"
-            android:padding="5dp"
-            android:text="添加好友"
-            android:textColor="#999999"
-            android:textSize="14sp" />
 
         <View
             android:layout_width="match_parent"
