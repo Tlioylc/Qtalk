@@ -59,6 +59,8 @@
         <activity android:name="qumi.com.qtalk.activity.MsgHistroyActivity" />
 
         <service android:name="qumi.com.qtalk.service.MsfService" />
+
+        <activity android:name="qumi.com.qtalk.activity.CreatGroupActivity" />
     </application>
 
 </manifest>

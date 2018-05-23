@@ -16,4 +16,6 @@ public interface qumi_com_qumitalk_service_DataBean_UserBeanRealmProxyInterface 
     public void realmSet$publicKey(String value);
     public int realmGet$friendRelationship();
     public void realmSet$friendRelationship(int value);
+    public int realmGet$isChecked();
+    public void realmSet$isChecked(int value);
 }

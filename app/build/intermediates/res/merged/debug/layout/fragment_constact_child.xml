@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingBottom="6.0dip"
-    android:paddingTop="6.0dip" 
+    android:paddingTop="6.0dip"
     android:background="@drawable/list_item_selector">
 
     <qumi.com.qtalk.view.CircleImageView
@@ -48,5 +50,17 @@
         android:singleLine="true"
         android:textColor="@color/gray"
         android:textSize="12.0sp" />
+
+    <CheckBox
+        android:id="@+id/cpntact_list_item_check"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="13dp"
+        android:layout_below="@+id/contact_list_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
 
 </RelativeLayout>

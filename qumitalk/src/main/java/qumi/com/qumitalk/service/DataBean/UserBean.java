@@ -12,6 +12,16 @@ public class UserBean extends RealmObject{
     private String publicKey;//公钥
     private int friendRelationship;//好友关系
 
+    private int isChecked;
+
+    public int getIsChecked() {
+        return isChecked;
+    }
+
+    public void setIsChecked(int isChecked) {
+        this.isChecked = isChecked;
+    }
+
     public int getFriendRelationship() {
         return friendRelationship;
     }

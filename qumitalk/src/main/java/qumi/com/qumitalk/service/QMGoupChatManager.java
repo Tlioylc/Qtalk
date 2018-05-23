@@ -1,15 +1,18 @@
 package qumi.com.qumitalk.service;
 
+import android.text.TextUtils;
 import android.util.Base64;
 
 import org.jivesoftware.smack.MessageListener;
 import org.jivesoftware.smack.SmackConfiguration;
 import org.jivesoftware.smack.SmackException;
+import org.jivesoftware.smack.XMPPConnection;
 import org.jivesoftware.smack.XMPPException;
 import org.jivesoftware.smack.packet.Message;
 import org.jivesoftware.smack.util.StringUtils;
 import org.jivesoftware.smackx.muc.DiscussionHistory;
 import org.jivesoftware.smackx.muc.HostedRoom;
+import org.jivesoftware.smackx.muc.InvitationListener;
 import org.jivesoftware.smackx.muc.MultiUserChat;
 import org.jivesoftware.smackx.muc.MultiUserChatManager;
 import org.jivesoftware.smackx.muc.RoomInfo;
@@ -33,14 +36,13 @@ import qumi.com.qumitalk.service.Util.LogUtil;
  */
 
 public class QMGoupChatManager {
-    private QtalkClient qtalkClient;
     private QMXMPPConnectClient qmxmppConnectClient;
     private MultiUserChatManager multiUserChatManager ;
     private QMMessageListener qmMessageListener;
     protected QMGoupChatManager(QtalkClient qtalkClient){
-        this.qtalkClient = qtalkClient;
         this.qmxmppConnectClient = qtalkClient.getClient();
         this.multiUserChatManager = MultiUserChatManager.getInstanceFor(qmxmppConnectClient);
+        addInviteListener();
     }
 
     public void addMessageListener(QMMessageListener qmMessageListener){
@@ -48,6 +50,10 @@ public class QMGoupChatManager {
     }
 
     public boolean createChatGroup(String roomName, String password){
+        return createChatGroup(roomName, password,null,null);
+    }
+
+    public boolean createChatGroup(String roomName, String password,ArrayList<String> inviteList,String reason){
         if(!qmxmppConnectClient.isConnected()) {
             throw new NullPointerException("服务器连接失败，请先连接服务器");
         }
@@ -57,9 +63,7 @@ public class QMGoupChatManager {
             muc = MultiUserChatManager.getInstanceFor(qmxmppConnectClient).getMultiUserChat(roomName + "@conference." + qmxmppConnectClient.getServiceName());
             // 创建聊天室
             boolean isCreated = muc.createOrJoin( qmxmppConnectClient.getUser().split("@")[0]);
-            LogUtil.e("test-------1------addqmMessageListener-----------"+qmMessageListener);
             if(qmMessageListener != null) {
-                LogUtil.e("test-----2--------addqmMessageListener-----------");
                 muc.addMessageListener(new QMGroupChatListener(qmMessageListener));
             }
             if(isCreated) {
@@ -104,6 +108,16 @@ public class QMGoupChatManager {
                 submitForm.setAnswer("x-muc#roomconfig_registration", false);
                 // 发送已完成的表单（有默认值）到服务器来配置聊天室
                 muc.sendConfigurationForm(submitForm);
+
+
+                if(inviteList != null && inviteList.size() > 0){
+                    for(String name : inviteList )
+                        if(TextUtils.isEmpty(reason)){
+                            muc.invite(name,"");
+                        }else {
+                            muc.invite(name,reason);
+                        }
+                }
             }
         } catch (XMPPException | SmackException e) {
             e.printStackTrace();
@@ -132,6 +146,7 @@ public class QMGoupChatManager {
             multiUserChat.join(QtalkClient.getInstance().getUser(), password, history,5000);
             if(qmMessageListener != null)
                 multiUserChat.addMessageListener(new QMGroupChatListener(qmMessageListener));
+
             System.out.println("会议室加入成功........");
             return true;
         } catch (XMPPException e) {
@@ -214,6 +229,16 @@ public class QMGoupChatManager {
             e.printStackTrace();
         }
         return Group;
+    }
+
+
+    public void addInviteListener(){
+        multiUserChatManager.addInvitationListener(new InvitationListener() {
+            @Override
+            public void invitationReceived(XMPPConnection conn, MultiUserChat room, String inviter, String reason, String password, Message message) {
+                LogUtil.e("-----"+room.getRoom()+"----"+room.getNickname()+"------------"+reason);
+            }
+        });
     }
 
 

@@ -1,5 +1,6 @@
 package qumi.com.qtalk.activity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -164,11 +165,17 @@ public class AddFriendActivity extends Activity implements OnClickListener{
 			search_key.setText("");
 			search_key.setHint("群名");
 			currentSearchType = 1;
+			listUser  = new ArrayList<>();
+			addFriendAdapter=new AddFriendAdapter(AddFriendActivity.this, listUser);
+			search_list.setAdapter(addFriendAdapter);
 			break;
 		case R.id.constact_add_friend:
 			search_key.setText("");
 			search_key.setHint("昵称");
 			currentSearchType = 0;
+			listUser  = new ArrayList<>();
+			addFriendAdapter=new AddFriendAdapter(AddFriendActivity.this, listUser);
+			search_list.setAdapter(addFriendAdapter);
 			break;
 		}
 	}
@@ -200,7 +207,12 @@ public class AddFriendActivity extends Activity implements OnClickListener{
 			View view = layoutInflater.inflate(R.layout.pop_edit,null);
 			popWindow = new PopupWindow(view,LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT,true);
 			initPop(view,toUser);
-		}	
+		}
+		if(currentSearchType == 0){
+			edit.setHint("请填写好友验证信息");
+		}else {
+			edit.setHint("群聊申请信息");
+		}
 		popWindow.setAnimationStyle(android.R.style.Animation_InputMethod);
 		popWindow.setFocusable(true);
 		popWindow.setOutsideTouchable(true);
