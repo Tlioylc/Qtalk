@@ -22,14 +22,14 @@
     <uses-permission android:name="android.permission.FLASHLIGHT" />
 
     <application
-        android:name="qumi.com.qtalk.QQApplication"
+        android:name=".QQApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar">
         <activity
-            android:name="qumi.com.qtalk.activity.WelcomeActivity"
-            android:label="@string/app_name" >
+            android:name=".activity.WelcomeActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,20 +37,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="qumi.com.qtalk.activity.LoginActivity"
+            android:name=".activity.LoginActivity"
             android:launchMode="singleTask" />
         <activity
-            android:name="qumi.com.qtalk.MainActivity"
+            android:name=".MainActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name="qumi.com.qtalk.activity.RegisterActivity" />
-        <activity android:name="qumi.com.qtalk.activity.AddFriendActivity" />
-        <activity android:name="qumi.com.qtalk.activity.ImgPageActivity" />
-        <activity android:name="qumi.com.qtalk.activity.ChatActivity" />
-        <activity android:name="qumi.com.qtalk.activity.SignActivity" />
-        <activity android:name="qumi.com.qtalk.activity.MsgAlertActivity" />
-        <activity android:name="qumi.com.qtalk.activity.MsgHistroyActivity" />
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.AddFriendActivity" />
+        <activity android:name=".activity.ImgPageActivity" />
+        <activity android:name=".activity.ChatActivity" />
+        <activity android:name=".activity.SignActivity" />
+        <activity android:name=".activity.MsgAlertActivity" />
+        <activity android:name=".activity.MsgHistroyActivity" />
 
-        <service android:name="qumi.com.qtalk.service.MsfService" />
+        <service android:name=".service.MsfService" />
 
+        <activity android:name=".activity.CreatGroupActivity"></activity>
     </application>
+
 </manifest>

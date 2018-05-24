@@ -90,9 +90,9 @@ public class MsfService extends Service{
 	 * 初始化XMPP
 	 */
 	void initXMPP() {
-		mXMPPConnection = QtalkClient.getInstance();
+		mXMPPConnection = QtalkClient.getInstance() ;
 		loginXMPP();															//登录XMPP
-		mXMPPConnection.addMessageListener(new MsgListener(MsfService.this, mNotificationManager));
+		QtalkClient.getInstance().addMessageListener(new MsgListener(MsfService.this, mNotificationManager));
 	}
 
 	/**

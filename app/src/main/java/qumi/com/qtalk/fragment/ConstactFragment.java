@@ -7,6 +7,7 @@ import qumi.com.qtalk.QQApplication;
 import qumi.com.qtalk.R;
 import qumi.com.qtalk.activity.AddFriendActivity;
 import qumi.com.qtalk.activity.ChatActivity;
+import qumi.com.qtalk.activity.CreatGroupActivity;
 import qumi.com.qtalk.adapter.ConstactAdapter;
 import qumi.com.qtalk.bean.Child;
 import qumi.com.qtalk.bean.Group;
@@ -35,6 +36,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
+import android.widget.Toast;
 
 import static qumi.com.qumitalk.service.QMContactsManager.FRIEND;
 
@@ -116,7 +118,13 @@ public class ConstactFragment extends Fragment {
 		creatGroupChat.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				QtalkClient.getInstance().getQMGoupChatManager().createChatGroup("heheda","");
+				Intent intent=new Intent(mContext, CreatGroupActivity.class);
+				startActivity(intent);
+//				try {
+//					QtalkClient.getInstance().getQMGoupChatManager().createChatGroup("群聊","");
+//				}catch (Exception e){
+//					Toast.makeText(getContext(),"已创建或加入该群聊",Toast.LENGTH_SHORT).show();
+//				}
 			}
 		});
 

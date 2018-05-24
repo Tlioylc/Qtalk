@@ -80,7 +80,8 @@
         android:layout_marginLeft="20dp"
         android:text="@string/forget_password"
         android:textColor="@color/blue"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:visibility="gone"/>
 
     <Button
         android:id="@+id/register"

@@ -37,7 +37,7 @@ public class QMChatManager {
             chat = chatMap.get(touser);
         }else {
             ChatManager chatmanager =qtalkClient.getChatManager();
-            chat =chatmanager.createChat(touser + "@" + StaticConfig.host, null);
+            chat =chatmanager.createChat(touser + "@" + StaticConfig.serviceName, null);
             chatMap.put(touser,chat);
         }
         return chat;

@@ -292,6 +292,10 @@
         "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_qq_friend.xml"
     },
     {
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/activity_creat_group.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/activity_creat_group.xml"
+    },
+    {
         "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/pop_edit.xml",
         "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/pop_edit.xml"
     },

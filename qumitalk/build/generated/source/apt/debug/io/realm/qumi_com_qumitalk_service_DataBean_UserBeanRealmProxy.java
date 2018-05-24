@@ -42,9 +42,10 @@ public class qumi_com_qumitalk_service_DataBean_UserBeanRealmProxy extends qumi.
         long moodIndex;
         long publicKeyIndex;
         long friendRelationshipIndex;
+        long isCheckedIndex;
 
         UserBeanColumnInfo(OsSchemaInfo schemaInfo) {
-            super(7);
+            super(8);
             OsObjectSchemaInfo objectSchemaInfo = schemaInfo.getObjectSchemaInfo("UserBean");
             this.uidIndex = addColumnDetails("uid", "uid", objectSchemaInfo);
             this.nickNameIndex = addColumnDetails("nickName", "nickName", objectSchemaInfo);
@@ -53,6 +54,7 @@ public class qumi_com_qumitalk_service_DataBean_UserBeanRealmProxy extends qumi.
             this.moodIndex = addColumnDetails("mood", "mood", objectSchemaInfo);
             this.publicKeyIndex = addColumnDetails("publicKey", "publicKey", objectSchemaInfo);
             this.friendRelationshipIndex = addColumnDetails("friendRelationship", "friendRelationship", objectSchemaInfo);
+            this.isCheckedIndex = addColumnDetails("isChecked", "isChecked", objectSchemaInfo);
         }
 
         UserBeanColumnInfo(ColumnInfo src, boolean mutable) {
@@ -76,6 +78,7 @@ public class qumi_com_qumitalk_service_DataBean_UserBeanRealmProxy extends qumi.
             dst.moodIndex = src.moodIndex;
             dst.publicKeyIndex = src.publicKeyIndex;
             dst.friendRelationshipIndex = src.friendRelationshipIndex;
+            dst.isCheckedIndex = src.isCheckedIndex;
         }
     }
 
@@ -296,8 +299,30 @@ public class qumi_com_qumitalk_service_DataBean_UserBeanRealmProxy extends qumi.
         proxyState.getRow$realm().setLong(columnInfo.friendRelationshipIndex, value);
     }
 
+    @Override
+    @SuppressWarnings("cast")
+    public int realmGet$isChecked() {
+        proxyState.getRealm$realm().checkIfValid();
+        return (int) proxyState.getRow$realm().getLong(columnInfo.isCheckedIndex);
+    }
+
+    @Override
+    public void realmSet$isChecked(int value) {
+        if (proxyState.isUnderConstruction()) {
+            if (!proxyState.getAcceptDefaultValue$realm()) {
+                return;
+            }
+            final Row row = proxyState.getRow$realm();
+            row.getTable().setLong(columnInfo.isCheckedIndex, row.getIndex(), value, true);
+            return;
+        }
+
+        proxyState.getRealm$realm().checkIfValid();
+        proxyState.getRow$realm().setLong(columnInfo.isCheckedIndex, value);
+    }
+
     private static OsObjectSchemaInfo createExpectedObjectSchemaInfo() {
-        OsObjectSchemaInfo.Builder builder = new OsObjectSchemaInfo.Builder("UserBean", 7, 0);
+        OsObjectSchemaInfo.Builder builder = new OsObjectSchemaInfo.Builder("UserBean", 8, 0);
         builder.addPersistedProperty("uid", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
         builder.addPersistedProperty("nickName", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
         builder.addPersistedProperty("avator", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
@@ -305,6 +330,7 @@ public class qumi_com_qumitalk_service_DataBean_UserBeanRealmProxy extends qumi.
         builder.addPersistedProperty("mood", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
         builder.addPersistedProperty("publicKey", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
         builder.addPersistedProperty("friendRelationship", RealmFieldType.INTEGER, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
+        builder.addPersistedProperty("isChecked", RealmFieldType.INTEGER, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         return builder.build();
     }
 
@@ -380,6 +406,13 @@ public class qumi_com_qumitalk_service_DataBean_UserBeanRealmProxy extends qumi.
                 objProxy.realmSet$friendRelationship((int) json.getInt("friendRelationship"));
             }
         }
+        if (json.has("isChecked")) {
+            if (json.isNull("isChecked")) {
+                throw new IllegalArgumentException("Trying to set non-nullable field 'isChecked' to null.");
+            } else {
+                objProxy.realmSet$isChecked((int) json.getInt("isChecked"));
+            }
+        }
         return obj;
     }
 
@@ -442,6 +475,13 @@ public class qumi_com_qumitalk_service_DataBean_UserBeanRealmProxy extends qumi.
                     reader.skipValue();
                     throw new IllegalArgumentException("Trying to set non-nullable field 'friendRelationship' to null.");
                 }
+            } else if (name.equals("isChecked")) {
+                if (reader.peek() != JsonToken.NULL) {
+                    objProxy.realmSet$isChecked((int) reader.nextInt());
+                } else {
+                    reader.skipValue();
+                    throw new IllegalArgumentException("Trying to set non-nullable field 'isChecked' to null.");
+                }
             } else {
                 reader.skipValue();
             }
@@ -489,6 +529,7 @@ public class qumi_com_qumitalk_service_DataBean_UserBeanRealmProxy extends qumi.
         realmObjectCopy.realmSet$mood(realmObjectSource.realmGet$mood());
         realmObjectCopy.realmSet$publicKey(realmObjectSource.realmGet$publicKey());
         realmObjectCopy.realmSet$friendRelationship(realmObjectSource.realmGet$friendRelationship());
+        realmObjectCopy.realmSet$isChecked(realmObjectSource.realmGet$isChecked());
         return realmObject;
     }
 
@@ -523,6 +564,7 @@ public class qumi_com_qumitalk_service_DataBean_UserBeanRealmProxy extends qumi.
             Table.nativeSetString(tableNativePtr, columnInfo.publicKeyIndex, rowIndex, realmGet$publicKey, false);
         }
         Table.nativeSetLong(tableNativePtr, columnInfo.friendRelationshipIndex, rowIndex, ((qumi_com_qumitalk_service_DataBean_UserBeanRealmProxyInterface) object).realmGet$friendRelationship(), false);
+        Table.nativeSetLong(tableNativePtr, columnInfo.isCheckedIndex, rowIndex, ((qumi_com_qumitalk_service_DataBean_UserBeanRealmProxyInterface) object).realmGet$isChecked(), false);
         return rowIndex;
     }
 
@@ -564,6 +606,7 @@ public class qumi_com_qumitalk_service_DataBean_UserBeanRealmProxy extends qumi.
                 Table.nativeSetString(tableNativePtr, columnInfo.publicKeyIndex, rowIndex, realmGet$publicKey, false);
             }
             Table.nativeSetLong(tableNativePtr, columnInfo.friendRelationshipIndex, rowIndex, ((qumi_com_qumitalk_service_DataBean_UserBeanRealmProxyInterface) object).realmGet$friendRelationship(), false);
+            Table.nativeSetLong(tableNativePtr, columnInfo.isCheckedIndex, rowIndex, ((qumi_com_qumitalk_service_DataBean_UserBeanRealmProxyInterface) object).realmGet$isChecked(), false);
         }
     }
 
@@ -608,6 +651,7 @@ public class qumi_com_qumitalk_service_DataBean_UserBeanRealmProxy extends qumi.
             Table.nativeSetNull(tableNativePtr, columnInfo.publicKeyIndex, rowIndex, false);
         }
         Table.nativeSetLong(tableNativePtr, columnInfo.friendRelationshipIndex, rowIndex, ((qumi_com_qumitalk_service_DataBean_UserBeanRealmProxyInterface) object).realmGet$friendRelationship(), false);
+        Table.nativeSetLong(tableNativePtr, columnInfo.isCheckedIndex, rowIndex, ((qumi_com_qumitalk_service_DataBean_UserBeanRealmProxyInterface) object).realmGet$isChecked(), false);
         return rowIndex;
     }
 
@@ -659,6 +703,7 @@ public class qumi_com_qumitalk_service_DataBean_UserBeanRealmProxy extends qumi.
                 Table.nativeSetNull(tableNativePtr, columnInfo.publicKeyIndex, rowIndex, false);
             }
             Table.nativeSetLong(tableNativePtr, columnInfo.friendRelationshipIndex, rowIndex, ((qumi_com_qumitalk_service_DataBean_UserBeanRealmProxyInterface) object).realmGet$friendRelationship(), false);
+            Table.nativeSetLong(tableNativePtr, columnInfo.isCheckedIndex, rowIndex, ((qumi_com_qumitalk_service_DataBean_UserBeanRealmProxyInterface) object).realmGet$isChecked(), false);
         }
     }
 
@@ -688,6 +733,7 @@ public class qumi_com_qumitalk_service_DataBean_UserBeanRealmProxy extends qumi.
         unmanagedCopy.realmSet$mood(realmSource.realmGet$mood());
         unmanagedCopy.realmSet$publicKey(realmSource.realmGet$publicKey());
         unmanagedCopy.realmSet$friendRelationship(realmSource.realmGet$friendRelationship());
+        unmanagedCopy.realmSet$isChecked(realmSource.realmGet$isChecked());
 
         return unmanagedObject;
     }
@@ -725,6 +771,10 @@ public class qumi_com_qumitalk_service_DataBean_UserBeanRealmProxy extends qumi.
         stringBuilder.append(",");
         stringBuilder.append("{friendRelationship:");
         stringBuilder.append(realmGet$friendRelationship());
+        stringBuilder.append("}");
+        stringBuilder.append(",");
+        stringBuilder.append("{isChecked:");
+        stringBuilder.append(realmGet$isChecked());
         stringBuilder.append("}");
         stringBuilder.append("]");
         return stringBuilder.toString();

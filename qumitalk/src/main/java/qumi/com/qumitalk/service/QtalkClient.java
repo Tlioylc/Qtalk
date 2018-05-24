@@ -59,7 +59,7 @@ public class QtalkClient{
             String server= StaticConfig.host;
             int port=5222;
             XMPPTCPConnectionConfiguration.Builder builder = XMPPTCPConnectionConfiguration.builder();
-            builder.setServiceName(server);
+            builder.setServiceName(StaticConfig.serviceName);
             builder.setHost(server);
             builder.setPort(port);
             builder.setCompressionEnabled(false);
