@@ -23,11 +23,10 @@ import qumi.com.qumitalk.service.CallBack.LoginResultCallBack;
 import qumi.com.qumitalk.service.Db.QMChatMessageManager;
 import qumi.com.qumitalk.service.Db.QMConversationManager;
 import qumi.com.qumitalk.service.Imp.QMCheckConnectionListenerImp;
-import qumi.com.qumitalk.service.Listener.QMContactListener;
+import qumi.com.qumitalk.service.Imp.QMContactListenerImp;
 import qumi.com.qumitalk.service.Listener.QMFriendsPacketListener;
-import qumi.com.qumitalk.service.Listener.QMCheckConnectionListener;
 import qumi.com.qumitalk.service.Listener.QMChatMessageListener;
-import qumi.com.qumitalk.service.Listener.QMMessageListener;
+import qumi.com.qumitalk.service.Imp.QMMessageListenerImp;
 
 /**
  * Created by mwang on 2018/5/16.
@@ -75,11 +74,11 @@ public class QtalkClient{
     public boolean Login(String userId,String pwd){
         return Login(userId, pwd , null, null );
     }
-    public boolean Login(String userId,String pwd, QMCheckConnectionListenerImp checkConnectionListener,QMContactListener friendsPacketListener ){
+    public boolean Login(String userId,String pwd, QMCheckConnectionListenerImp checkConnectionListener,QMContactListenerImp friendsPacketListener ){
        return Login(userId, pwd , checkConnectionListener, friendsPacketListener ,null);
     }
 
-    public boolean Login(String userId, String pwd , QMCheckConnectionListenerImp qmCheckConnectionListenerImp, QMContactListener qmContactListener , LoginResultCallBack loginResultCallBack){
+    public boolean Login(String userId, String pwd , QMCheckConnectionListenerImp qmCheckConnectionListenerImp, QMContactListenerImp qmContactListenerImp, LoginResultCallBack loginResultCallBack){
         if(qmCheckConnectionListenerImp != null){
             this.qmCheckConnectionListenerImp = qmCheckConnectionListenerImp;
         }
@@ -87,7 +86,7 @@ public class QtalkClient{
 //        if(friendsPacketListener != null){
 //            this.friendsPacketListener = friendsPacketListener;
 //        }
-        this.friendsPacketListener = new QMFriendsPacketListener(qmContactListener);
+        this.friendsPacketListener = new QMFriendsPacketListener(qmContactListenerImp);
 
         client.setListener(qmCheckConnectionListenerImp,friendsPacketListener);
         if(loginResultCallBack != null)
@@ -100,22 +99,6 @@ public class QtalkClient{
             Presence presence = new Presence(Presence.Type.available);
             client.sendStanza(presence);
 
-//            ChatManager chatmanager = ChatManager.getInstanceFor(getInstance());
-//            chatmanager.addChatListener(new ChatManagerListener() {
-//                @Override
-//                public void chatCreated(Chat chat, boolean createdLocally) {
-//                    chat.addMessageListener(new ChatMessageListener() {
-//                        @Override
-//                        public void processMessage(Chat chat, Message message) {
-//                            String content=message.getBody();
-//                            if (content!=null){
-//                                LogUtil.e("from:" + message.getFromUser() + " to:" + message.getToUser() + " message:" + message.getBody());
-//                            }
-//
-//                        }
-//                    });
-//                }
-//            });
             if(loginResultCallBack != null)
                 loginResultCallBack.onSuccess();
             return true;
@@ -133,14 +116,14 @@ public class QtalkClient{
         return client;
     }
 
-    public void  addMessageListener(final QMMessageListener qmMessageListener){
+    public void  addMessageListener(final QMMessageListenerImp qmMessageListenerImp){
         getChatManager().addChatListener(new ChatManagerListener() {
             @Override
             public void chatCreated(Chat arg0, boolean arg1) {
-                arg0.addMessageListener(new QMChatMessageListener(qmMessageListener));
+                arg0.addMessageListener(new QMChatMessageListener(qmMessageListenerImp));
             }
         });
-        getQMGoupChatManager().addMessageListener(qmMessageListener);
+        getQMGoupChatManager().addMessageListener(qmMessageListenerImp);
     }
 
     public boolean logOut()  {//退出登录

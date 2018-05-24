@@ -7,6 +7,7 @@ import java.net.SocketException;
 
 import qumi.com.qtalk.listener.CheckConnectionListener;
 import qumi.com.qtalk.listener.FriendsPacketListener;
+import qumi.com.qtalk.listener.groupChatInviteListenerImp;
 import qumi.com.qtalk.listener.MsgListener;
 import qumi.com.qtalk.util.Const;
 import qumi.com.qtalk.util.PreferencesUtils;
@@ -18,7 +19,6 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
-import android.util.Log;
 
 
 /**
@@ -62,6 +62,8 @@ public class MsfService extends Service{
 		}
 		mNotificationManager = (NotificationManager) getSystemService(android.content.Context.NOTIFICATION_SERVICE);         // 通知
 		mXmppConnectionManager = XmppConnectionManager.getInstance();
+
+
 		initXMPPTask();		
 	}
 
@@ -93,6 +95,7 @@ public class MsfService extends Service{
 		mXMPPConnection = QtalkClient.getInstance() ;
 		loginXMPP();															//登录XMPP
 		QtalkClient.getInstance().addMessageListener(new MsgListener(MsfService.this, mNotificationManager));
+		QtalkClient.getInstance().getQMGoupChatManager().addInviteListener(new groupChatInviteListenerImp());
 	}
 
 	/**

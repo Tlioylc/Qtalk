@@ -3,11 +3,11 @@ package qumi.com.qtalk.listener;
 
 import qumi.com.qtalk.service.MsfService;
 import qumi.com.qtalk.util.Const;
-import qumi.com.qumitalk.service.Listener.QMContactListener;
+import qumi.com.qumitalk.service.Imp.QMContactListenerImp;
 import android.content.Intent;
 import android.util.Log;
 
-public class FriendsPacketListener implements QMContactListener {
+public class FriendsPacketListener implements QMContactListenerImp {
 	MsfService context;
 	public FriendsPacketListener(MsfService context){
 		this.context=context;

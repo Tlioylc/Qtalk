@@ -1,15 +1,33 @@
 package qumi.com.qumitalk.service;
 
+import android.util.Log;
+
+import org.jivesoftware.smack.PacketListener;
 import org.jivesoftware.smack.SmackException;
+import org.jivesoftware.smack.StanzaListener;
 import org.jivesoftware.smack.filter.AndFilter;
+import org.jivesoftware.smack.filter.IQTypeFilter;
+import org.jivesoftware.smack.filter.PacketFilter;
+import org.jivesoftware.smack.filter.StanzaFilter;
 import org.jivesoftware.smack.filter.StanzaTypeFilter;
+import org.jivesoftware.smack.packet.IQ;
+import org.jivesoftware.smack.packet.Packet;
 import org.jivesoftware.smack.packet.Presence;
+import org.jivesoftware.smack.packet.Stanza;
+import org.jivesoftware.smack.provider.ProviderManager;
 import org.jivesoftware.smack.tcp.XMPPTCPConnection;
 import org.jivesoftware.smack.tcp.XMPPTCPConnectionConfiguration;
+import org.jivesoftware.smack.util.StringUtils;
+import org.jivesoftware.smackx.bytestreams.ibb.provider.DataPacketProvider;
+import org.jivesoftware.smackx.iqprivate.PrivateDataManager;
+import org.jivesoftware.smackx.muc.packet.GroupChatInvitation;
+import org.jivesoftware.smackx.xhtmlim.provider.XHTMLExtensionProvider;
 
+import qumi.com.qumitalk.service.CustomElementProvider.GroupsExtensionProvider;
 import qumi.com.qumitalk.service.Imp.QMCheckConnectionListenerImp;
 import qumi.com.qumitalk.service.Listener.QMCheckConnectionListener;
 import qumi.com.qumitalk.service.Listener.QMFriendsPacketListener;
+import qumi.com.qumitalk.service.Util.LogUtil;
 
 /**
  * Created by mwang on 2018/5/22.
@@ -50,6 +68,22 @@ public class QMXMPPConnectClient extends XMPPTCPConnection {
             AndFilter filter = new AndFilter(new StanzaTypeFilter(Presence.class));
             addAsyncStanzaListener(friendsPacketListener, filter);
         }
+
+
+        ProviderManager.addIQProvider("groups","com:qumi:group", new GroupsExtensionProvider());
+
+
+//        AndFilter filter = new AndFilter(new StanzaTypeFilter(IQ.class));
+//        addAsyncStanzaListener(new StanzaListener() {
+//            @Override
+//            public void processPacket(Stanza packet) {
+//                LogUtil.e("test---processPacket");
+//                if(packet.toXML().toString().contains("<groups xmlns='com:qumi:group'>")){
+//                    LogUtil.e("test"+packet.toString());
+//                }
+//
+//            }
+//        }, filter);
 
     }
 }

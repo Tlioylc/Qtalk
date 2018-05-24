@@ -7,16 +7,17 @@ import org.jivesoftware.smack.chat.ChatMessageListener;
 import org.jivesoftware.smack.packet.Message;
 
 import qumi.com.qumitalk.service.DataBean.QMMessageBean;
+import qumi.com.qumitalk.service.Imp.QMMessageListenerImp;
 
 /**
  * Created by mwang on 2018/5/17.
  */
 
 public class QMChatMessageListener implements ChatMessageListener {
-    private QMMessageListener qmMessageListener;
+    private QMMessageListenerImp qmMessageListenerImp;
 
-    public QMChatMessageListener(QMMessageListener qmMessageListener){
-        this.qmMessageListener = qmMessageListener;
+    public QMChatMessageListener(QMMessageListenerImp qmMessageListenerImp){
+        this.qmMessageListenerImp = qmMessageListenerImp;
     }
 
     @Override
@@ -25,11 +26,12 @@ public class QMChatMessageListener implements ChatMessageListener {
             return;
         }
         String messageBody = message.getBody();
+        qumi.com.qumitalk.service.Util.LogUtil.e(message.getBody()+"---"+message.getSubject()+"---"+message.getType());
         if (TextUtils.isEmpty(messageBody))
             return;
         QMMessageBean qmMessageBean = QMMessageBean.decodeBase64Json(messageBody);
         qmMessageBean.setChatType(0);
-        qmMessageListener.onMessageReceived(qmMessageBean);
+        qmMessageListenerImp.onMessageReceived(qmMessageBean);
 
     }
 }

@@ -1,15 +1,14 @@
 package qumi.com.qumitalk.service;
 
 import android.text.TextUtils;
-import android.util.Base64;
 
-import org.jivesoftware.smack.MessageListener;
-import org.jivesoftware.smack.SmackConfiguration;
+import org.jivesoftware.smack.ExceptionCallback;
 import org.jivesoftware.smack.SmackException;
+import org.jivesoftware.smack.StanzaListener;
 import org.jivesoftware.smack.XMPPConnection;
 import org.jivesoftware.smack.XMPPException;
 import org.jivesoftware.smack.packet.Message;
-import org.jivesoftware.smack.util.StringUtils;
+import org.jivesoftware.smack.packet.Stanza;
 import org.jivesoftware.smackx.muc.DiscussionHistory;
 import org.jivesoftware.smackx.muc.HostedRoom;
 import org.jivesoftware.smackx.muc.InvitationListener;
@@ -19,16 +18,16 @@ import org.jivesoftware.smackx.muc.RoomInfo;
 import org.jivesoftware.smackx.xdata.Form;
 import org.jivesoftware.smackx.xdata.FormField;
 
-import java.lang.ref.PhantomReference;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import qumi.com.qumitalk.service.DataBean.QMMessageBean;
 import qumi.com.qumitalk.service.Db.Session;
+import qumi.com.qumitalk.service.Imp.QMGroupChatInviteListenerImp;
 import qumi.com.qumitalk.service.Listener.QMGroupChatListener;
-import qumi.com.qumitalk.service.Listener.QMMessageListener;
+import qumi.com.qumitalk.service.Imp.QMMessageListenerImp;
 import qumi.com.qumitalk.service.Util.LogUtil;
+import qumi.com.qumitalk.service.Util.QMCostomIQ;
 
 
 /**
@@ -38,15 +37,14 @@ import qumi.com.qumitalk.service.Util.LogUtil;
 public class QMGoupChatManager {
     private QMXMPPConnectClient qmxmppConnectClient;
     private MultiUserChatManager multiUserChatManager ;
-    private QMMessageListener qmMessageListener;
+    private QMMessageListenerImp qmMessageListenerImp;
     protected QMGoupChatManager(QtalkClient qtalkClient){
         this.qmxmppConnectClient = qtalkClient.getClient();
         this.multiUserChatManager = MultiUserChatManager.getInstanceFor(qmxmppConnectClient);
-        addInviteListener();
     }
 
-    public void addMessageListener(QMMessageListener qmMessageListener){
-        this.qmMessageListener = qmMessageListener;
+    public void addMessageListener(QMMessageListenerImp qmMessageListenerImp){
+        this.qmMessageListenerImp = qmMessageListenerImp;
     }
 
     public boolean createChatGroup(String roomName, String password){
@@ -63,8 +61,8 @@ public class QMGoupChatManager {
             muc = MultiUserChatManager.getInstanceFor(qmxmppConnectClient).getMultiUserChat(roomName + "@conference." + qmxmppConnectClient.getServiceName());
             // 创建聊天室
             boolean isCreated = muc.createOrJoin( qmxmppConnectClient.getUser().split("@")[0]);
-            if(qmMessageListener != null) {
-                muc.addMessageListener(new QMGroupChatListener(qmMessageListener));
+            if(qmMessageListenerImp != null) {
+                muc.addMessageListener(new QMGroupChatListener(qmMessageListenerImp));
             }
             if(isCreated) {
                 // 获得聊天室的配置表单
@@ -113,9 +111,9 @@ public class QMGoupChatManager {
                 if(inviteList != null && inviteList.size() > 0){
                     for(String name : inviteList )
                         if(TextUtils.isEmpty(reason)){
-                            muc.invite(name,"");
+                            muc.invite(name+"@" +qmxmppConnectClient.getServiceName(),"");
                         }else {
-                            muc.invite(name,reason);
+                            muc.invite(name+"@"+qmxmppConnectClient.getServiceName(),reason);
                         }
                 }
             }
@@ -144,8 +142,8 @@ public class QMGoupChatManager {
             //history.setSince(new Date());
             // 用户加入聊天室
             multiUserChat.join(QtalkClient.getInstance().getUser(), password, history,5000);
-            if(qmMessageListener != null)
-                multiUserChat.addMessageListener(new QMGroupChatListener(qmMessageListener));
+            if(qmMessageListenerImp != null)
+                multiUserChat.addMessageListener(new QMGroupChatListener(qmMessageListenerImp));
 
             System.out.println("会议室加入成功........");
             return true;
@@ -185,21 +183,35 @@ public class QMGoupChatManager {
      *
      */
     public  List<String> findMulitGroup(){
-        List<String> tempRoomList = null;
-        List<String> Group = new ArrayList<>();
+
+        QMCostomIQ qmCostomIQ = new QMCostomIQ("groups","com:qumi:group","","action type=\"getrooms\" ");
+        LogUtil.e(qmCostomIQ.toXML().toString());
+
         try {
-            tempRoomList = multiUserChatManager.getJoinedRooms(qmxmppConnectClient.getUser());
-            for (String roomId : tempRoomList) {
-                RoomInfo roomInfo = multiUserChatManager.getRoomInfo(roomId);
-                Group.add(roomInfo.getName());
-            }
-        } catch (SmackException.NoResponseException e) {
-            e.printStackTrace();
-        } catch (XMPPException.XMPPErrorException e) {
-            e.printStackTrace();
+            qmxmppConnectClient.sendIqWithResponseCallback(qmCostomIQ, new StanzaListener() {
+                @Override
+                public void processPacket(Stanza packet) {
+                    LogUtil.e("---sendIqWithResponseCallback---"+packet.toXML().toString());
+                }
+            });
         } catch (SmackException.NotConnectedException e) {
             e.printStackTrace();
         }
+//        List<String> tempRoomList = null;
+        List<String> Group = new ArrayList<>();
+//        try {
+//            tempRoomList = multiUserChatManager.getJoinedRooms(qmxmppConnectClient.getUser());
+//            for (String roomId : tempRoomList) {
+//                RoomInfo roomInfo = multiUserChatManager.getRoomInfo(roomId);
+//                Group.add(roomInfo.getName());
+//            }
+//        } catch (SmackException.NoResponseException e) {
+//            e.printStackTrace();
+//        } catch (XMPPException.XMPPErrorException e) {
+//            e.printStackTrace();
+//        } catch (SmackException.NotConnectedException e) {
+//            e.printStackTrace();
+//        }
         return Group;
     }
 
@@ -232,11 +244,11 @@ public class QMGoupChatManager {
     }
 
 
-    public void addInviteListener(){
+    public void addInviteListener(final QMGroupChatInviteListenerImp groupChatInviteListener){
         multiUserChatManager.addInvitationListener(new InvitationListener() {
             @Override
             public void invitationReceived(XMPPConnection conn, MultiUserChat room, String inviter, String reason, String password, Message message) {
-                LogUtil.e("-----"+room.getRoom()+"----"+room.getNickname()+"------------"+reason);
+                groupChatInviteListener.onInviteToJoinGroup(room.getRoom().split("@")[0],reason,password);
             }
         });
     }

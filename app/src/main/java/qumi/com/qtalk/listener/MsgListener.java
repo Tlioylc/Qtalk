@@ -7,8 +7,7 @@ import qumi.com.qumitalk.service.QtalkClient;
 import qumi.com.qtalk.service.MsfService;
 import qumi.com.qtalk.util.Const;
 import qumi.com.qtalk.util.PreferencesUtils;
-import qumi.com.qumitalk.service.Listener.QMMessageListener;
-import qumi.com.qumitalk.service.Util.LogUtil;
+import qumi.com.qumitalk.service.Imp.QMMessageListenerImp;
 
 import android.app.KeyguardManager;
 import android.app.Notification;
@@ -21,7 +20,7 @@ import android.os.Bundle;
  */
 
 @SuppressWarnings("static-access")
-public class MsgListener implements QMMessageListener {
+public class MsgListener implements QMMessageListenerImp {
 	
 	private MsfService context;
 	private NotificationManager mNotificationManager;
