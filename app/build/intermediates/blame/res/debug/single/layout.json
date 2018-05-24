@@ -1,386 +1,386 @@
 [
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_phone_constact.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_phone_constact.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/common_title_bar.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/common_title_bar.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_screen_toolbar.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/select_dialog_singlechoice_material.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_select_dialog_material.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/common_search_l.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/common_search_l.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_dialog_title_material.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/refresh_footer.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/refresh_footer.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dot_image.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\dot_image.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/fragment_news_item.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_news_item.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_search.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\activity_search.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/common_loading_view.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/common_loading_view.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\common_url_textview.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\common_url_textview.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/select_dialog_multichoice_material.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_news.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_news.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_screen_simple_overlay_action_mode.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\select_dialog_item_material.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_screen_toolbar.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_constact_group.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_constact_group.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/common_search_xxl.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/common_search_xxl.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pop_loginout.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\pop_loginout.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_activity_chooser_view_list_item.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_setting_msg_histroy.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\activity_setting_msg_histroy.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/activity_register_userinfo.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/activity_register_userinfo.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cce174a5624158d4915e0d374b4e2d7e\\res\\layout\\notification_action_tombstone.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/notification_template_icon_group.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/49a819f92cc509331c53d0a51851a263/res/layout/notification_template_icon_group.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register_result.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\activity_register_result.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/fragment_news_pop.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_news_pop.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pc_connect_wifi.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\pc_connect_wifi.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/select_dialog_item_material.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_scan.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\dialog_scan.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/dot_image.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/dot_image.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cce174a5624158d4915e0d374b4e2d7e\\res\\layout\\notification_template_part_chronometer.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\chat_face_container.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\chat_face_container.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/fragment_constact.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_constact.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_screen_simple.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/common_search_x.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/common_search_x.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_news_code_scan.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_news_code_scan.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/fragment_phone_constacts_item.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_phone_constacts_item.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_news_call.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_news_call.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_title_material.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_alert_dialog_title_material.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_welcome.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\activity_welcome.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/water_camera_page1.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/water_camera_page1.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_news_qq_item.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_news_qq_item.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_action_menu_layout.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cce174a5624158d4915e0d374b4e2d7e\\res\\layout\\notification_template_part_time.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_screen_content_include.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_screen_content_include.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_search_view.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_list_menu_item_layout.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/dialog_scan.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/dialog_scan.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register_userinfo.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\activity_register_userinfo.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/notification_action_tombstone.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/49a819f92cc509331c53d0a51851a263/res/layout/notification_action_tombstone.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_tooltip.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_tooltip.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/chat_add_container.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/chat_add_container.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_list_menu_item_radio.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_action_menu_item_layout.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_constact_father.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_constact_father.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_screen_simple.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\common_title_bar.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\common_title_bar.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/refresh_head.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/refresh_head.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_news_camera.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_news_camera.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/fragment_news_qq_item.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_news_qq_item.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cce174a5624158d4915e0d374b4e2d7e\\res\\layout\\notification_template_icon_group.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_action_bar_up_container.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_alert_dialog_title_material.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_activity_chooser_view.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/fragment_dynamic.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_dynamic.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dropdown_lv_head.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\dropdown_lv_head.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/activity_login.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/activity_login.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\water_camera_page5.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\water_camera_page5.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/notification_action.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/49a819f92cc509331c53d0a51851a263/res/layout/notification_action.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\face_image.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\face_image.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/activity_register_result.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/activity_register_result.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_news_item.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_news_item.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/activity_search.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/activity_search.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register_phone.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\activity_register_phone.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_select_dialog_material.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/fragment_news_call.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_news_call.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_mine.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_mine.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/fragment_qq_constact.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_qq_constact.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\select_dialog_multichoice_material.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/pc_connect_wifi.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/pc_connect_wifi.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\activity_login.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/fragment_phone_constact.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_phone_constact.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/activity_sign.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/activity_sign.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_search_view.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_news_waterphoto_save.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_news_waterphoto_save.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/fragment_news_waterphoto_save.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_news_waterphoto_save.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/fragment_news_camera.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_news_camera.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_popup_menu_item_layout.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/water_camera_page4.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/water_camera_page4.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_phone_constacts_item.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_phone_constacts_item.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cce174a5624158d4915e0d374b4e2d7e\\res\\layout\\notification_action.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/chat_lv_item.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/chat_lv_item.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\refresh_head.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\refresh_head.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/dropdown_lv_head.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/dropdown_lv_head.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_activity_chooser_view.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_expanded_menu_layout.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_qq_friend.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_qq_friend.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/water_camera_page5.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/water_camera_page5.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_constact_head_view.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_constact_head_view.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_dialog_title_material.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\water_camera_page3.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\water_camera_page3.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/fragment_constact_child.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_constact_child.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/fragment_mine.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_mine.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\common_loading_view.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\common_loading_view.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/fragment_constact_father.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_constact_father.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_list_menu_item_checkbox.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/main_chat.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/main_chat.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_qq_constact.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_qq_constact.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/chat_face_container.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/chat_face_container.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_img_page.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\activity_img_page.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/activity_register_phone.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/activity_register_phone.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_setting_msg_alert.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\activity_setting_msg_alert.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/activity_setting_msg_histroy.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/activity_setting_msg_histroy.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_custom_loding_dialog_layout.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\activity_custom_loding_dialog_layout.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/water_camera_page2.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/water_camera_page2.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\select_dialog_singlechoice_material.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/activity_custom_loding_dialog_layout.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/activity_custom_loding_dialog_layout.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\water_camera_page2.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\water_camera_page2.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\common_search_l.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\common_search_l.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/pop_loginout.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/pop_loginout.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\common_search_xl.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\common_search_xl.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/fragment_constact_head_view.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_constact_head_view.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_popup_menu_header_item_layout.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/fragment_constact_group.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_constact_group.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_news_pop.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_news_pop.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/face_image.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/face_image.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\common_search_x.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\common_search_x.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_popup_menu_header_item_layout.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_action_bar_up_container.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/face_gridview.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/face_gridview.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_expanded_menu_layout.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/fragment_qq_friend.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_qq_friend.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_action_mode_close_item_material.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/pop_edit.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/pop_edit.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\chat_add_container.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\chat_add_container.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/activity_setting_msg_alert.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/activity_setting_msg_alert.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\common_search_xxl.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\common_search_xxl.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/common_search_xl.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/common_search_xl.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\chat_lv_item.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\chat_lv_item.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/49a819f92cc509331c53d0a51851a263/res/layout/notification_template_part_time.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_dynamic.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_dynamic.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/49a819f92cc509331c53d0a51851a263/res/layout/notification_template_part_chronometer.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_action_menu_layout.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/fragment_news.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_news.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_action_mode_bar.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/app_exit.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/app_exit.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qq_constact.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\activity_qq_constact.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pop_edit.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\pop_edit.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/activity_img_page.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/activity_img_page.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_action_bar_title_item.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/fragment_news_father.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_news_father.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_sign.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\activity_sign.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_action_bar_title_item.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_news_father.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_news_father.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main_chat.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\main_chat.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_tooltip.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_tooltip.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_list_menu_item_icon.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/activity_welcome.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/activity_welcome.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_exit.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\app_exit.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/activity_qq_constact.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/activity_qq_constact.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_alert_dialog_material.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/common_url_textview.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/common_url_textview.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_constact.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_constact.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\refresh_footer.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\refresh_footer.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/fragment_news_code_scan.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/fragment_news_code_scan.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\face_gridview.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\face_gridview.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_action_mode_bar.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\water_camera_page4.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\water_camera_page4.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/water_camera_page3.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/water_camera_page3.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\water_camera_page1.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\water_camera_page1.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\layout\\abc_action_menu_item_layout.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/layout/abc_alert_dialog_material.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_constact_child.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\layout\\fragment_constact_child.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/layout/activity_main.xml"
     }
 ]

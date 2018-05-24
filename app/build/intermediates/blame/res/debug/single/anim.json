@@ -1,90 +1,90 @@
 [
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\activity_up.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\anim\\activity_up.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/anim/abc_fade_in.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\pop_down.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\anim\\pop_down.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/anim/abc_popup_exit.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\pop_out.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\anim\\pop_out.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/login_anim.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/anim/login_anim.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\login_anim.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\anim\\login_anim.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/anim/abc_slide_in_bottom.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\activity_down.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\anim\\activity_down.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/fade_in.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/anim/fade_in.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\anim\\abc_slide_out_bottom.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/anim/abc_slide_out_bottom.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/fade_out.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/anim/fade_out.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\anim\\abc_fade_out.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/anim/abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/anim/abc_fade_out.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\anim\\abc_slide_in_bottom.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/pop_enter.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/anim/pop_enter.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\anim\\abc_slide_out_top.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/anim/abc_popup_enter.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\alpha_in.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\anim\\alpha_in.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_tooltip_exit.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\anim\\abc_tooltip_exit.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/activity_up.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/anim/activity_up.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\pop_enter.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\anim\\pop_enter.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/activity_down.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/anim/activity_down.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\anim\\abc_slide_in_top.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/anim/abc_slide_out_top.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\anim\\abc_fade_in.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/pop_down.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/anim/pop_down.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\anim\\abc_popup_enter.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/abc_tooltip_enter.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/anim/abc_tooltip_enter.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\pop_up.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\anim\\pop_up.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/pop_out.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/anim/pop_out.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\fade_in.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\anim\\fade_in.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/abc_tooltip_exit.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/anim/abc_tooltip_exit.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_tooltip_enter.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\anim\\abc_tooltip_enter.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/pop_up.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/anim/pop_up.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
-        "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\anim\\abc_popup_exit.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
+        "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/anim/abc_slide_in_top.xml"
     },
     {
-        "merged": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\anim\\fade_out.xml",
-        "source": "E:\\QUMIWrokSpace\\Qtalk\\app\\src\\main\\res\\anim\\fade_out.xml"
+        "merged": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/anim/alpha_in.xml",
+        "source": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/src/main/res/anim/alpha_in.xml"
     }
 ]

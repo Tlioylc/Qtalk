@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hu\\values-hu.xml",
+            "outputFile": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hu/values-hu.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cce174a5624158d4915e0d374b4e2d7e\\res\\values-hu\\values-hu.xml",
+                    "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/49a819f92cc509331c53d0a51851a263/res/values-hu/values-hu.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\values-hu\\values-hu.xml",
+                    "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/values-hu/values-hu.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -33,10 +33,10 @@
             ]
         },
         {
-            "outputFile": "E:\\QUMIWrokSpace\\Qtalk\\app\\build\\intermediates\\res\\merged\\debug\\values-hu\\values-hu.xml",
+            "outputFile": "/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/res/merged/debug/values-hu/values-hu.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cce174a5624158d4915e0d374b4e2d7e\\res\\values-hu\\values-hu.xml",
+                    "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/49a819f92cc509331c53d0a51851a263/res/values-hu/values-hu.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -53,7 +53,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\mwang\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1cfeb5460aabcc4a78691556a3e3f12b\\res\\values-hu\\values-hu.xml",
+                    "source": "/Users/wangmeng/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/60a81e75b1ae16acc5aebd4437d8a7b9/res/values-hu/values-hu.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
