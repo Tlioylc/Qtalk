@@ -5,7 +5,7 @@ package qumi.com.qumitalk.service.Config;
  */
 
 public class StaticConfig {
-   public static final String host = "192.168.1.106";
+   public static final String host = "192.168.1.222";
    public static final String serviceName = "openfire.qumitech.com";
 
 //   public static final String host = "192.168.1.106";
@@ -18,4 +18,10 @@ public class StaticConfig {
 
    public static final int MSG_TYPE_ADD_FRIEND=5;//添加好友
    public static final int MSG_TYPE_ADD_FRIEND_SUCCESS=6;//同意添加好友
+
+
+   public static final boolean isdebug = true;
+
+
+   public static String qiniutoken = null;
 }

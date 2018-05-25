@@ -9,32 +9,36 @@ import java.io.IOException;
 
 import qumi.com.qumitalk.service.CustomElement.GroupElement;
 
-
 public class GroupsExtensionProvider extends IQProvider<GroupElement> {
     @Override
-    public GroupElement parse(XmlPullParser parser, int initialDepth) throws XmlPullParserException, IOException{
+    public GroupElement parse(XmlPullParser parser, int initialDepth)  throws XmlPullParserException, IOException, SmackException {
 
-        int eventType = parser.next();
-        while(eventType!=XmlPullParser.END_DOCUMENT) {
-            switch (eventType) {
-                // 判断当前事件是否为文档开始事件
-                case XmlPullParser.START_DOCUMENT:
-                    break;
-                // 判断当前事件是否为标签元素开始事件
+
+            int eventType2;
+            StringBuilder stringBuilder = new StringBuilder();
+            outerloop: while (true)
+            {
+                int eventType = parser.next();
+                switch (eventType) {
                 case XmlPullParser.START_TAG:
                     if(parser.getName().equals("groups")){
-                        if (parser.next() == XmlPullParser.TEXT) {
-                            return new GroupElement(parser.getText());
+                        eventType2 = parser.next();
+                        if (eventType2 == XmlPullParser.START_TAG && parser.getName().equals("room")) {
+                            parser.next();
+                            stringBuilder.append(parser.getText());
                         }
+                    }if(parser.getName().equals("room")){
+                        parser.next();
+                        stringBuilder.append(parser.getText()+"&");
                     }
                     break;
-                // 判断当前事件是否为标签元素结束事件
-                case XmlPullParser.END_TAG:
-                    break;
+                    case XmlPullParser.END_TAG:
+                        if (parser.getDepth() == initialDepth) {
+                            break outerloop;
+                        }
+                        break;
+                }
             }
-            eventType = parser.next();
-        }
-
-        return new GroupElement(null);
+            return  new GroupElement(stringBuilder.toString());
     }
 }

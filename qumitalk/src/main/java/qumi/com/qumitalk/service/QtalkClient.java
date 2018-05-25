@@ -19,7 +19,7 @@ import java.util.concurrent.Executors;
 
 import io.realm.Realm;
 import qumi.com.qumitalk.service.Config.StaticConfig;
-import qumi.com.qumitalk.service.CallBack.LoginResultCallBack;
+import qumi.com.qumitalk.service.CallBack.QMLoginResultCallBack;
 import qumi.com.qumitalk.service.Db.QMChatMessageManager;
 import qumi.com.qumitalk.service.Db.QMConversationManager;
 import qumi.com.qumitalk.service.Imp.QMCheckConnectionListenerImp;
@@ -42,7 +42,7 @@ public class QtalkClient{
     private QMConversationManager qmConversationManager;
     private QMChatMessageManager qmChatMessageManager;
     private QMContactsManager qmmContactsManager;
-    private QMGoupChatManager qmGoupChatManager;
+    private QMGoupManager qmGoupManager;
     private static QMXMPPConnectClient client;
     private static class LazyHolder {
         private static final QtalkClient INSTANCE = new QtalkClient();
@@ -78,7 +78,7 @@ public class QtalkClient{
        return Login(userId, pwd , checkConnectionListener, friendsPacketListener ,null);
     }
 
-    public boolean Login(String userId, String pwd , QMCheckConnectionListenerImp qmCheckConnectionListenerImp, QMContactListenerImp qmContactListenerImp, LoginResultCallBack loginResultCallBack){
+    public boolean Login(String userId, String pwd , QMCheckConnectionListenerImp qmCheckConnectionListenerImp, QMContactListenerImp qmContactListenerImp, QMLoginResultCallBack qMLoginResultCallBack){
         if(qmCheckConnectionListenerImp != null){
             this.qmCheckConnectionListenerImp = qmCheckConnectionListenerImp;
         }
@@ -89,8 +89,8 @@ public class QtalkClient{
         this.friendsPacketListener = new QMFriendsPacketListener(qmContactListenerImp);
 
         client.setListener(qmCheckConnectionListenerImp,friendsPacketListener);
-        if(loginResultCallBack != null)
-            loginResultCallBack.onProgress();
+        if(qMLoginResultCallBack != null)
+            qMLoginResultCallBack.onProgress();
         try{
             if(!client.isConnected())
                 client.connect();
@@ -99,13 +99,13 @@ public class QtalkClient{
             Presence presence = new Presence(Presence.Type.available);
             client.sendStanza(presence);
 
-            if(loginResultCallBack != null)
-                loginResultCallBack.onSuccess();
+            if(qMLoginResultCallBack != null)
+                qMLoginResultCallBack.onSuccess();
             return true;
         } catch (Exception e) {
             e.printStackTrace();
-            if(loginResultCallBack != null)
-                loginResultCallBack.onError(e.getMessage());
+            if(qMLoginResultCallBack != null)
+                qMLoginResultCallBack.onError(e.getMessage());
             return false;
         }
     }
@@ -131,7 +131,7 @@ public class QtalkClient{
         qmConversationManager = null;
         qmChatMessageManager = null;
         qmmContactsManager = null;
-        qmGoupChatManager = null;
+        qmGoupManager = null;
         qmCheckConnectionListenerImp = null;
         friendsPacketListener = null;
         Presence presence = new Presence(Presence.Type.unavailable);
@@ -207,11 +207,11 @@ public class QtalkClient{
         return qmmContactsManager;
     }
 
-    public QMGoupChatManager getQMGoupChatManager(){
-        if(qmGoupChatManager == null){
-            qmGoupChatManager = new QMGoupChatManager(this);
+    public QMGoupManager getQMGoupChatManager(){
+        if(qmGoupManager == null){
+            qmGoupManager = new QMGoupManager(this);
         }
-        return qmGoupChatManager;
+        return qmGoupManager;
     }
 
     public String getUser(){

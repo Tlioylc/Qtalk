@@ -41,4 +41,7 @@ dependencies {
 
     implementation 'com.alibaba:fastjson:1.1.68.android'
 
+    implementation 'com.qiniu:qiniu-android-sdk:7.3.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.8.0'
+
 }

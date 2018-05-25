@@ -3,7 +3,6 @@ package qumi.com.qtalk.fragment;
 import java.util.ArrayList;
 import java.util.List;
 
-import qumi.com.qtalk.QQApplication;
 import qumi.com.qtalk.R;
 import qumi.com.qtalk.activity.AddFriendActivity;
 import qumi.com.qtalk.activity.ChatActivity;
@@ -18,6 +17,7 @@ import qumi.com.qtalk.view.TitleBarView;
 import qumi.com.qumitalk.service.DataBean.UserBean;
 import qumi.com.qumitalk.service.QtalkClient;
 import qumi.com.qumitalk.service.Util.LogUtil;
+import qumi.com.qumitalk.service.CallBack.QMGroupListResultCallBack;
 
 import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
@@ -36,7 +36,6 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
-import android.widget.Toast;
 
 import static qumi.com.qumitalk.service.QMContactsManager.FRIEND;
 
@@ -191,7 +190,6 @@ public class ConstactFragment extends Fragment {
 			for (UserBean userBean : userBeans) {
 					if(userBean.getFriendRelationship() == FRIEND) {
 //						Presence presence = roster.getPresence(entry.getUser());
-						LogUtil.e(userBean.getNickName()+"-----------------");
 						Child child = new Child();
 						child.setUsername(userBean.getNickName());
 						child.setMood(userBean.getMood());
@@ -209,22 +207,31 @@ public class ConstactFragment extends Fragment {
 			childListOnline.addAll(childListNotOnline);//在线的靠前排列
 			mygroup.setChildList(childListOnline);
 
-			Group mygroup2=new Group();
-			mygroup2.setGroupName("群聊");
-			List<Child> childListGroup=new ArrayList<Child>();//在线
-			List<String> mulitGroup = QtalkClient.getInstance().getQMGoupChatManager().findMulitGroup();
-			for(String name : mulitGroup){
-				Child child = new Child();
-				child.setUsername(name);
-				child.setMood("群聊");
-				child.setOnline_status("1");
-				childListGroup.add(child);
-				child.setChatType(1);
-			}
 
-			mygroup2.setChildList(childListGroup);
+			QtalkClient.getInstance().getQMGoupChatManager().findMulitGroup(new QMGroupListResultCallBack() {
+				@Override
+				public void onGetResult(List<String> groups) {
+					Group mygroup2=new Group();
+					mygroup2.setGroupName("群聊");
+					List<Child> childListGroup=new ArrayList<Child>();//在线
+					for(String name : groups){
+						Child child = new Child();
+						child.setUsername(name);
+						child.setMood("群聊");
+						child.setOnline_status("1");
+						childListGroup.add(child);
+						child.setChatType(1);
+					}
+					mygroup2.setChildList(childListGroup);
+					listGroup.add(mygroup2);
+					mExpAdapter.notifyDataSetChanged();
+				}
+			});
+
+
+
 			listGroup.add(mygroup);
-			listGroup.add(mygroup2);
+
 			Log.e("jj", "好友数量="+listGroup.get(0).getChildList().size());
 		} catch (Exception e) {
 			e.printStackTrace();

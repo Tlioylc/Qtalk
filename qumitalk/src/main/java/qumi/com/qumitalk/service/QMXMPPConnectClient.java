@@ -21,6 +21,7 @@ import org.jivesoftware.smack.util.StringUtils;
 import org.jivesoftware.smackx.bytestreams.ibb.provider.DataPacketProvider;
 import org.jivesoftware.smackx.iqprivate.PrivateDataManager;
 import org.jivesoftware.smackx.muc.packet.GroupChatInvitation;
+import org.jivesoftware.smackx.pubsub.provider.PubSubProvider;
 import org.jivesoftware.smackx.xhtmlim.provider.XHTMLExtensionProvider;
 
 import qumi.com.qumitalk.service.CustomElementProvider.GroupsExtensionProvider;
@@ -73,17 +74,6 @@ public class QMXMPPConnectClient extends XMPPTCPConnection {
         ProviderManager.addIQProvider("groups","com:qumi:group", new GroupsExtensionProvider());
 
 
-//        AndFilter filter = new AndFilter(new StanzaTypeFilter(IQ.class));
-//        addAsyncStanzaListener(new StanzaListener() {
-//            @Override
-//            public void processPacket(Stanza packet) {
-//                LogUtil.e("test---processPacket");
-//                if(packet.toXML().toString().contains("<groups xmlns='com:qumi:group'>")){
-//                    LogUtil.e("test"+packet.toString());
-//                }
-//
-//            }
-//        }, filter);
 
     }
 }

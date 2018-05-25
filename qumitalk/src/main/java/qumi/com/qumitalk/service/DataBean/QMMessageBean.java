@@ -75,6 +75,18 @@ public class QMMessageBean implements Serializable {
 		return qmMessageBean;
 	}
 
+	public static QMMessageBean createImgMessage(String content,String toUser,String fromUser){
+		SimpleDateFormat sd = new SimpleDateFormat("MM-dd HH:mm");
+		String time=sd.format(new Date());
+		QMMessageBean qmMessageBean = new QMMessageBean();
+		qmMessageBean.setContent(content);
+		qmMessageBean.setFromUser(fromUser);
+		qmMessageBean.setToUser(toUser);
+		qmMessageBean.setDate(time);
+		qmMessageBean.setType(StaticConfig.MSG_TYPE_IMG);
+		return qmMessageBean;
+	}
+
 	public static QMMessageBean createFriendMessage(String content,String toUser,String fromUser){
 		SimpleDateFormat sd = new SimpleDateFormat("MM-dd HH:mm");
 		String time=sd.format(new Date());
@@ -97,6 +109,8 @@ public class QMMessageBean implements Serializable {
 		qmMessageBean.setType(StaticConfig.MSG_TYPE_ADD_FRIEND_SUCCESS);
 		return qmMessageBean;
 	}
+
+
 	public void setAttributeJson(String attributeJson) {
 		if(TextUtils.isEmpty(attributeJson)){
 			return;

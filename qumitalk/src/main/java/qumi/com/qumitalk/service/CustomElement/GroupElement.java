@@ -4,6 +4,7 @@ import org.jivesoftware.smack.packet.Element;
 import org.jivesoftware.smack.packet.IQ;
 import org.jivesoftware.smack.packet.Message;
 import org.jivesoftware.smackx.iqprivate.packet.PrivateData;
+import org.jivesoftware.smackx.pubsub.packet.PubSubNamespace;
 import org.jivesoftware.smackx.xhtmlim.packet.XHTMLExtension;
 
 import java.util.ArrayList;
@@ -19,36 +20,32 @@ public class GroupElement extends IQ {
 
 
     private final String xml;
-    private final String getElement;
-    private final String getNamespace;
 
-    public GroupElement(String xml) {
+    public GroupElement(String xml) {//receive response
         this(xml, null, null);
-        LogUtil.e("test--GroupElement--"+xml);
         setType(Type.set);
     }
 
-    public GroupElement(String element, String namespace) {
-        this(null, element, namespace);
-        setType(Type.get);
+    public GroupElement() {//send request
+        super(ELEMENT, NAMESPACE);
+        this.xml = null;
     }
 
     private GroupElement(String xml, String getElement, String getNamespace) {
         super(ELEMENT, NAMESPACE);
         this.xml = xml;
-        this.getElement = getElement;
-        this.getNamespace = getNamespace;
+//        this.getElement = getElement;
+//        this.getNamespace = getNamespace;
     }
 
     @Override
     protected IQChildElementXmlStringBuilder getIQChildElementBuilder(IQChildElementXmlStringBuilder xml) {
         xml.rightAngleBracket();
 
-        LogUtil.e("test--IQChildElementXmlStringBuilder--"+this.xml);
-        if (xml != null) {
+        if (this.xml != null) {
             xml.append(this.xml);
         } else {
-            xml.halfOpenElement(getElement).xmlnsAttribute(getNamespace).closeEmptyElement();
+            xml.emptyElement("action type=\"getrooms\"");
         }
         return xml;
     }

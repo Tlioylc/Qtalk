@@ -10,14 +10,18 @@ import android.app.Activity;
 import android.app.AlertDialog.Builder;
 import android.app.Service;
 import android.content.BroadcastReceiver;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.provider.MediaStore;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.text.ClipboardManager;
@@ -40,6 +44,7 @@ import android.widget.Toast;
 import qumi.com.qtalk.R;
 import qumi.com.qtalk.adapter.ChatAdapter;
 import qumi.com.qtalk.adapter.FaceVPAdapter;
+import qumi.com.qumitalk.service.CallBack.QMSendMessageCallBack;
 import qumi.com.qumitalk.service.DataBean.QMMessageBean;
 import qumi.com.qumitalk.service.Db.Session;
 import qumi.com.qtalk.util.Const;
@@ -48,6 +53,7 @@ import qumi.com.qtalk.util.PreferencesUtils;
 import qumi.com.qtalk.util.ToastUtil;
 import qumi.com.qtalk.view.DropdownListView;
 import qumi.com.qumitalk.service.QtalkClient;
+import qumi.com.qumitalk.service.Util.BaseUtil;
 
 
 /**
@@ -59,6 +65,9 @@ import qumi.com.qumitalk.service.QtalkClient;
  * */
 @SuppressLint("SimpleDateFormat")
 public class ChatActivity extends Activity implements OnClickListener,DropdownListView.OnRefreshListenerHeader {
+
+    private static final int REQUEST_CODE_PICK_IMAGE = 1023;
+
 	private ViewPager mViewPager;
 	private LinearLayout mDotsLayout;
 	private EditText input;
@@ -290,7 +299,10 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 			}
 			break;
 		case R.id.tv_pic://模拟一张图片路径
-			sendMsgImg("http://my.csdn.net/uploads/avatar/3/B/9/1_baiyuliang2013.jpg");
+//			sendMsgImg("http://my.csdn.net/uploads/avatar/3/B/9/1_baiyuliang2013.jpg");
+            Intent intent = new Intent(Intent.ACTION_PICK);
+            intent.setType("image/*");// 相片类型
+            startActivityForResult(intent, REQUEST_CODE_PICK_IMAGE);
 			break;
 		case R.id.tv_camera://拍照，换个美女图片吧
 			sendMsgImg("http://b.hiphotos.baidu.com/image/pic/item/55e736d12f2eb93872b0d889d6628535e4dd6fe8.jpg");
@@ -306,8 +318,25 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 	 * @param
 	 */
 	void sendMsgImg(String imgpath){
-//		QMMessageBean QMMessageBean =getChatInfoTo(imgpath,Const.MSG_TYPE_IMG);
-//		QMMessageBean.setMsgId(msgDao.insert(QMMessageBean));
+
+		final QMMessageBean qMMessageBean =getChatInfoTo(imgpath,Const.MSG_TYPE_IMG);
+		qMMessageBean.setMsgId(QtalkClient.getInstance().getQmChatMessageManager().addMessage(qMMessageBean));
+
+		listQMMessageBean.add(qMMessageBean);
+		offset= listQMMessageBean.size();
+		mLvAdapter.notifyDataSetChanged();
+		final QMMessageBean qmMessageBean2 = QMMessageBean.createImgMessage(imgpath,YOU,I);
+		QtalkClient.getInstance().getChatClient().sendImageMessage(qmMessageBean2, new QMSendMessageCallBack() {
+			@Override
+			public void onSuccess() {
+				updateSession(qmMessageBean2);
+			}
+
+			@Override
+			public void onFailed() {
+
+			}
+		});
 //		listQMMessageBean.add(QMMessageBean);
 //		offset= listQMMessageBean.size();
 //		mLvAdapter.notifyDataSetChanged();
@@ -580,6 +609,51 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 		}, 100);
     	super.onResume();
     };
+
+    /**
+     * 根据Uri获取图片文件的绝对路径
+     */
+    public String getRealFilePath(final Uri uri) {
+        if (null == uri) {
+            return null;
+        }
+
+        final String scheme = uri.getScheme();
+        String data = null;
+        if (scheme == null) {
+            data = uri.getPath();
+        } else if (ContentResolver.SCHEME_FILE.equals(scheme)) {
+            data = uri.getPath();
+        } else if (ContentResolver.SCHEME_CONTENT.equals(scheme)) {
+            Cursor cursor = getContentResolver().query(uri,
+                    new String[]{MediaStore.Images.ImageColumns.DATA}, null, null, null);
+            if (null != cursor) {
+                if (cursor.moveToFirst()) {
+                    int index = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
+                    if (index > -1) {
+                        data = cursor.getString(index);
+                    }
+                }
+                cursor.close();
+            }
+        }
+        return data;
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode != RESULT_OK) {
+            return;
+        }
+        if (requestCode == REQUEST_CODE_PICK_IMAGE) {
+            Uri uri = data.getData();
+            //获取图片绝对路径
+            String link = getRealFilePath(uri);
+            //发送就可以
+            if (BaseUtil.obtain().fileIsExists(link)) {
+                sendMsgImg(link);
+            }
+        }
+    }
 	
 	/**
 	 * 监听返回键

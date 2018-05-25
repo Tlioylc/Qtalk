@@ -9,7 +9,7 @@ import qumi.com.qumitalk.service.Listener.QMCheckConnectionListener;
 /**
  * @author baiyuliang
  */
-public class CheckConnectionListener extends QMCheckConnectionListenerImp {
+public class CheckConnectionListener implements QMCheckConnectionListenerImp {
 	
 	private MsfService context;
 	
