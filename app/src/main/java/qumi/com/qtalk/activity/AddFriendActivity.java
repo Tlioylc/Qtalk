@@ -32,13 +32,12 @@ import android.widget.PopupWindow;
 import qumi.com.qtalk.R;
 import qumi.com.qtalk.adapter.AddFriendAdapter;
 import qumi.com.qumitalk.service.DataBean.QMMessageBean;
-import qumi.com.qumitalk.service.Db.Session;
+import qumi.com.qumitalk.service.DataBean.Session;
 import qumi.com.qtalk.util.PreferencesUtils;
 import qumi.com.qtalk.util.ToastUtil;
 import qumi.com.qtalk.util.XmppUtil;
 import qumi.com.qtalk.view.LoadingDialog;
 import qumi.com.qumitalk.service.QtalkClient;
-import qumi.com.qumitalk.service.Util.LogUtil;
 
 
 /**

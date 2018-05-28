@@ -13,6 +13,9 @@ import java.util.List;
 
 import qumi.com.qumitalk.service.Util.LogUtil;
 
+/**
+ * 自定义IQ Element
+ * */
 public class GroupElement extends IQ {
 
     public static final String ELEMENT = "groups";

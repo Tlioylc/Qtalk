@@ -5,7 +5,7 @@ import org.jivesoftware.smack.StanzaListener;
 import org.jivesoftware.smack.packet.Presence;
 import org.jivesoftware.smack.packet.Stanza;
 
-import qumi.com.qumitalk.service.Imp.QMContactListenerImp;
+import qumi.com.qumitalk.service.ListenerImp.QMContactListenerImp;
 import qumi.com.qumitalk.service.Util.LogUtil;
 
 /**

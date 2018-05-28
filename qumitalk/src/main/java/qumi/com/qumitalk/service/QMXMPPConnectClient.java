@@ -1,34 +1,17 @@
 package qumi.com.qumitalk.service;
 
-import android.util.Log;
-
-import org.jivesoftware.smack.PacketListener;
 import org.jivesoftware.smack.SmackException;
-import org.jivesoftware.smack.StanzaListener;
 import org.jivesoftware.smack.filter.AndFilter;
-import org.jivesoftware.smack.filter.IQTypeFilter;
-import org.jivesoftware.smack.filter.PacketFilter;
-import org.jivesoftware.smack.filter.StanzaFilter;
 import org.jivesoftware.smack.filter.StanzaTypeFilter;
-import org.jivesoftware.smack.packet.IQ;
-import org.jivesoftware.smack.packet.Packet;
 import org.jivesoftware.smack.packet.Presence;
-import org.jivesoftware.smack.packet.Stanza;
 import org.jivesoftware.smack.provider.ProviderManager;
 import org.jivesoftware.smack.tcp.XMPPTCPConnection;
 import org.jivesoftware.smack.tcp.XMPPTCPConnectionConfiguration;
-import org.jivesoftware.smack.util.StringUtils;
-import org.jivesoftware.smackx.bytestreams.ibb.provider.DataPacketProvider;
-import org.jivesoftware.smackx.iqprivate.PrivateDataManager;
-import org.jivesoftware.smackx.muc.packet.GroupChatInvitation;
-import org.jivesoftware.smackx.pubsub.provider.PubSubProvider;
-import org.jivesoftware.smackx.xhtmlim.provider.XHTMLExtensionProvider;
 
 import qumi.com.qumitalk.service.CustomElementProvider.GroupsExtensionProvider;
-import qumi.com.qumitalk.service.Imp.QMCheckConnectionListenerImp;
+import qumi.com.qumitalk.service.ListenerImp.QMCheckConnectionListenerImp;
 import qumi.com.qumitalk.service.Listener.QMCheckConnectionListener;
 import qumi.com.qumitalk.service.Listener.QMFriendsPacketListener;
-import qumi.com.qumitalk.service.Util.LogUtil;
 
 /**
  * Created by mwang on 2018/5/22.
@@ -64,16 +47,14 @@ public class QMXMPPConnectClient extends XMPPTCPConnection {
         if(checkConnectionListener != null)
             addConnectionListener(checkConnectionListener);
 
-        // 注册好友状态更新监听
+        // 注册订阅关系更新监听
         if(friendsPacketListener != null){
             AndFilter filter = new AndFilter(new StanzaTypeFilter(Presence.class));
             addAsyncStanzaListener(friendsPacketListener, filter);
         }
 
-
+        //添加IQ解析
         ProviderManager.addIQProvider("groups","com:qumi:group", new GroupsExtensionProvider());
-
-
 
     }
 }

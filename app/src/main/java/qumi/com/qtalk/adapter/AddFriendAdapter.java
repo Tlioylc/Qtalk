@@ -9,7 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import qumi.com.qtalk.R;
-import qumi.com.qumitalk.service.Db.Session;
+import qumi.com.qumitalk.service.DataBean.Session;
 import qumi.com.qtalk.view.CircleImageView;
 
 public class AddFriendAdapter extends BaseAdapter {

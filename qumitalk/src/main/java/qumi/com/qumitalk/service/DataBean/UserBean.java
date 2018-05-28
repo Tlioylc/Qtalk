@@ -3,6 +3,9 @@ package qumi.com.qumitalk.service.DataBean;
 import io.realm.Realm;
 import io.realm.RealmObject;
 
+/**
+ * 用户数据
+ * */
 public class UserBean extends RealmObject{
     private String uid;
     private String nickName;

@@ -1,5 +1,6 @@
 package qumi.com.qumitalk.service;
 
+import android.content.Context;
 import android.text.TextUtils;
 
 import org.jivesoftware.smack.SmackException;
@@ -22,10 +23,10 @@ import java.util.Iterator;
 import java.util.List;
 
 import qumi.com.qumitalk.service.CustomElement.GroupElement;
-import qumi.com.qumitalk.service.Db.Session;
-import qumi.com.qumitalk.service.Imp.QMGroupChatInviteListenerImp;
+import qumi.com.qumitalk.service.DataBean.Session;
+import qumi.com.qumitalk.service.ListenerImp.QMGroupChatInviteListenerImp;
 import qumi.com.qumitalk.service.Listener.QMGroupChatListener;
-import qumi.com.qumitalk.service.Imp.QMMessageListenerImp;
+import qumi.com.qumitalk.service.ListenerImp.QMMessageListenerImp;
 import qumi.com.qumitalk.service.Util.LogUtil;
 import qumi.com.qumitalk.service.CallBack.QMGroupListResultCallBack;
 
@@ -38,9 +39,11 @@ public class QMGoupManager {
     private QMXMPPConnectClient qmxmppConnectClient;
     private MultiUserChatManager multiUserChatManager ;
     private QMMessageListenerImp qmMessageListenerImp;
+    private Context context;
     protected QMGoupManager(QtalkClient qtalkClient){
         this.qmxmppConnectClient = qtalkClient.getClient();
         this.multiUserChatManager = MultiUserChatManager.getInstanceFor(qmxmppConnectClient);
+        this.context = qtalkClient.getContext();
     }
 
     public void addMessageListener(QMMessageListenerImp qmMessageListenerImp){
@@ -62,7 +65,7 @@ public class QMGoupManager {
             // 创建聊天室
             boolean isCreated = muc.createOrJoin( qmxmppConnectClient.getUser().split("@")[0]);
             if(qmMessageListenerImp != null) {
-                muc.addMessageListener(new QMGroupChatListener(qmMessageListenerImp));
+                muc.addMessageListener(new QMGroupChatListener(qmMessageListenerImp,context));
             }
             if(isCreated) {
                 // 获得聊天室的配置表单
@@ -143,7 +146,7 @@ public class QMGoupManager {
             // 用户加入聊天室
             multiUserChat.join(QtalkClient.getInstance().getUser(), password, history,5000);
             if(qmMessageListenerImp != null)
-                multiUserChat.addMessageListener(new QMGroupChatListener(qmMessageListenerImp));
+                multiUserChat.addMessageListener(new QMGroupChatListener(qmMessageListenerImp,context));
 
             System.out.println("会议室加入成功........");
             return true;
@@ -224,7 +227,8 @@ public class QMGoupManager {
     }
 
     /**
-     * 获取已加入聊天室列表
+     * 获取聊天室列表
+     *
      *
      */
     public  List<Session> findMulitGroup(String groupName){

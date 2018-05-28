@@ -1,5 +1,7 @@
 package qumi.com.qumitalk.service;
 
+import android.content.Context;
+import android.content.Intent;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -10,9 +12,10 @@ import org.jivesoftware.smack.chat.Chat;
 import org.jivesoftware.smack.chat.ChatManager;
 import org.jivesoftware.smackx.muc.MultiUserChat;
 import org.jivesoftware.smackx.muc.MultiUserChatManager;
-import org.json.JSONObject;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
@@ -24,8 +27,8 @@ import okhttp3.Response;
 import qumi.com.qumitalk.service.CallBack.QMSendMessageCallBack;
 import qumi.com.qumitalk.service.Config.StaticConfig;
 import qumi.com.qumitalk.service.DataBean.QMMessageBean;
+import qumi.com.qumitalk.service.DataBean.Session;
 import qumi.com.qumitalk.service.Util.LogUtil;
-import qumi.com.qumitalk.service.Util.UpLoadImgMgr;
 import qumi.com.qumitalk.service.Util.UploadFileMgr;
 
 /**
@@ -37,10 +40,14 @@ public class QMChatManager {
     private QtalkClient qtalkClient;
     private HashMap<String,Chat> chatMap;
     private HashMap<String,MultiUserChat> multiUserChatHashMap;
+    private Context context;
+
 
     protected QMChatManager(QtalkClient qtalkClient){
         this.qmxmppConnectClient = qtalkClient.getClient();
         this.qtalkClient = qtalkClient;
+        this.context = qtalkClient.getContext();
+
     }
 
 
@@ -86,13 +93,12 @@ public class QMChatManager {
 
 
     public boolean sendMessage(QMMessageBean qmMessageBean) {
-
-
         LogUtil.e(qmMessageBean.getToUser()+"---msg-----");
         Chat chat = getChat(qmMessageBean.getToUser());
         if (chat != null) {
             try {
                 chat.sendMessage(qmMessageBean.toBase64Json());
+                updateSession(qmMessageBean);
             } catch (SmackException.NotConnectedException e) {
                 e.printStackTrace();
                 return false;
@@ -102,7 +108,7 @@ public class QMChatManager {
     }
 
     public void sendImageMessage(final QMMessageBean qmMessageBean, final QMSendMessageCallBack qmSendMessageCallBack) {
-        if(TextUtils.isEmpty(StaticConfig.qiniutoken)){
+        if(TextUtils.isEmpty(StaticConfig.qiniutoken)){//获取七牛token
             String url = "http://192.168.1.249/qiniu/gettoken";
             final OkHttpClient okHttpClient = new OkHttpClient.Builder()
                     .connectTimeout(10, TimeUnit.SECONDS)
@@ -114,7 +120,7 @@ public class QMChatManager {
             okHttpClient.newCall(request).enqueue(new Callback() {
                 @Override
                 public void onFailure(Call call, IOException e) {
-                    Log.e("zfq", "onFailure: "+e.getMessage());
+                    LogUtil.e("onFailure: "+e.getMessage());
                 }
 
                 @Override
@@ -139,6 +145,7 @@ public class QMChatManager {
                     try {
                         qmMessageBean.setContent(name);
                         chat.sendMessage(qmMessageBean.toBase64Json());
+                        updateSession(qmMessageBean);
                     } catch (SmackException.NotConnectedException e) {
                         qmSendMessageCallBack.onFailed();
                         e.printStackTrace();
@@ -160,10 +167,34 @@ public class QMChatManager {
         MultiUserChat muc = getMultiuserChat(qmMessageBean.getToUser());
         try {
             muc.sendMessage(qmMessageBean.toBase64Json());
+            updateSession(qmMessageBean);
         } catch (SmackException.NotConnectedException e) {
             e.printStackTrace();
             return false;
         }
         return true;
     }
+
+    //更新会话信息
+    void updateSession(QMMessageBean qmMessageBean){
+        SimpleDateFormat sd=new SimpleDateFormat("MM-dd HH:mm");
+
+        Session session=new Session();
+        session.setFromUser(qmMessageBean.getToUser());
+        session.setToUser(qmMessageBean.getFromUser());
+        session.setChatType(qmMessageBean.getChatType());
+        session.setNotReadCount("");//未读消息数量
+        session.setContent(qmMessageBean.getContent());
+        session.setDate(sd.format(new Date()));
+        session.setType(qmMessageBean.getType());
+        if(QtalkClient.getInstance().getQMConversationManager().isHaveConversation(qmMessageBean.getToUser(), qmMessageBean.getFromUser())){
+            QtalkClient.getInstance().getQMConversationManager().updateConversation(session);
+        }else{
+            QtalkClient.getInstance().getQMConversationManager().addConversation(session);
+        }
+        Intent intent=new Intent(StaticConfig.ACTION_ADDFRIEND);//发送广播，通知消息界面更新
+        if(context != null)
+            context.sendBroadcast(intent);
+    }
+
 }

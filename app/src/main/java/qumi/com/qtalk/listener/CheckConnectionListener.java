@@ -2,8 +2,7 @@ package qumi.com.qtalk.listener;
 
 import qumi.com.qtalk.service.MsfService;
 import qumi.com.qtalk.util.ToastUtil;
-import qumi.com.qumitalk.service.Imp.QMCheckConnectionListenerImp;
-import qumi.com.qumitalk.service.Listener.QMCheckConnectionListener;
+import qumi.com.qumitalk.service.ListenerImp.QMCheckConnectionListenerImp;
 
 
 /**

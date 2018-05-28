@@ -133,7 +133,9 @@ public class ChatAdapter extends BaseAdapter {
 				hodler.fromImg.setVisibility(View.VISIBLE);//图片
 				hodler.fromLocation.setVisibility(View.GONE);//位置
 				hodler.progress_load.setVisibility(View.GONE);
-				finalImageLoader.display(hodler.fromImg, QMMessageBean.getContent());//加载图片
+
+				String url = "http://imp.qumitech.com/" + QMMessageBean.getContent() + "?imageView2/1/w/260/h/175";
+				finalImageLoader.display(hodler.fromImg, url);//加载图片
 			}else if(QMMessageBean.getType()  == Const.MSG_TYPE_LOCATION ){//位置类型
 				hodler.fromText.setVisibility(View.GONE);//文本
 				hodler.fromImg.setVisibility(View.GONE);//图片

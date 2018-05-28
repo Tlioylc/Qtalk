@@ -5,6 +5,9 @@ package qumi.com.qumitalk.service.Config;
  */
 
 public class StaticConfig {
+   /**
+    * 服务器地址和域名
+    * */
    public static final String host = "192.168.1.222";
    public static final String serviceName = "openfire.qumitech.com";
 
@@ -24,4 +27,8 @@ public class StaticConfig {
 
 
    public static String qiniutoken = null;
+
+   public static final String ACTION_ADDFRIEND= "com.android.qq.addfriend";
+   public static final String ACTION_FRIENDS_ONLINE_STATUS_CHANGE= "com.android.qq.friends_online_status_change";
+   public static final String ACTION_NEW_MSG= "com.android.qq.newmsg";
 }

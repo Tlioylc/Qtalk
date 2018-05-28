@@ -1,4 +1,4 @@
-#Fri May 25 17:28:28 CST 2018
-base.0=/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/transforms/dexMerger/debug/21
+#Mon May 28 11:01:49 CST 2018
+base.0=/Users/wangmeng/Desktop/gitWorkSpace/Qtalk/app/build/intermediates/transforms/dexMerger/debug/3
 path.0=classes.dex
 renamed.0=classes.dex

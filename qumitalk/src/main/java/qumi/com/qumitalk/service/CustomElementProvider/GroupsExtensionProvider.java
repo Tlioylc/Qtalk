@@ -9,9 +9,13 @@ import java.io.IOException;
 
 import qumi.com.qumitalk.service.CustomElement.GroupElement;
 
+/**
+ * IQ解析器
+ *
+ * */
 public class GroupsExtensionProvider extends IQProvider<GroupElement> {
     @Override
-    public GroupElement parse(XmlPullParser parser, int initialDepth)  throws XmlPullParserException, IOException, SmackException {
+    public GroupElement parse(XmlPullParser parser, int initialDepth)  throws XmlPullParserException, IOException{
 
 
             int eventType2;

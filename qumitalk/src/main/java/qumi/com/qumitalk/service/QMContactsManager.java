@@ -8,8 +8,6 @@ import org.jivesoftware.smack.roster.Roster;
 import org.jivesoftware.smack.roster.RosterEntry;
 import org.jivesoftware.smackx.search.ReportedData;
 import org.jivesoftware.smackx.search.UserSearchManager;
-import org.jivesoftware.smackx.vcardtemp.VCardManager;
-import org.jivesoftware.smackx.vcardtemp.packet.VCard;
 import org.jivesoftware.smackx.xdata.Form;
 
 import java.util.ArrayList;
@@ -17,7 +15,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-import qumi.com.qumitalk.service.Db.Session;
+import qumi.com.qumitalk.service.DataBean.Session;
 import qumi.com.qumitalk.service.DataBean.UserBean;
 import qumi.com.qumitalk.service.Util.LogUtil;
 

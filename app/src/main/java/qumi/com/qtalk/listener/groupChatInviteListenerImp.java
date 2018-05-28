@@ -1,6 +1,6 @@
 package qumi.com.qtalk.listener;
 
-import qumi.com.qumitalk.service.Imp.QMGroupChatInviteListenerImp;
+import qumi.com.qumitalk.service.ListenerImp.QMGroupChatInviteListenerImp;
 import qumi.com.qumitalk.service.QtalkClient;
 
 public class groupChatInviteListenerImp implements QMGroupChatInviteListenerImp {

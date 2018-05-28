@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import qumi.com.qtalk.R;
-import qumi.com.qumitalk.service.Db.Session;
+import qumi.com.qumitalk.service.DataBean.Session;
 import qumi.com.qumitalk.service.QtalkClient;
 
 public class XmppUtil {

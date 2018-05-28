@@ -3,7 +3,7 @@ package qumi.com.qtalk.listener;
 
 import qumi.com.qtalk.service.MsfService;
 import qumi.com.qtalk.util.Const;
-import qumi.com.qumitalk.service.Imp.QMContactListenerImp;
+import qumi.com.qumitalk.service.ListenerImp.QMContactListenerImp;
 import android.content.Intent;
 import android.util.Log;
 

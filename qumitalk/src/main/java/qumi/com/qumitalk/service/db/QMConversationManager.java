@@ -4,6 +4,8 @@ import android.content.Context;
 
 import java.util.List;
 
+import qumi.com.qumitalk.service.DataBean.Session;
+
 /**
  * Created by mwang on 2018/5/17.
  */

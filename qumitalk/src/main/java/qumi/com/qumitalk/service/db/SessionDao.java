@@ -9,6 +9,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import qumi.com.qumitalk.service.DataBean.Session;
+
 
 /**
  * 聊天回话列表的管理

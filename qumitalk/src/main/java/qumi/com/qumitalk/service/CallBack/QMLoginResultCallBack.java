@@ -5,18 +5,18 @@ package qumi.com.qumitalk.service.CallBack;
  */
 
 public interface QMLoginResultCallBack {
-    /*
+    /**
      *  登陆成功回调
      */
     void onSuccess();
 
-    /*
+    /**
      *   登陆失败回调
      */
     void onError(String s);
 
-    /*
-    *   登陆过程中回调
-    */
+    /**
+     *   登陆过程中回调
+     */
     void onProgress();
 }

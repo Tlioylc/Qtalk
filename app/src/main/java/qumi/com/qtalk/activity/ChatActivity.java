@@ -46,7 +46,6 @@ import qumi.com.qtalk.adapter.ChatAdapter;
 import qumi.com.qtalk.adapter.FaceVPAdapter;
 import qumi.com.qumitalk.service.CallBack.QMSendMessageCallBack;
 import qumi.com.qumitalk.service.DataBean.QMMessageBean;
-import qumi.com.qumitalk.service.Db.Session;
 import qumi.com.qtalk.util.Const;
 import qumi.com.qtalk.util.ExpressionUtil;
 import qumi.com.qtalk.util.PreferencesUtils;
@@ -329,7 +328,6 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 		QtalkClient.getInstance().getChatClient().sendImageMessage(qmMessageBean2, new QMSendMessageCallBack() {
 			@Override
 			public void onSuccess() {
-				updateSession(qmMessageBean2);
 			}
 
 			@Override
@@ -386,7 +384,6 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 				}
 			}
 		}).start();
-		updateSession(qmMessageBean);
 	}
 	
 	/**
@@ -417,7 +414,6 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 				}
 			}
 		}).start();
-		updateSession(qmMessageBean);
 	}
 	
 	/**
@@ -439,24 +435,7 @@ public class ChatActivity extends Activity implements OnClickListener,DropdownLi
 		return qMMessageBean;
 	}
 	
-	void updateSession(QMMessageBean qmMessageBean){
-		Session session=new Session();
-		session.setFromUser(YOU);
-		session.setToUser(I);
-		session.setChatType(chatType);
-		session.setNotReadCount("");//未读消息数量
-		session.setContent(qmMessageBean.getContent());
-		session.setDate(sd.format(new Date()));
-		session.setType(qmMessageBean.getType());
-		if(QtalkClient.getInstance().getQMConversationManager().isHaveConversation(YOU, I)){
-			QtalkClient.getInstance().getQMConversationManager().updateConversation(session);
-		}else{
-			QtalkClient.getInstance().getQMConversationManager().addConversation(session);
-		}
-		Intent intent=new Intent(Const.ACTION_ADDFRIEND);//发送广播，通知消息界面更新
-		sendBroadcast(intent);
-	}
-	
+
 	
 	/**
 	 * 表情页改变时，dots效果也要跟着改变

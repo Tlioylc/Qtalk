@@ -22,11 +22,11 @@ import qumi.com.qumitalk.service.Config.StaticConfig;
 import qumi.com.qumitalk.service.CallBack.QMLoginResultCallBack;
 import qumi.com.qumitalk.service.Db.QMChatMessageManager;
 import qumi.com.qumitalk.service.Db.QMConversationManager;
-import qumi.com.qumitalk.service.Imp.QMCheckConnectionListenerImp;
-import qumi.com.qumitalk.service.Imp.QMContactListenerImp;
+import qumi.com.qumitalk.service.ListenerImp.QMCheckConnectionListenerImp;
+import qumi.com.qumitalk.service.ListenerImp.QMContactListenerImp;
 import qumi.com.qumitalk.service.Listener.QMFriendsPacketListener;
 import qumi.com.qumitalk.service.Listener.QMChatMessageListener;
-import qumi.com.qumitalk.service.Imp.QMMessageListenerImp;
+import qumi.com.qumitalk.service.ListenerImp.QMMessageListenerImp;
 
 /**
  * Created by mwang on 2018/5/16.
@@ -53,6 +53,11 @@ public class QtalkClient{
         Realm.init(mcontext);
         this.executor = Executors.newCachedThreadPool();
     }
+
+    public Context getContext() {
+        return mcontext;
+    }
+
     public static final QtalkClient getInstance() {
         if(client == null){
             String server= StaticConfig.host;
@@ -120,7 +125,7 @@ public class QtalkClient{
         getChatManager().addChatListener(new ChatManagerListener() {
             @Override
             public void chatCreated(Chat arg0, boolean arg1) {
-                arg0.addMessageListener(new QMChatMessageListener(qmMessageListenerImp));
+                arg0.addMessageListener(new QMChatMessageListener(qmMessageListenerImp,mcontext));
             }
         });
         getQMGoupChatManager().addMessageListener(qmMessageListenerImp);
@@ -231,7 +236,7 @@ public class QtalkClient{
                 presence = new Presence(Presence.Type.available);  //设置Q我吧
                 presence.setMode(Presence.Mode.chat);
                 break;
-            case 2:                                                                                      //隐身
+            case 2:                                                                              //隐身
 //            Roster roster = Roster.getInstanceFor(con);
 //            Collection<RosterEntry> entries = roster.getEntries();
 //            for (RosterEntry entry : entries) {

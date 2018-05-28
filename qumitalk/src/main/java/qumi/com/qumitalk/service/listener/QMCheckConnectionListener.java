@@ -3,7 +3,7 @@ package qumi.com.qumitalk.service.Listener;
 import org.jivesoftware.smack.ConnectionListener;
 import org.jivesoftware.smack.XMPPConnection;
 
-import qumi.com.qumitalk.service.Imp.QMCheckConnectionListenerImp;
+import qumi.com.qumitalk.service.ListenerImp.QMCheckConnectionListenerImp;
 
 /**
  * Created by mwang on 2018/5/16.
